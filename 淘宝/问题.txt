@@ -1,6 +1,0 @@
-好货发现
-1、上下border合为一个时候，怎么在hover的时候，等级始终在上面？
-答：加 position:relative;
-       z-index:1;
-
-2、三个a链接时，margin-top:-1px; 为什么不行呢？
