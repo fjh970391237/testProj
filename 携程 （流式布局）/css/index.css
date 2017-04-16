@@ -1,0 +1,265 @@
+.top{
+	width: 100%;
+	height: 44px;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+.left{
+	width: 45px;
+	height: 44px;
+	float: left;
+	position: relative;
+	cursor: pointer;
+
+}
+.left:before,.right:before{
+	content:'';
+	width: 20px;
+	height: 22px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	background: url(../images/icon/un_ico_home_v66.png) no-repeat -70px -228px;
+	transform: translate(-50%,-50%);
+	-webkit-background-size: 104px 327px;
+	background-size: 104px 327px;
+}
+.right{
+	width: 40px;
+	height: 44px;
+	float: right;
+	position: relative;
+	cursor: pointer;
+}
+.right:before{
+	width: 23px;
+	height: 22px;
+	background-position: -59px -194px;
+}
+.center{
+	margin: 7px 40px 7px 45px;
+}
+.search{
+	height: 28px;
+	border-radius: 4px;
+	border: 1px solid #999;
+	font-size: 12px;
+	color: #666;
+	line-height: 28px;
+	padding-left: 28px;
+	position: relative;
+	box-shadow: 1px 2px 2px rgba(0,0,0,.2);
+}
+.search:before{
+	content:'';
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	top:50%;
+	left:10px;
+	background: url(../images/icon/un_ico_home_v66.png) no-repeat -60px -279px;
+	-webkit-background-size: 104px 327px;
+	background-size: 104px 327px;
+	transform: translateY(-50%);
+}
+
+/* 本例子css -------------------------------------- */
+	.focus {
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+	}
+	.focus .hd {
+		width: 100%;
+		height: 5px;
+		position: absolute;
+		z-index: 1;
+		bottom: 15px;
+		text-align: center;
+	}
+	.focus .hd ul {
+		overflow: hidden;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.focus .hd ul li {
+		text-indent: -9999px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		border: 1px solid #fff;
+		float: left;
+		margin-right: 5px;
+		cursor: pointer;
+		background: rgba(255,255,255,.4)
+	}
+	.focus .hd ul .on {
+		background: #fff;
+	}
+	.focus .bd {
+		position: relative;
+		z-index: 0;
+	}
+	.focus .bd li a {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 取消链接高亮 */
+	}
+
+	.list{
+		padding: 8px 8px 0 112px;
+		position: relative;
+	}
+	.list li{
+		width: 50%;
+		height: 40px;
+		float: left;
+		border-left: 1px solid #fff;
+		box-sizing: border-box;
+		color: #fff;
+		line-height: 40px;
+		text-align: center;
+		font-size: 15px;
+		text-shadow: 1px 1px rgba(0,0,0,.3);
+		background: #FF697A;
+		cursor: pointer;
+	}
+	
+	.list li:nth-child(5n+1){
+		position: absolute;
+		top:8px;
+		left:8px;
+		letter-spacing: 4px;
+		width: 104px;
+		height: 80px;
+		border-radius: 4px 0 0 4px;
+		margin-bottom: 10px;
+	}
+	.list li:nth-child(5n+4),.list li:nth-child(5n){
+		border-top: 1px solid #fff;
+		margin-bottom: 10px;
+	}
+	
+	.list li:nth-child(6){
+		top: 98px;
+	}
+	.list li:nth-child(11){
+		top: 188px;
+	}
+	.list li:nth-child(16){
+		top: 278px;
+	}
+	.list li:nth-child(5n)~li{
+		background: #3D98FF;		
+	}
+	.list li:nth-child(10n)~li{
+		background: #5EBE00;		
+	}
+	.list li:nth-child(15n)~li{
+		background: #FC9720;		
+	}
+	.list li:nth-child(1):after,.list li:nth-child(6):after,.list li:nth-child(11):after,.list li:nth-child(16):after{
+		content: '';
+		width: 40px;
+		height: 34px;
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: url(../images/icon/un_ico_home_v66.png) no-repeat 0 -130px;
+		-webkit-background-size: 104px 327px;
+		background-size: 104px 327px;
+	}
+	.list li:nth-child(6):after{
+		width: 42px;
+		height: 28px;
+		background-position: -51px -119px;
+	}
+	.list li:nth-child(11):after{
+		width: 42px;
+		height: 40px;
+		background-position: 0 -181px;
+	}
+	.list li:nth-child(16):after{
+		width: 36px;
+		height: 30px;
+		background-position: 0 -239px;
+	}
+	
+/*图片banner样式开始*/
+
+	.pic-banner{
+		width: 100%;
+		padding: 0 8px 8px;
+		box-sizing: border-box;
+	}
+	.picIn{
+		display: table;
+		width: 100%;
+		border: 1px solid #D8D8D8;
+
+	}
+	.pic-banner li{
+		display: table-cell;
+		width: 50%;
+		box-sizing: border-box;
+	}
+	.pic-banner li:first-child{
+		border-right: 1px solid #D8D8D8;
+	}
+
+	
+
+	.bottom{
+		border-bottom: 1px solid #C2C2C2;
+		border-top: 1px solid #C2C2C2;
+		/*display: -webkit-box;这是第一种分家方法
+		display: box;
+		display: flex;*/
+		height: 49px;
+	}
+	.bottom a{
+		width: 33.33333%;/*这是第二种分家方法*/
+		display:block; 
+		float: left;
+		/*-webkit-box-flex:1;
+		flex:1;*/
+		color: #333;
+		text-align: center;
+		padding-top: 26px;
+		position: relative;
+	}
+	.bottom a:before{
+		content: '';
+		position: absolute;
+		top:7px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 16px;
+		height: 16px;
+		background: url(../images/icon/un_ico_home_v66.png) no-repeat -60px -153px;
+		-webkit-background-size:104px 327px ;
+		background-size:104px 327px ;
+	}
+	.bottom a:nth-of-type(2):before{
+		background-position: -60px -173px;
+	}
+	.bottom a:nth-of-type(3):before{
+		width: 18px;
+		height: 18px;
+		background-position: -60px -309px;
+	}
+
+	.footer{
+		text-align: center;
+		color: #999;
+		margin: 8px 0;
+	}
+	.footer a{
+		color: #666;
+	}
+	p{
+		color: #999;
+		text-align: center;
+	}
