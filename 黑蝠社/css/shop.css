@@ -1,0 +1,168 @@
+@charset "utf-8"; /* CSS Document */ 
+
+
+/*店铺信息开始 */
+	
+	.ShopInfo .hd{
+		width: 970px;
+		height: 40px;
+		margin-bottom:13px;
+		background: url(../images/spirit.png) no-repeat 0 -687px;
+	}
+	.ShopInfo .hd h3{
+		height: 39px;
+		margin-bottom:13px;
+		font-size: 12px;
+		color: #D3941A;
+		padding-right: 50px;
+		line-height: 26px;
+		text-align: right;
+		background: url(../images/ShopInfo_h3_bg.jpg) no-repeat left center;
+	}
+	.inShopInfo{
+		width: 970px;
+		background: #151515;
+		overflow: hidden;
+	}
+	.shopMain{
+		margin-top: 10px;
+		width: 710px;
+		padding:0 5px;
+		position: relative;
+		float: left;
+	}
+	.shopMain .rightBtn,.shopMain .leftBtn{
+		cursor: pointer;
+		width: 80px;
+		height: 80px;
+		background: url(../images/shop_thePre.gif);
+		position: absolute;
+		right:20px;
+		top:220px;
+	}
+	.shopMain .leftBtn{
+		background: url(../images/shop_theNext.gif);
+		position: absolute;
+		left:20px;
+		top:220px;
+	}
+	.shopMain h4{
+		text-align: center;
+		padding: 12px 0 12px;
+		margin-bottom: 20px;
+		border-bottom: 1px #424242 dashed;
+		font-size: 18px;
+		color: #fff;
+	}
+	.shopMain .pic{
+		margin: 0 auto 20px;
+		width:480px;
+		height: 360px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.shopMain .pic ul{
+		width:500px;
+		height: 360px;
+		position: absolute;
+		top:0;
+		left:0;
+	}
+	.shopMain .pic ul img{
+		width: 480px;
+		height:360px;
+	}
+	.shopMain .pic ul li{
+		position: absolute;
+		top:0;
+		left:0;
+	}
+	.shopMain p{
+		border-top: 1px dashed #424242;
+		text-indent: 2em;
+		padding-top: 8px;
+		margin: 0 28px ;
+		padding-bottom: 20px;
+		line-height: 20px;
+		font-size: 12px;
+		font-family: 微软雅黑;
+		color: #BBBBBB;
+	}
+	.shopMain p a{display: inline; color: #FF9900;}
+	.ShopInfo .sidebar{
+		float: right;
+		width:217px;
+		height: 634px;
+		background: #fff;
+		margin: 6px;
+		position: relative;
+		/*overflow: hidden;*/
+	}
+	.inShopInfo .sidebar i{
+		display: block;
+		width: 214px;
+		height: 36px;
+		line-height: 28px;
+		font-style: normal;
+		font-size: 14px;
+		font-weight: bold;
+		color: #fff;
+		padding-left: 10px;
+		background: url(../images/shop_sidebar_bg.gif) no-repeat ;
+		position: absolute;
+		left: -7px;
+		top:10px;
+	}
+	.inShopInfo .inSidebar{
+		height: 550px;
+		overflow: hidden;
+		position: relative;
+	}
+	.inSidebar ul{
+		position: absolute;
+		top:0;
+		height: 2000px;
+		margin: 100px 29px 0;
+	}
+	.inShopInfo .sidebar ul li{
+		width:150px;
+		height: 94px;
+		padding:3px;
+		border:1px solid #D1D1D1;
+		margin-bottom: 12px;
+	}
+	.inShopInfo .sidebar ul li{
+		width:150px;
+		height: 94px;
+		padding:3px;
+		border:1px solid #D1D1D1;
+		margin-bottom: 12px;
+	}
+	.inShopInfo .sidebar ul li:hover{
+		padding: 2px;
+		border:2px solid #FF9900;
+	}
+	.sidebar ul li.current{
+		padding: 2px; 
+		border:2px solid #FF9900;
+	}
+	.sideBarT,.sideBarB{
+		display: block;
+		width: 199px;
+		height: 30px;
+		left:13px;
+		position: absolute;
+		cursor: pointer;
+	}
+	.sideBarT{
+		top:60px;
+		
+		background: url(../images/sideBar_top.gif) no-repeat;
+	}
+	.sideBarB{
+		bottom:50px;
+		
+		background: url(../images/sideBar_bottom.gif) no-repeat;
+	}
+/*店铺信息结束 */

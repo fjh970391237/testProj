@@ -1,0 +1,14 @@
+body {height:100%; }
+#Cue_MsgBox {color:#000; background:transparent; background-color:#FFFFFF; position:absolute; z-index:2;  border:4px solid #666;}
+.fourbutton {background:url(/public/Image/submitbg.gif) no-repeat; margin-right:16px; text-align:center; height:28px; cursor:hand; font-weight:bold; color:#fff; line-height:26px; width:96px; border:0;}
+.fourbutton2 {background:url(/public/Image/reset.gif) no-repeat; text-align:center; height:28px; margin-left:16px; cursor:hand; font-weight:bold; color:#fff; line-height:26px; width:96px; border:0px;}
+#Cue_MsgBox_Title {background:url(/public/msgWin/topbg.gif) #ddeab9 repeat-x; }
+#Cue_MsgBox_Title_left {background:url(/public/msgWin/msgtitlebg_left.gif) no-repeat left; line-height:15px; padding-top:10px; font-size:12px; color:#1a5731; padding-left:42px; font-weight:bold; float:left; height:21px; width:194px;}
+#Cue_MsgBox_Title_right {background:url(/public/msgWin/msgtitlebg_r.gif) right no-repeat; height:31px; overflow:hidden; float:right; width:123px;}
+#Cue_MsgBox_Detial {border:1px solid #343434; padding:15px; border-top:0px; background:#fff;}
+.MSG {right:0px; background:#333; filter:alpha(opacity=30); -moz-opacity:0.60;opacity:0.4 ; LEFT: 0px; !important;  BOTTOM: 0px; POSITION: absolute; top:0; moz-opacity: 0.8;}
+#Cue_MsgBox_Msg {background:#fff;}
+#Cue_MsgBox_btn {background:#fff;}
+.TextWin{width:138px; border-top:#7C7C7C 1px solid;  height:18px; border-left:#7c7c7c 1px solid; border-bottom:#C3C3C3 1px solid; border-right:#C3C3C3 1px solid; padding:1px; line-height:18px; background:url(../images/input_text_bg.gif) no-repeat #fff !important; background:url(../images/input_text_bg.gif) no-repeat fixed #fff}
+#Cue_MsgBox a{ color:#b40202; text-decoration:underline;}
+#VipSign Td { background:#fff;}

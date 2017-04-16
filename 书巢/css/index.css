@@ -1,0 +1,77 @@
+/*banner部分样式开始*/
+	.banner{width:100%; position: relative;height: 410px;overflow: hidden;/*border:1px solid red;*/}
+	.banner img{position: absolute; left:50%; margin-left: -800px;}
+	.banner .ishu{/*border: 1px solid #000;*/ position: absolute; width:1040px; height: 330px;left:50%; margin-left: -520px; color: #fff; padding-top: 80px;}
+	.ishu h1{font-size: 34px;font-family: "宋体";}
+	.ishu span{font-size: 16px; font-style:bold; line-height: 30px;}
+	.ishu p{font-size: 16px; line-height: 32px; font-family: "宋体"; margin-top: 10px;}
+	.ishu .join{display: block; width: 221px; height: 58px; border: 1px solid #606C8E; border-radius: 4px; background: #6A7E9F; color: #fff;line-height: 58px;text-align: center; font-size: 24px; margin-top: 10px;}
+	.ishu .start{display: block; width:80px; height: 80px;background: url(../images/index/player.png) no-repeat 0 0; position: absolute;right:125px;top:150px;}
+	.ishu .start:hover{background-position:0 -80px;}
+/*banner部分样式结束*/
+
+
+/*主体部分样式开始*/
+	.wrap{width:1020px; margin: 30px auto; background: #fff; padding: 10px 10px 30px;}
+
+	.inwrap{margin-bottom: 25px;}
+	.wrap-hd{height: 24px; line-height: 24px; background: #E6EBFA;/*border:1px solid red;*/ margin-bottom: 35px;}
+	.wrap-hd h2{padding: 0 15px 0 35px; background: #fff url(../images/index/h2.png) no-repeat left center; height: 24px; line-height: 24px; font-size: 18px; color:#666;}
+	.wrap-hd span{font-size: 13px; color: #6A7E9F;}
+	.wrap a{color: #6A7E9F;}
+	.wrap a:hover{text-decoration: underline;}
+	.list{text-align: center;}
+	.list li{float: left;padding:0 15px;width:140px; height: 165px; position: relative;}
+	.list li:hover img{ transform: rotate(10deg);}
+	.wait .list li img{width:130px; height: 130px; transition: all .3s;}
+	.wait .bigImg:hover img{width:140px; height: 140px;}
+
+	.list li span{width: 100%; position: absolute; top:145px;left:0px;text-align: center; line-height: 18px;}
+	
+	.doit .wrap-hd{margin-bottom: 30px;}
+	.newsLink{padding-left: 28px;}
+
+	.borrow{text-align: center;}
+	.borrow .list li,.loan .list li{height: 220px;}
+	.borrow .list img,.loan .list img{width: 130px; height: 185px;transition: all .3s;}
+	.borrow .list li span,.loan .list li span{top:200px;}
+/*TA正在讨论部分样式开始*/
+	
+	.talk-L{width:600px;}
+	.talk-L .wrap-hd{margin-bottom: 10px;}
+	.talk-L ul li{border-bottom: 1px solid #EEE;padding:15px 15px 17px;}
+	.talk-L ul .pic img{width: 50px; height: 50px; margin-right: 15px;}
+	.talk-L .first a,.talk-L .second a{color: #999;}
+	.talk-L .second h4{margin-bottom: 10px;}
+	.talk-L .second h4 a{font-size: 16px; color: #333; }
+	.talk-L .second p a:hover{color: #fff; background: #6A7E9F; text-decoration: none;}
+	.talk-L .second p a{display: inline-block; background: #F7F7F7; height:21px; line-height: 21px; padding:0 5px 0; font-size: 12px; border-radius: 4px; margin-right: 12px;}
+	.talk-L .second span{padding-left: 16px; font-size: 12px;line-height: 16px; margin-right: 18px;}
+	.date{background: url(../images/index/ico-date.png) no-repeat left center;}
+	.view{background: url(../images/index/ico-view.png) no-repeat left center;}
+	.thank{background: url(../images/index/ico-thank.png) no-repeat left center;}
+
+	.talk-L .last{width:25px; height: 27px;}
+	.talk-L .last a{color: #fff; display: block; width:25px; height: 27px; line-height: 27px; text-align: center; margin-top: 10px; background: #6A7E9F; border-radius: 4px;}
+
+
+	.hot{width:340px;}
+
+	.hot li{float: left;margin: 0 22px 24px 0;}
+
+	.how ul{padding-left: 18px;}
+	/*.how ul li{float: left;margin:0 25px 10px 0;}*/
+
+	.how li{float:left;margin: 0 25px 24px 0;padding: 1px;background: #fff;border-radius:4px;overflow: hidden;transform-origin:top left;position: relative;transition: all 1s;width:227px;height:135px;}
+	.how li img{border-radius: 4px;}
+	.how li a{color:#e3e3e3;font-size: 16px;background: url(../images/index/tblack_bg.png) no-repeat center center;position: absolute;left:50%;top:170px;width:60px;height: 75px;-webkit-transition:all 1s;-ms-transition:all 1s;-moz-transition:all 1s;-o-transition:all 1s;transition:all 1s;-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);transform: translate(-50%,-50%);text-align: center;}
+	.how li .tBlack{position: absolute;left:50%;top:50%;background:rgba(0,0,0,.5);transform: translate(-50%,-50%);transition:all 1s;height: 0;width: 0;border-radius: 50%;}
+	.how li:hover .tBlack{width:300px;height:300px;}
+	.how li:hover a{top:85px;}
+	.how li a:hover{color:#9ef8f5;}
+
+	.text{/*border:1px solid red;*/text-align: center; font-style: italic; font-size: 18px; color: #6A7E9F; height: 24px; line-height: 24px;}
+	.text em{color: #ED9780;}
+/*主体部分样式结束*/
+
+	

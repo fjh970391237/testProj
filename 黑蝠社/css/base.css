@@ -1,0 +1,620 @@
+@charset "utf-8"; /* CSS Document */ 
+/*css reset 开始*/ 
+/*初始化*/
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,input,button,fieldset, legend,img ,a{ margin:0; padding:0; }
+h1,h2,h3,h4,h5,h6{ font-size:14px; font-weight:normal;}
+fieldset,img{ border:none; }
+img{display:block;}
+li{list-style:none; }
+a{ display:block; color:#C7C7C7; text-decoration:none;}
+a:hover{  text-decoration:underline;}
+body{background:url(../images/bg.jpg) top center fixed; font-size:14px;font-family: 宋体;color: #333333;/*position: relative;*/} 
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.clearfix{
+	zoom:1;
+}
+
+
+/*顶部开始*/
+	.top{
+		width: 984px;
+		height: 88px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.logo a{
+		text-indent: -9999px;
+		width: 120px;
+		height: 88px;
+		background: url(../images/logo.jpg) no-repeat 3px center;
+		float: left;
+	}
+	.top .left{
+		font-size: 12px;
+		width: 503px;
+		height: 88px;
+		margin-left: 300px;
+		float: right;
+	}
+	.left ul{
+		height: 38px;
+		color: #C7C7C7;
+		overflow: hidden;
+		margin-bottom: 8px;
+	}
+	.top ul li{
+		line-height: 36px;
+		float: left;
+		height: 38px;
+	}
+	.collect ,.beauty,.man{
+		padding:0 14px;
+		background:url(../images/top.bg.png) no-repeat right center ;
+	}
+	.collect a{
+		margin-top: 10px;
+		width: 57px;
+		height: 19px;
+		background: url(../images/collect.png);
+	}
+	.top .join{
+		padding-left: 14px;
+	}
+	.join a{
+		width: 78px;
+		height: 37px;
+		background: url(../images/spirit.png ) 0 -67px;
+	}
+	.share{
+		width:167px;
+		height: 100px;
+		float: right;
+	}
+	.bdsharebuttonbox{
+		width:100px;
+		height:28px;
+		float: left;
+	}
+	
+	.left .share span{
+		float: left;
+		width:67px;
+		height: 12px;
+		line-height: 30px;
+		color: #333333;
+	}
+	.left span a {
+		display: inline;
+	}
+/*顶部结束*/
+
+/*导航开始*/
+	.nav{
+		width: 984px;
+		height: 38px;
+		margin: 0 auto;
+		background: url(../images/spirit.png) ;
+		overflow: hidden;
+	}
+	.nav ul {}
+	.nav ul li{
+		width: 109px;
+		text-align: center;
+		float: left;
+		line-height: 38px;
+	}
+	.nav a{
+		margin-left: 4px;
+		font-size: 14px;
+		color: #D7D7D7;
+	}
+	.nav li.current a{
+		color: #DEA853;
+		width: 100px;
+		height: 38px;
+		background: url(../images/menuhover.jpg) no-repeat;
+	}
+	.nav a:hover{
+		background: url(../images/menuhover.jpg) no-repeat;
+	}
+
+/*导航结束*/
+
+/*banner开始*/
+ 	.banner{
+ 		width: 984px;
+ 		height: 496px;
+ 		margin:0 auto;
+ 		background: #fff url(../images/banner.jpg) no-repeat center;
+ 	}
+/*banner结束*/
+
+
+
+/*联系我们开始*/
+ 	.contact,.brandNews,.ShopInfo{
+ 		width:970px;
+ 		background: #fff;
+ 		overflow: hidden;
+ 		zoom:1;
+ 		margin: 0 auto;
+ 		padding: 12px 7px 0;
+ 		padding-bottom: 1px;
+ 		
+ 	}
+ 	.contact .hd{
+		width: 970px;
+		margin-bottom:13px;
+		height: 34px;
+ 		background: url(../images/spirit.png) no-repeat 0 -316px;
+	}
+	.contact .hd h2{
+		text-indent: -9999px;
+		margin-bottom:13px;
+		width: 203px;
+ 		height: 34px;
+ 		background: url(../images/contact.jpg) no-repeat ;
+	}
+	.contactL{
+		width: 664px;
+		height: 664px;
+		float: left;
+	}
+	.contactL .L1{
+		height: 97px;
+		overflow: hidden;
+	}
+	.contactL .L1 p{
+		display: block;
+		width: 108px;
+		height: 91px;
+		background: url(../images/dashed6.png);
+		float: left;
+		padding: 3px;
+	}
+	.contactL .L1 p span{
+		text-align: center;
+		/*padding-top: 8px;*/
+		line-height: 25px;
+		font-size: 12px;
+		color: #333333;
+		width: 108px;
+		height: 91px;
+		display: block;
+		background: #fff;
+	}
+	.contactL .L1 p strong{
+		font-size: 14px;
+		color: #E39433;
+	}
+	.contactL .L1 ul{
+		width: 520px;
+		height: 89px;
+		padding: 3px 12px;
+		float: right;
+		border:1px solid #D7D7D7;
+	}
+	.contactL .L1 ul li{
+		font-size: 12px;
+		color: #999999;
+		line-height: 30px;
+		height: 28px;
+		border-bottom: 1px dashed #DDDDDD;
+	}
+	.contactL .red{
+		color: #D60303;
+	}
+	.contactL .gray{
+		color: #363636;
+	}
+	.contactL img{
+		margin: 15px 0 10px;
+	}
+	.contactL .ft{
+		margin-left: 5px;
+		padding-left: 8px;
+		margin-bottom: 5px;
+		display: block;
+		font-size: 12px;
+		color: #333333;
+		line-height: 30px;
+		width: 606px;
+		height: 35px;
+		background: url(../images/spirit.png) no-repeat 0 -951px;
+	}
+	.contact .L2{
+		overflow: hidden;
+		zoom: 1;
+	}
+	.contact .L2 form{
+		font-size: 12px;
+		color: #333;
+		width: 374px;
+		float: left;
+
+	}
+	.form2{
+		font-size: 12px;
+		color: #333333;
+		width: 363px;
+	}
+	form label{
+		float: left;
+		display:inline-block;
+		width: 85px;
+		text-align: right;
+	}
+	.pre{
+		background: url(../images/pre.gif) no-repeat 15px center;
+	}
+	.form1,.form2,.form3{ overflow: hidden; zoom：1;line-height:23px;}
+	.form3{height: 23px;}
+	.special{
+		width: auto;
+		float: none;
+		vertical-align: bottom;
+		cursor: pointer;
+	}
+	.contact form div{
+		margin: 10px 0;
+	}
+	.form2 input{
+		width: 276px;
+		height: 23px;
+		float: right;
+		border:1px solid #BEBEBE;
+	}
+	.L2 form textarea{
+		color: #666;
+		font-size: 12px;
+		resize:none;
+		width: 272px;
+		height: 134px;
+		margin-bottom: 5px;
+	}
+	.btn{
+		width: 126px;
+		height: 36px;
+		border:0;
+		color: #fff;
+		font-weight: bold;
+		padding-left: 25px;
+		background: url(../images/submit.png) no-repeat;
+		display: block;
+		margin: 0 auto;
+		cursor:pointer ;
+	}
+
+	.L2r{
+		width:260px;
+		height: 356px;
+		float: right;
+		padding: 22px 15px;
+		margin-top: 10px;
+		_display: inline;
+	}
+	.message{
+		width: 179px;
+		height: 87px;
+		margin-bottom: 34px;
+		background: url(../images/message_bg.gif) no-repeat;
+		padding-left: 39px;
+		padding-top: 5px;
+	}
+	.message a{
+		display: block;
+		width: 158px;
+		height: 19px;
+		font-size: 12px;
+		color: #333;
+		line-height: 19px;
+		padding-left: 17px;
+	}
+	.message a:hover{
+		color:#FFBF00;
+		text-decoration: none;
+		background: url(../images/relDes.gif) no-repeat;
+	}
+	.L2r p{
+		font-size: 12px;
+		color:#333;
+		line-height: 35px;
+	}
+
+	.contactR{
+		width: 287px;
+	
+		float: right;
+		padding-left: 7px;
+		padding-bottom: 7px;
+		background: url(../images/dashed10.png);
+		overflow: hidden;
+	}
+	.incontactR{
+		width: 287px;
+		height: 657px;
+		background: #fff;
+	}
+	.inhd{
+		width: 287px;
+	}
+	.inhd img{
+		display: block;
+		width: 119px;
+		height: 60px;
+		padding: 8px 70px;
+		border:1px solid #DFDFDF;
+		margin: 0 auto;
+	}
+	.inhd p{
+		width:259px;
+		margin: 1px auto;
+		padding-top: 10px;
+		line-height: 28px;
+		border-top: 1px solid #DFDFDF;
+		background: url(../images/sanjiao_bg.gif) no-repeat top center;
+	}
+	.inhd p span, .inbd p span{
+		color: #838383;
+	}
+	.inbd{
+		margin-top:6px; 
+		width: 287px;
+		height: 175px;
+		padding-left: 1px;
+	}
+	.inbd h3{
+		color: #D3941A;
+		padding-left: 35px;
+		line-height: 23px;
+		font-weight: bold;
+		width: 285px;
+		height: 23px;
+		background: url(../images/inbd_h3_bg.gif) no-repeat;
+	}
+	.inbd p{
+		font-size: 12px;
+		line-height: 24px;
+	}
+	.inbd p a{
+		display: inline;
+		text-decoration: underline;
+		color: #FF6600;
+	}
+	.inft{
+		margin-top: 5px;
+		width: 287px;
+		height: 270px;
+		background: #fff;
+	}
+	.inft h3{
+		text-indent: -9999px;
+		width: 268px;
+		height: 23px;
+		margin: 0 auto;
+		background: url(../images/inft_h3_bg.gif) no-repeat;
+	}
+	.inft .style{
+		width: 268px;
+		height: 65px;
+		margin: 12px auto 0;
+		border:1px solid #E4E4E4;
+		position: relative;
+	}
+	.inft .inStyle{
+		font-weight: bold;
+		width: 36px;
+		height: 70px;
+		position: absolute;
+		bottom: -2px;
+		left:0;
+		background: url(../images/spirit.png) no-repeat 0 -1020px;
+	}
+	.inft .inStyle p{
+		text-align: center;
+		padding-top: 10px;
+		color: #fff;
+		font-weight: bold;
+	}
+	.inft .style ul{
+		width: 210px;
+		height: 64px;
+		float: right;
+		background: url(../images/dashed6.png);
+		margin-right: 5px;
+		margin-bottom: 10px;
+		overflow: hidden;
+		zoom: 1;
+	}
+	.inft .style ul li{
+		background: #fff;
+		line-height: 32px;
+		height: 32px;
+		width: 70px;
+		float: left;
+		margin-bottom: 1px;
+	}
+	.inft .style ul a{
+		color: #313131;
+	}
+	.inft .style ul a:hover{
+		color: #FF4D4D;
+	}
+/*联系我们结束*/
+
+/*同类品牌开始*/
+	.BrandSame{
+		width: 970px;
+		height: 159px;
+		padding: 12px 7px 0;
+		margin: 0 auto 0;
+		background:#fff;
+		overflow: hidden;
+		/*zoom: 1;*/
+		border-top: 1px solid #DBDBDB;
+
+	}
+	.inBrandSame{
+		/*width: 970px;*/
+		height: 159px;
+		width: 119px;
+		/*_overflow: hidden;*/
+		/*float: left;*/
+		
+		background: url(../images/spirit.png) no-repeat 0 -423px;
+		_background: url(../images/sameBrand_pre_bg.jpg) no-repeat;
+	}
+	.inBrandSame ul{
+		width:851px;
+		height: 152px;
+		/*float: left;*/
+		overflow: hidden;
+		zoom: 1;
+		margin-left: 119px;
+		padding-top: 6px;
+		background: url(../images/BrandSame_bg.gif);
+	}
+	.inBrandSame ul li{
+		background: #fff;
+		padding:0 8px 10px;
+		float: left;
+		margin-left: 9px;
+		_display: inline;
+	}
+	.inBrandSame ul li a{
+		color: #313131;
+		font-size: 12px;
+		text-align: center;
+	}
+	.inBrandSame ul li a:hover{
+		color: #FF4D4D;
+	}
+	.inBrandSame a img{
+		margin: 5px 0 10px;
+	}
+	.inBrandSame ul .moreB{
+		width: 88px;
+		height: 144px;
+		padding:0;
+		background: url(../images/same5.jpg) no-repeat ;
+		float: right;
+		margin-right:10px; 
+		cursor: pointer;
+
+	}
+/*同类品牌结束*/
+
+/*底部开始*/
+	.footer{
+		width: 970px;
+		height:110px;
+		margin: 0 auto;
+		padding: 16px 7px 0;
+		background: #fff;
+	}
+	.footer ul{
+		padding-left: 150px;
+		width: 816px;
+		height: 29px;
+		overflow: hidden;
+		zoom: 1;
+		background: url(../images/footbg.gif) repeat-x;
+	}
+	.footer ul li{
+		/*margin-left: 160px;*/
+
+		display: inline;
+		float: left;
+		padding-top: 5px;
+		/*line-height: 29px;*/
+
+	}
+	.footer ul li a{
+		white-space: nowrap;
+		font-size: 12px;
+		padding: 0 15px;
+		border-right: 1px solid #fff; 
+		color: #fff;
+	}
+	.footer ul .last a{
+		border:0;
+	}
+	.footer p{
+		margin-top: 12px;
+		text-align: center;
+		font-size: 12px;
+		line-height: 24px;
+	}
+/*底部结束*/
+
+/*固定加盟咨询开始 */
+	.fixed{
+		display: block;
+		width: 85px;
+		height: 85px;
+		position: fixed;
+		top:70%;
+		right:55px;
+		z-index:2;
+		cursor: pointer;
+		background: url(../images/join.png) no-repeat scroll;
+	}
+/* 固定加盟咨询结束 -->*/
+
+
+.zs{
+	width: 100%;
+	height: 56px;
+	position: fixed;
+	bottom: 0;
+}
+.zsIn{
+	width: 100%;
+	height: 56px;
+	position: relative;
+	border-top: 1px solid #646464;
+}
+.zs .bg{
+	width: 100%;
+	height: 56px;
+	position:absolute;
+	top:0;
+	left:0;
+	background: #000;
+	opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+.zsbg{
+	width: 946px;
+	height: 56px;
+	position: relative;
+	top:0;
+	left:50%;
+	margin-left: -473px;
+	background: url(../images/zsbg.png) ;
+}
+.zs .ask,.zs .more-zs,.zs .close{
+	height: 32px;
+	/*background: #f00;*/
+	position: absolute;
+	cursor: pointer;
+	top:13px;
+}
+.zs .ask{
+	width: 125px;
+	right:180px;
+}
+.more-zs{
+	width: 102px;
+	right:41px;
+}
+.zs .close{
+	width: 13px;
+	height: 13px;
+	top:5px;
+	right:5px;
+}

@@ -1,0 +1,29 @@
+@charset "utf-8";
+div.allpage {width:auto; white-space:nowrap; float:right; margin-top:8px; margin-bottom:5px; padding-right:8px; }
+.allpage,.allpage * {color:#222; font-size:13px; height:21px; line-height:21px;}
+.allpage div { white-space:nowrap; display:inline; float:left; }
+div.allpage form{ float:left}
+
+
+.pagefont { padding:0 6px;}
+.pagefont A:link,.pagefont A:visited  {COLOR: #323232; font-size:13px; font-weight:bold; text-decoration:underline;}
+.pagefont A.:hover {COLOR: #323232; TEXT-DECORATION:underline;}
+.pageNum {padding:0 5px; float:left; font-size:13px;  font-weight:bold;  line-height:21px;}
+
+
+div.pageGo { padding:0 3px; }
+div.pageGofont { padding:0 2px;}
+.pageGofont input { cursor:pointer; height:18px; margin-top:1px; }
+
+
+#currPageNum {padding:0 4px 0 4px; float:left; line-height:21px;}
+#currPageNum span {padding-left:6px; padding-right:6px; font-weight:bold; color:#FFFFFF; padding-top:2px; padding-bottom:2px; background:#5E90C3; }
+div.pageNum font {COLOR: #fff; font-size:13px; line-height:21px; background-color:#c2030d; padding:2px 6px 1px 6px;　TEXT-DECORATION: none}
+div.pageNum A:link,div.pageNum A:visited  {	COLOR: #fff; font-size:13px; line-height:21px; background-color:#757575; padding:2px 8px 1px 8px;　TEXT-DECORATION: none}
+div.pageNum A:hover {COLOR: #fff; TEXT-DECORATION:none;background-color:#c2030d; }
+.StopChinese{ ime-mode:disabled; width:200px; }
+.bktable{ border:1px solid #cecece;}
+.bktd{ border-top:1px solid #ffffff; border-bottom:3px solid #9aadca;  background-color:#f4f4f4;}
+.mustInput{font-size:11px; color:#e76c09;}
+.PageGoText{ width:28px; border:1px solid #666666; padding-left:3px; height:15px; margin-top:2px; padding:0 3px; background-image:url(/public/Image/gobg.gif); line-height:15px; }
+

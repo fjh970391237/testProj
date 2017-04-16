@@ -1,0 +1,240 @@
+html{
+	font-size: 40px;
+	min-width: 320px;
+	max-width: 540px;
+	margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+.fl{float: left;}
+.fr{float: right;}
+.header{
+	/*width: 13.5rem;*/
+	height: 2rem;
+	text-align: center;
+	line-height: 2rem;
+	font-size: 0.75rem;
+	color: #fff;
+	background: #34bfed;
+	position: relative;
+}
+.header:before{
+	content: '';
+	position: absolute;
+	top:50%;
+	left:0.55rem;
+	width:1.125rem;
+	height: 1.025rem;
+	transform: translateY(-50%);
+	background: url(../images/icon/icon1.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+/* 本例子css -------------------------------------- */
+	.focus{ width:100%;  margin:0 auto; position:relative; overflow:hidden;   }
+	.focus .hd{ width:100%; height:5px;  position:absolute; z-index:1; bottom:0; text-align:center;  }
+	.focus .hd ul{ overflow:hidden; display:-moz-box; display:-webkit-box; display:box; height:5px; background-color:#2786da;   }
+	.focus .hd ul li{ -moz-box-flex:1; -webkit-box-flex:1; box-flex:1; }
+	.focus .hd ul .on{ background:#ff7f5d;  }
+	.focus .bd{ position:relative; z-index:0; }
+	.focus .bd li img{ width: 100%;}
+	.focus .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */ }
+/*插件结束*/
+
+
+/*快乐曲线养生旗舰店部分样式开始*/
+	.wrap{
+		border: 1px solid #e7e7e7;
+		padding:0.5rem 0 0.475rem 0.25rem; 
+		background: #fff;
+	}
+	.left{
+		margin-top: 0.1rem;
+		float: left;
+		width: 2.95rem;
+		height: 2.95rem;
+		padding:3px;
+		border: 1px solid #dadada;
+		margin-right: 0.7rem;
+	}
+	.right{
+		float: left;
+	}
+	.right h2 a{
+		font-family: "微软雅黑";
+		font-size: 0.55rem;
+		color: #515567;
+	}
+	.text{
+		line-height: 1.4rem;
+		font-size: 0.45rem;
+		color: #797979;
+	}
+	.blue{
+		font-size: 0.5rem;
+		color: #328fe1;
+	}
+	.btns{font-size: 0;position: relative;margin-top: 0.1rem;}
+	.btns > div{
+		font-size: 0.45rem;
+		height: 1.1rem;
+		line-height: 1.1rem;
+		background:#2786da;
+		display: inline-block;
+		border-radius: 4px;
+		color: #fff;
+	}
+	.btns div:nth-child(1){
+		text-align: center;
+		width: 2.7rem;
+		margin-right: 0.85rem;
+		cursor: pointer;
+	}
+	.btns div:nth-child(2){
+		padding-left: 0.2rem;
+		width: 5.65rem;
+		box-sizing: border-box;
+	}
+	.btns .inWrap{
+		width: 3.35rem;
+		height: 1rem;
+		background: #fff;
+		position: absolute;
+		top:0.05rem;
+		right:0.05rem;
+		border-radius: 0 4px 4px 0;
+		display: -webkit-box;
+		display: box;
+		display: flex;
+	}
+	.inWrap span{
+		box-flex:1;
+		-webkit-box-flex:1;
+		flex: 1;
+		background: url(../images/icon/icon2.png) no-repeat center;
+		padding: 0.075rem;
+		box-sizing: border-box;
+		cursor: pointer;
+	}
+	.inWrap span:nth-child(2){
+		background-image: url(../images/icon/icon3.png);
+	}
+	.inWrap span:nth-child(3){
+		background-image: url(../images/icon/icon4.png);
+	}
+/*快乐曲线养生旗舰店部分样式结束*/
+
+
+/*商品描述部分样式开始*/
+	.list{padding:0;border-top: 0;}
+	.list .blue{font-size: 0.55rem;}
+	.list .data{
+		margin-left: 0.8rem;
+	}
+	.list li{
+		margin: 0 auto;
+		width: 12rem;
+		line-height: 1.5rem;
+		border-bottom: 1px solid #e7e7e7;
+	}
+	.list li:nth-child(3){
+		border-bottom: 0;
+	}
+	.special{
+		margin-left: 0.8rem;
+		display: inline-block;
+		width: 1.53rem;
+		height: 2px;
+		background: #328fe1;
+	}
+/*商品描述部分样式结束*/
+
+
+	b{
+		display: block;
+		height: 0.475rem;
+		width: 100%;
+		background: #f7f7f7;
+	}
+
+/*全部商品部分样式开始*/
+	.all{
+		padding: 0 1.4rem;
+		line-height: 1.95rem;
+		height: 1.95rem;
+		display: -webkit-box;
+		display: box;
+		display: flex;
+	}
+	.all h3{
+		-webkit-box-flex:1;
+		box-flex:1;
+		flex:1;
+	}
+	.all h3 a{
+		font-family: "微软雅黑";
+		font-size: 0.6rem;
+		color: #515567;
+	}
+	.all h3:nth-child(2){
+		text-align: right;
+		box-sizing: border-box;
+		border-left: 1px solid #e7e7e7;
+	}
+	.all h3 span a{
+		color: #ff7f5d;
+	}
+/*全部商品部分样式结束*/
+
+
+/*首页推荐部分样式开始*/
+	.product h3{
+		border-top: 1px solid #e7e7e7;
+		border-bottom: 1px solid #e7e7e7;
+		padding:0 0.3rem;
+		line-height: 1.75rem;
+		font-size: 0.6rem;
+		color: #515567;
+		margin-bottom: 0.25rem;
+	}
+	.product h3 i{font-weight: bold; float: right;}
+	.product h3 i a{
+		color: #515567;
+	}
+	.product{padding: 0 0.175rem;}
+	.proList li{
+		width:6.4rem;
+		height: 8.7rem;
+		padding: 0.05rem;
+		box-sizing: border-box;
+		float: left;
+		margin-bottom: 0.25rem;
+		border: 1px solid #c5c5c5;
+	}
+	.proList li:nth-child(odd){
+		margin-right: 0.25rem;
+	}
+	.proList img{
+		width: 6.22rem;
+		height: 6rem;
+		overflow: hidden;
+		cursor: pointer;
+	}
+		
+	.proList p{padding-left: 0.2rem; }
+	.proTitle{
+		font-size: 0.35rem;
+		line-height: 0.6rem;
+		color: #666;
+		height: 1.2rem;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	.price{
+		line-height: 1.1rem;
+		font-size: 0.5rem;
+		color: #f40;
+	}
+
+/*首页推荐部分样式结束*/
+

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>书巢-首页</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/ie6png.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+	
+	<!--[if lte IE 6]>
+	<script type="text/javascript" src="js/ie6png.js"></script>
+	<script type="text/javascript">
+		DD_belatedPNG.fix('h1,a');
+	</script>
+	<![endif]-->
+</head>
+<body>
+
+<!-- 登录模态窗口简单模拟 -->
+	<div class="Login">
+		<div class="upLogin">
+			<div class="close"></div>
+			<input type="text" class="userName" value="用户名或邮箱，如name@qq.com">
+			<input type="text" class="passWord" placeholder value="输错5次将锁定账号">
+			<button>确认登录</button>
+			<div class="instant"></div>
+			<div class="forget"></div>
+		</div>
+		<div class="downLogin"></div>
+	</div>
+<!-- 登录模态窗口简单模拟 -->
+
+
+<!-- 导航部分结构开始 -->
+	<div class="top">
+		<div class="header">
+			<h1 class="fl"><a href="index.html">书巢</a></h1>
+			<ul class="fl clearfix">
+				<li class="oneNav place">
+					<div><a href="javascript:;">北京</a></div>
+					<ol>
+						<li><a href="javascript:;">北京</a></li>
+						<li><a href="javascript:;">上海</a></li>
+						<li><a href="javascript:;">广州</a></li>
+						<li><a href="javascript:;">深圳</a></li>
+						<li><a href="javascript:;">其他</a></li>
+					</ol>
+				</li>
+				<li class="oneNav"><a href="book.html">读书</a></li>
+				<li class="oneNav"><a href="people.html">读人</a></li>
+				<li class="oneNav"><a href="javascript:;">话点</a></li>
+				<li class="oneNav"><a href="javascript:;">游吟</a></li>
+			</ul>
+			<div class="header-R fr">
+				<div class="search clearfix fl">
+					<input type="text" value="书名、作者、ISBN" />
+					<s></s>
+				</div>
+				<a href="javascript:;" class="fl login" >登录</a>
+				<a href="javascript:;" class="fr register">注册</a>
+			</div>
+		</div>
+	</div>
+<!-- 导航部分结构结束 -->
+
+
+<!-- banner部分结构开始 -->
+	<div class="banner">
+		<img src="images/index/banner.png" height="410" width="1600" alt="" />
+		<div class="ishu">
+			<h1>书巢</h1>
+			<span>iShuchao.com</span>
+			<p>书巢是一个闲置纸质书的在线漂流平台，亦是一座去中心存储的社会化图书馆。<br />书巢的所有藏书均来自会员捐赠，同时寄存在每个会员处，并且所有会员都可以随时借阅。<br />在书巢你可以捐赠已看过的闲书供他人借阅，还可以借阅他人捐赠的书籍，这一切都是免费的。
+			</p>
+			<a href="javascript:;" class="join">加入书巢</a>
+			<a href="javascript:;" class="start"></a>
+		</div>
+	</div>
+<!-- banner部分结构结束 -->
+
+
+<!-- 主体部分结构开始 -->
+	<div class="wrap">
+		<!-- TA在等你来读部分结构开始 -->
+		<div class="wait clearfix inwrap">
+			<div class="wrap-hd">
+				<h2 class="fl">TA在等你来读</h2>
+				<span class="fr"><a href="javascript:;" >+查看更多</a></span>
+			</div>
+			<ul class="clearfix list">
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/wait-1.jpg" alt="" /></a>
+					<span>
+						<a href="javascript:;" class="pName">shrek</a>
+					</span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/wait-2.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">sudo</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/wait-3.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">Anja</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/wait-4.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">xiaoo</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/wait-5.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">SalvadorCrusoe</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/wait-6.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">linson</a></span>
+				</li>
+			</ul>
+		</div>
+		<!-- TA在等你来读部分结构开始 -->
+
+		<!-- 你的书巢可以做 部分结构开始 -->
+		<div class="doit inwrap">
+			<div class="wrap-hd">
+				<h2 class="fl">你在书巢可以做</h2>
+				<span class="fr">与读懂你的人不期而遇</span>
+			</div>
+			<div class="newsLink"><a href="javascript:;"><img src="images/index/doit.png" height="226" width="966" alt="" /></a></div>
+		</div>
+		<!-- 你的书巢可以做 部分结构结束 -->
+
+
+		<!-- TA想借入的书部分结构开始 -->
+		<div class="borrow inwrap">
+			<div class="wrap-hd">
+				<h2 class="fl">TA想借入的书</h2>
+				<span class="fr"><a href="javascript:;" >+查看更多</a></span>
+			</div>
+			<ul class="clearfix list">
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/borrow-1.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">红楼梦植物文化赏析</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/borrow-2.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">植物古汉名图考</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/borrow-3.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">我们仨</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/borrow-4.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">京东技术解密</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/borrow-5.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">信息简史</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/borrow-6.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">C语言程序设计</a></span>
+				</li>
+			</ul>
+		</div>
+		<!-- TA想借入的书部分结构结束 -->
+
+
+		<!-- TA想借出的书部分结构开始 -->
+		<div class="loan inwrap">
+			<div class="wrap-hd">
+				<h2 class="fl">TA想借出的书</h2>
+				<span class="fr"><a href="javascript:;" >+查看更多</a></span>
+			</div>
+			<ul class="clearfix list">
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/loan-1.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">城乡中国（上）</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/loan-2.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">聪明的投资者</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/loan-3.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">身体的乡愁</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/loan-4.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">蔬菜之神</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/loan-5.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">现代设计的意义</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/loan-6.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">为人的设计</a></span>
+				</li>
+			</ul>
+		</div>
+		<!-- TA想借出的书部分结构结束 -->
+
+
+		<!-- 随机推荐的书部分结构开始 -->
+		<div class="loan inwrap">
+			<div class="wrap-hd">
+				<h2 class="fl">随机推荐的书</h2>
+				<span class="fr"><a href="javascript:;" >+查看更多</a></span>
+			</div>
+			<ul class="clearfix list">
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/random-1.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">英语医学词汇构词法</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/random-2.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">害怕写作</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/random-3.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">将来的你，一定会感谢现在拼命的自己</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/random-4.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">浮生取义</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/random-5.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">等待野蛮人</a></span>
+				</li>
+				<li>
+					<a href="javascript:;" class="bigImg"><img src="images/index/random-6.jpg" alt="" /></a>
+					<span>
+					<a href="javascript:;" class="pName">尼采</a></span>
+				</li>
+			</ul>
+		</div>
+		<!-- 随机推荐的书部分结构结束 -->
+
+
+		<!-- TA正在讨论部分结构开始 -->
+		<div class="talk clearfix ">
+			<div class="talk-L fl">
+				<div class="wrap-hd">
+					<h2 class="fl">TA正在讨论</h2>
+					<span class="fr"><a href="javascript:;" >+查看更多</a></span>
+				</div>
+				<ul>
+					<li class="clearfix first">
+						<div class="pic fl"><a href="javascript:;"><img src="images/index/talk-l-1.jpg" height="140" width="140" alt="" /></a></div>
+						<div class="fl second">
+							<h4>
+							<a href="javascript:;" class="special">屠呦呦成为中国首位自然科学诺奖获得者</a></h4>
+							<p>
+								<a href="javascript:;">新闻</a>
+								<span class="date">最近更新于13时18分前</span>
+								<span class="view">22浏览</span>
+								<span class="thank">0点赞</span>
+								<a href="javascript:;">cash</a>
+							</p>
+						</div>
+						<div class="fr last"><a href="javascript:;">1</a></div>
+					</li>
+					<li class="clearfix first">
+						<div class="pic fl"><a href="javascript:;"><img src="images/index/talk-l-2.jpg" height="140" width="140" alt="" /></a></div>
+						<div class="fl second">
+							<h4>
+							<a href="javascript:;" class="special">取书地点的查询</a></h4>
+							<p>
+								<a href="javascript:;">所有</a>
+								<span class="date">最近更新于12时14分前</span>
+								<span class="view">13浏览</span>
+								<span class="thank">0点赞</span>
+								<a href="javascript:;">sll1983</a>
+							</p>
+						</div>
+						<div class="fr last"><a href="javascript:;">0</a></div>
+					</li>
+					<li class="clearfix first">
+						<div class="pic fl"><a href="javascript:;"><img src="images/index/talk-l-3.jpg" height="140" width="140" alt="" /></a></div>
+						<div class="fl second">
+							<h4>
+							<a href="javascript:;" class="special">建议增加“有借有还"的借阅方式</a></h4>
+							<p>
+								<a href="javascript:;">建议</a>
+								<span class="date">最近更新于1天6时前</span>
+								<span class="view">177浏览</span>
+								<span class="thank">3点赞</span>
+								<a href="javascript:;">Diablo</a>
+							</p>
+						</div>
+						<div class="fr last"><a href="javascript:;">8</a></div>
+					</li>
+					<li class="clearfix first">
+						<div class="pic fl"><a href="javascript:;"><img src="images/index/talk-l-5.jpg" height="140" width="140" alt="" /></a></div>
+						<div class="fl second">
+							<h4>
+							<a href="javascript:;" class="special">A life changing moment</a></h4>
+							<p>
+								<a href="javascript:;">随想</a>
+								<span class="date">最近更新于3天16时前</span>
+								<span class="view">24浏览</span>
+								<span class="thank">0点赞</span>
+								<a href="javascript:;">Octavian</a>
+							</p>
+						</div>
+						<div class="fr last"><a href="javascript:;">0</a></div>
+					</li>
+					<li class="clearfix first">
+						<div class="pic fl"><a href="javascript:;"><img src="images/index/talk-l-6.jpg" height="140" width="140" alt="" /></a></div>
+						<div class="fl second">
+							<h4>
+							<a href="javascript:;" class="special">挂耳咖啡书巢网友特别价 29 元， 1 盒也包邮！</a></h4>
+							<p>
+								<a href="javascript:;">咖啡</a>
+								<span class="date">最近更新于4天12时前</span>
+								<span class="view">73浏览</span>
+								<span class="thank">1点赞</span>
+								<a href="javascript:;">wonsper</a>
+							</p>
+						</div>
+						<div class="fr last"><a href="javascript:;">1</a></div>
+					</li>
+					<li class="clearfix first">
+						<div class="pic fl"><a href="javascript:;"><img src="images/index/talk-l-7.jpg" height="140" width="140" alt="" /></a></div>
+						<div class="fl second">
+							<h4>
+							<a href="javascript:;" class="special">捐书有没有批量导入的方法</a></h4>
+							<p>
+								<a href="javascript:;">疑问</a>
+								<span class="date">最近更新于6天1时前</span>
+								<span class="view">22浏览</span>
+								<span class="thank">0点赞</span>
+								<a href="javascript:;">wonsper</a>
+							</p>
+						</div>
+						<div class="fr last"><a href="javascript:;">6</a></div>
+					</li>
+				</ul>
+			</div>
+			<div class="hot fr">
+				<div class="wrap-hd">
+					<h2 class="fl">热门讨论节点</h2>
+					<span class="fr"><a href="javascript:;" >+查看更多</a></span>
+				</div>
+				<ul class="clearfix">
+					<li><a href="javascript:;"><img src="images/index/type_1.png" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="images/index/type_2.png" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="images/index/type_3.png" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="images/index/type_4.png" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="images/index/type_5.png" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="images/index/type_6.png" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="images/index/type_7.png" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="images/index/type_8.png" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="images/index/type_9.png" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="images/index/type_10.png" alt="" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- TA正在讨论部分结构结束 -->
+
+
+		<!-- 书巢如何工作部分结构开始 -->
+		<div class="how inwrap">
+			<div class="wrap-hd">
+				<h2 class="fl">书巢如何工作</h2>
+				<span class="fr">给相遇一个理由</span>
+			</div>
+			<ul class="clearfix">
+				<li>
+					<img src="images/index/bottom_1.png" />
+					<span class="tBlack"></span>
+					<a href="javascript:;" target="_blank">标记</a>
+				</li>
+				<li>
+					<img src="images/index/bottom_2.png" />
+					<span class="tBlack"></span>
+					<a href="javascript:;" target="_blank">分享</a>
+				</li>
+				<li>
+					<img src="images/index/bottom_3.png" />
+					<span class="tBlack"></span>
+					<a href="javascript:;" target="_blank">连接</a>
+				</li>
+				<li>
+					<img src="images/index/bottom_4.png" />
+					<span class="tBlack"></span>
+					<a href="javascript:;" target="_blank">遇见</a>
+				</li>
+				<!-- <li><a href="javascript:;"><img src="images/index/bottom_2.png" /></a></li>
+				<li><a href="javascript:;"><img src="images/index/bottom_3.png" /></a></li>
+				<li><a href="javascript:;"><img src="images/index/bottom_4.png" /></a></li> -->
+			</ul>
+		</div>
+		<!-- 书巢如何工作部分结构结束 -->
+
+		<div class="text">书巢目前藏书<em>2040</em>册，已被来自全国<em>385</em>个城市的<em>2973</em>名会员分享<em>90</em>次</div>
+
+	</div>
+<!-- 主体部分结构结束 -->
+
+
+<!-- 底部结构开始 -->
+	<div class="footer">
+		<div class="inFooter">
+			<ul class="fl">
+				<li><a href="javascript:;">关于</a><em>|</em></li>
+				<li><a href="javascript:;">指南</a><em>|</em></li>
+				<li><a href="javascript:;">帮助</a><em>|</em></li>
+				<li><a href="javascript:;">反馈</a><em>|</em></li>
+				<li><a href="javascript:;">联系</a></li>
+			</ul>
+			<p class="fr">京ICP备14023315号　© 2015 <a href="javascript:;">书巢</a>保留所有权利</p>
+		</div>
+	</div>
+<!-- 底部结构结束 -->
+
+
+
+
+</body>
+</html>

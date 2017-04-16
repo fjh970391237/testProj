@@ -1,0 +1,27 @@
+#picArea{ width:686px; height:auto; overflow:hidden; text-align:center; padding:20px 0; }
+.prevIcon {
+	Z-INDEX: 5; POSITION: absolute; FILTER: alpha(opacity=50); WIDTH: 80px; DISPLAY: none; HEIGHT: 80px; left:-0px;TOP: 375px; CURSOR: pointer; -moz-opacity: 0.5; opacity: 0.5; background:url(/public/brandzt/images/zt2013bg.png) -780px -534px;
+}
+.nextIcon {
+	Z-INDEX: 5; POSITION: absolute; FILTER: alpha(opacity=50); WIDTH: 80px; DISPLAY: none; right:8px; HEIGHT: 80px; TOP: 375px; CURSOR: pointer; -moz-opacity: 0.5; opacity: 0.5; background:url(/public/brandzt/images/zt2013bg.png) -870px -534px;
+}
+
+.picArea {
+	POSITION: relative; PADDING-BOTTOM: 0px; PADDING-LEFT: 25px; WIDTH: 940px; PADDING-RIGHT: 25px; CLEAR: both; PADDING-TOP: 0px
+}
+
+.picture {
+	POSITION: relative; TEXT-ALIGN: center; background:url(/public/image/bsload.gif) center no-repeat; MARGIN: 0px auto; MIN-HEIGHT: 260px; WIDTH: 686px; ZOOM: 1; VERTICAL-ALIGN: middle; _height: 500px; float:left; 
+}
+.picture IMG.loading {
+	MARGIN: 242px auto
+}
+#thumbnail img { cursor:pointer;}
+
+#imgList ul{ width:164px; height:466px; overflow:hidden; margin:0 auto;}
+#imgList ul li{ width:150px; height:94px; overflow:hidden; padding:3px; border:1px solid #d1d1d1; margin:0 auto; margin:12px auto;}
+#imgList ul li.hover{ width:150px; border:2px solid #FF9900; padding:2px;}
+
+#imgList{ width:217px; height:auto; overflow:hidden; background:#fff; float:right; padding-bottom:10px;}
+#imgList p{ width:199px; height:30px; overflow:hidden; background:url(/public/brandzt/images/zt2013bg.png) -285px -900px; margin:0 auto; cursor:pointer;}
+#imgList p.topBtn{ background-position:-521px -900px;height:20px;}
