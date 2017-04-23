@@ -1,8 +1,8 @@
 /*
 * @Author: anqi
 * @Date:   2017-02-16 17:23:19
-* @Last Modified by:   anqi
-* @Last Modified time: 2017-02-17 11:27:18
+* @Last Modified by:   asuspc
+* @Last Modified time: 2017-04-23 15:12:45
 */
 html, body {
         margin: 0;
@@ -527,6 +527,7 @@ html, body {
         animation: fadeIn .5s ease 2s;
         -webkit-animation: fadeIn .5s ease 2s ;
     }
+    .item6 .viewWorks a{color:white;text-decoration: none}
 /* 第六屏 E*/
 
 /* 动画停留在最后一帧 */
