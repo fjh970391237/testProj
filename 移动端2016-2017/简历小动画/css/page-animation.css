@@ -1,0 +1,553 @@
+/* 如动画过程有闪烁（通常发生在动画开始的时候），可以尝试下面的Hack： */
+/*-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-ms-backface-visibility: hidden;
+backface-visibility: hidden;
+
+-webkit-perspective: 1000;
+-moz-perspective: 1000;
+-ms-perspective: 1000;
+perspective: 1000; */
+
+.animated {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+
+/* 使用css translate在android上相当杯具，
+而在iOS的mobile safari里面使用，则transalte2d的效果远远不如translate3d */
+
+/*====================== slideLeft ====================*/
+/* 从右向左滑动，并有晃动 */
+.slideLeft{
+        animation: slideLeft 1s ease-in-out;
+        -webkit-animation: slideLeft 1s ease-in-out;
+    }
+    @keyframes slideLeft {
+        0%  {opacity: 0;transform: translate3d(150%,0,0);}
+        50% {opacity: 1;transform: translate3d(-8%,0,0);}
+        65% {opacity: 1;transform: translate3d(4%,0,0);}
+        80% {opacity: 1;transform: translate3d(-4%,0,0);}
+        95% {opacity: 1;transform: translate3d(2%,0,0);}
+        100%{opacity: 1;transform: none;}
+    }
+    @-webkit-keyframes slideLeft {
+        0%  {opacity: 0;-webkit-transform: translate3d(150%,0,0);}
+        50% {opacity: 1;-webkit-transform: translate3d(-8%,0,0);}
+        65% {opacity: 1;-webkit-transform: translate3d(4%,0,0);}
+        80% {opacity: 1;-webkit-transform: translate3d(-4%,0,0);}
+        95% {opacity: 1;-webkit-transform: translate3d(2%,0,0);}
+        100%{opacity: 1;-webkit-transform: none;}
+    }
+/*====================== slideRight ====================*/
+/* 从左向右滑动，并有晃动 */
+.slideRight{
+        animation: slideRight 1s ease-in-out;
+        -webkit-animation: slideRight 1s ease-in-out;
+    }
+    @keyframes slideRight {
+        0%  {opacity: 0;transform: translate3d(-150%,0,0);}
+        50% {opacity: 1;transform: translate3d(8%,0,0);}
+        65% {opacity: 1;transform: translate3d(-4%,0,0);}
+        80% {opacity: 1;transform: translate3d(4%,0,0);}
+        95% {opacity: 1;transform: translate3d(-2%,0,0);}
+        100%{opacity: 1;transform: none;}
+    }
+    @-webkit-keyframes slideRight {
+        0%  {opacity: 0;-webkit-transform: translate3d(-150%,0,0);}
+        50% {opacity: 1;-webkit-transform: translate3d(8%,0,0);}
+        65% {opacity: 1;-webkit-transform: translate3d(-4%,0,0);}
+        80% {opacity: 1;-webkit-transform: translate3d(4%,0,0);}
+        95% {opacity: 1;-webkit-transform: translate3d(-2%,0,0);}
+        100%{opacity: 1;-webkit-transform: none;}
+    }
+/*====================== slideUp ====================*/
+/* 从下向上滑动，并有晃动 ，类似moveUp*/
+.slideUp {
+        animation: slideUp 1s ease-in-out;
+        -webkit-animation: slideUp 1s ease-in-out;
+    }
+    @keyframes slideUp {
+        0%  {opacity: 0;transform: translate3d(0,100%,0);}
+        50% {opacity: 1;transform: translate3d(0,-8%,0);}
+        65% {opacity: 1;transform: translate3d(0,4%,0);}
+        80% {opacity: 1;transform: translate3d(0,-4%,0);}
+        95% {opacity: 1;transform: translate3d(0,2%,0);}
+        100%{opacity: 1;transform: none;}
+    }
+
+    @-webkit-keyframes slideUp {
+        0%  {opacity: 0;-webkit-transform: translate3d(0,100%,0);}
+        50% {opacity: 1;-webkit-transform: translate3d(0,-8%,0);}
+        65% {opacity: 1;-webkit-transform: translate3d(0,4%,0);}
+        80% {opacity: 1;-webkit-transform: translate3d(0,-4%,0);}
+        95% {opacity: 1;-webkit-transform: translate3d(0,2%,0);}
+        100%{opacity: 1;-webkit-transform: none;}
+    }
+/*====================== slideDown ====================*/
+/* 从上向下滑动，并有晃动 ，类似moveDown*/
+.slideDown {
+        animation: slideDown 1s ease-in-out;
+        -webkit-animation: slideDown 1s ease-in-out;
+    }
+    @keyframes slideDown {
+        0%  {opacity: 0;transform: translate3d(0,-100%,0);}
+        50% {opacity: 1;transform: translate3d(0,8%,0);}
+        65% {opacity: 1;transform: translate3d(0,-4%,0);}
+        80% {opacity: 1;transform: translate3d(0,4%,0);}
+        95% {opacity: 1;transform: translate3d(0,-2%,0);}
+        100%{opacity: 1;transform: none;}
+    }
+
+    @-webkit-keyframes slideDown {
+        0%  {opacity: 0;-webkit-transform: translate3d(0,-100%,0);}
+        50% {opacity: 1;-webkit-transform: translate3d(0,8%,0);}
+        65% {opacity: 1;-webkit-transform: translate3d(0,-4%,0);}
+        80% {opacity: 1;-webkit-transform: translate3d(0,4%,0);}
+        95% {opacity: 1;-webkit-transform: translate3d(0,-2%,0);}
+        100%{opacity: 1;-webkit-transform: none;}
+    }
+/*====================== pullUp ====================*/
+/* 从下长高 高度变化，注意中心点位置*/
+.pullUp {
+        animation: pullUp 1.1s ease-out;
+        -webkit-animation: pullUp 1.1s ease-out;
+        transform-origin: 50% 100%;
+        -webkit-transform-origin: 50% 100%;
+    }
+    @keyframes pullUp {
+        0%  {opacity: 0;transform: scaleY(0.1) translateZ(0);}
+        40% {opacity: 1;transform: scaleY(1.02) ;}
+        60% {opacity: 1;transform: scaleY(0.98) ;}
+        80% {opacity: 1;transform: scaleY(1.01) ;}
+        100%{opacity: 1;transform: scaleY(1) ;}
+    }
+    @-webkit-keyframes pullUp {
+        0%  {opacity: 0;-webkit-transform: scaleY(0.1) translateZ(0);}
+        40% {opacity: 1;-webkit-transform: scaleY(1.02) ;}
+        60% {opacity: 1;-webkit-transform: scaleY(0.98) ;}
+        80% {opacity: 1;-webkit-transform: scaleY(1.01) ;}
+        100%{opacity: 1;-webkit-transform: scaleY(1) ;}
+    }
+
+/*====================== pullDown ====================*/
+/* 从上长高 高度变化，注意中心点位置*/
+.pullDown {
+        animation: pullDown 1.1s ease-out;
+        -webkit-animation: pullDown 1.1s ease-out;
+        transform-origin: 50% 0%;
+        -webkit-transform-origin: 50% 0%;
+    }
+    @keyframes pullDown {
+        0%  {opacity: 0;transform: scaleY(0.1) translateZ(0);}
+        40% {opacity: 1;transform: scaleY(1.02) translateZ(0);}
+        60% {opacity: 1;transform: scaleY(0.98) translateZ(0);}
+        80% {opacity: 1;transform: scaleY(1.01) translateZ(0);}
+        100%{opacity: 1;transform: scaleY(1) translateZ(0);}
+    }
+    @-webkit-keyframes pullDown {
+        0%  {opacity: 0;-webkit-transform: scaleY(0.1) translateZ(0);}
+        40% {opacity: 1;-webkit-transform: scaleY(1.02) translateZ(0);}
+        60% {opacity: 1;-webkit-transform: scaleY(0.98) translateZ(0);}
+        80% {opacity: 1;-webkit-transform: scaleY(1.01) translateZ(0);}
+        100%{opacity: 1;-webkit-transform: scaleY(1) translateZ(0);}
+    }
+/*====================== heartBeat ====================*/
+/* 原位置闪烁 */
+.heartBeat{
+        animation: heartBeat 1.5s infinite;
+        -webkit-animation: heartBeat 1.5s infinite;
+    }
+    @keyframes heartBeat {
+        0%   {opacity: 0.7;transform: scale(0.95); }
+        50%  {opacity: 1.0;transform: scale(1); }   
+        100% {opacity: 0.7;transform: scale(0.95); }           
+    }
+
+    @-webkit-keyframes heartBeat {
+        0%   {opacity: 0.7;-webkit-transform: scale(0.95); }
+        50%  {opacity: 1.0;-webkit-transform: scale(1); }   
+        100% {opacity: 0.7;-webkit-transform: scale(0.95); }           
+    }
+/*====================== rollInLeft ====================*/
+/* 从左侧旋转进来 */
+.rollInLeft {
+        animation: rollInLeft 1s ease-in-out;
+        -webkit-animation: rollInLeft 1s ease-in-out;
+    }
+    @-webkit-keyframes rollInLeft {
+        0% {opacity: 0; -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+                                transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);}
+        100%{opacity: 1;-webkit-transform: none;transform: none;}
+    }
+
+    @keyframes rollInLeft {
+        0% {opacity: 0; -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+                                transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);}
+        100%{opacity: 1;-webkit-transform: none;transform: none;}
+    }
+/*====================== rollInRight ====================*/
+/* 从右侧旋转进来 */
+.rollInRight {
+        animation: rollInRight 1s ease-in-out;
+        -webkit-animation: rollInRight 1s ease-in-out;
+    }
+    @-webkit-keyframes rollInRight {
+        0% {opacity: 0; -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+                                transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);}
+        100%{opacity: 1;-webkit-transform: none;transform: none;}
+    }
+
+    @keyframes rollInRight {
+        0% {opacity: 0; -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+                                transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);}
+        100%{opacity: 1;-webkit-transform: none;transform: none;}
+    }
+/*====================== expandOpen ====================*/
+.expandOpen {
+        animation: expandOpen 1s ease-in-out;
+        -webkit-animation: expandOpen 1s ease-in-out;
+    }
+    @keyframes expandOpen {
+        0%  {opacity: 0;transform: scale(1.8) translateZ(0);}
+        50% {opacity: 1;transform: scale(0.95) translateZ(0);}
+        80% {opacity: 1;transform: scale(1.05) translateZ(0);}
+        90% {opacity: 1;transform: scale(0.98) translateZ(0);}
+        100%{opacity: 1;transform: scale(1) translateZ(0);}
+    }
+    @-webkit-keyframes expandOpen {
+        0%  {opacity: 0;-webkit-transform: scale(1.8) translateZ(0);}
+        50% {opacity: 1;-webkit-transform: scale(0.95) translateZ(0);}
+        80% {opacity: 1;-webkit-transform: scale(1.05) translateZ(0);}
+        90% {opacity: 1;-webkit-transform: scale(0.98) translateZ(0);}
+        100%{opacity: 1;-webkit-transform: scale(1) translateZ(0);}
+    }
+/*====================== zoomIn ====================*/
+.zoomIn {
+        animation: zoomIn 1s ease-in-out;
+        -webkit-animation: zoomIn 1s ease-in-out;
+    }
+    @-webkit-keyframes zoomIn {
+        0%  {opacity: 0;-webkit-transform: scale3d(.3, .3, .3);}
+        100%{opacity: 1;}
+    }
+
+    @keyframes zoomIn {
+        0%  {opacity: 0;transform: scale3d(.3, .3, .3);-webkit-transform: scale3d(.3, .3, .3);}
+        100%{opacity: 1;}
+    }
+/*====================== zoomInDown ====================*/
+.zoomInDown {
+        -webkit-animation-name: zoomInDown;
+        animation-name: zoomInDown;
+    }
+    @-webkit-keyframes zoomInDown {
+        0% {opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        60%{opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        }
+        100%{opacity: 1;-webkit-transform: none;transform: none;}
+    }
+    @keyframes zoomInDown {
+        0% {opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        60%{opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        }
+        100%{opacity: 1;-webkit-transform: none;transform: none;}
+    }
+/*====================== fadeInNormal ====================*/
+.fadeInNormal {
+        animation: fadeInNormal 1.5s ease-in-out;
+        -webkit-animation: fadeInNormal 1.5s ease-in-out;
+    }
+    @keyframes fadeInNormal{
+        0%  {opacity: 0;}
+        100%{opacity: 1;}
+    }
+    @-webkit-keyframes fadeInNormal{
+        0%  {opacity: 0;}
+        100%{opacity: 1;}
+    }
+/*====================== fadeIn ====================*/
+.fadeIn {
+        animation: fadeIn 1.5s ease-in-out;
+        -webkit-animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+        0%   {transform: scale(0.0);opacity: 0.0;}
+        60%  {transform: scale(1.15);opacity: 0;}
+        80%  {transform: scale(0.85);opacity: 1;}   
+        100% {transform: scale(1.0);opacity: 1;}       
+    }
+    @-webkit-keyframes fadeIn {
+        0%   {-webkit-transform: scale(0);opacity: 0.0;}
+        60%  {-webkit-transform: scale(1.15);opacity: 0;}
+        80%  {-webkit-transform: scale(0.85);opacity: 1; }   
+        100% {-webkit-transform: scale(1);opacity: 1; }       
+    }
+/*====================== moveUp ====================*/
+/* 从下向上移动并淡入 */
+.moveUp {
+        animation: moveUp 1s ease;
+        -webkit-animation: moveUp 1s ease;
+    }
+    @keyframes moveUp {
+        0%  {opacity: 0;transform: translateY(100%);}
+        100%{opacity: 1;transform: translateY(0%);}
+    }
+    @-webkit-keyframes moveUp {
+        0%  {opacity: 0;-webkit-transform: translateY(100%);}
+        100%{opacity: 1;-webkit-transform: translateY(0%);}
+    }
+/*====================== moveDown ====================*/
+/* 从上向下移动并淡入 */
+.moveDown {
+        animation: moveDown 1s ease;
+        -webkit-animation: moveDown 1s ease;
+    }
+    @keyframes moveDown {
+        0%  {opacity: 0;transform: translateY(-100%);}
+        100%{opacity: 1;transform: translateY(0%);}
+    }
+    @-webkit-keyframes moveDown {
+        0%  {opacity: 0;-webkit-transform: translateY(-100%);}
+        100%{opacity: 1;-webkit-transform: translateY(0%);}
+    }
+/*====================== moveLeft ====================*/
+/* 从右向左移动并淡入 */
+.moveLeft {
+        animation: moveLeft 1s ease-in-out;
+        -webkit-animation: moveLeft 1s ease-in-out;
+    }
+    @keyframes moveLeft {
+        0%  {opacity: 0;transform: translateX(150%);}
+        100%{opacity: 1;transform: translateX(0%);}
+    }
+    @-webkit-keyframes moveLeft {
+        0%  {opacity: 0;-webkit-transform: translateX(150%);}
+        100%{opacity: 1;-webkit-transform: translateX(0%);}
+    }
+/*====================== moveRight ====================*/
+/* 从左向左移动并淡入 */
+.moveRight {
+        animation: moveRight 1s ease-in-out;
+        -webkit-animation: moveRight 1s ease-in-out;
+    }
+    @keyframes moveRight {
+        0%  {opacity: 0;transform: translateX(-150%);}
+        100%{opacity: 1;transform: translateX(0%);}
+    }
+    @-webkit-keyframes moveRight {
+        0%  {opacity: 0;-webkit-transform: translateX(-150%);}
+        100%{opacity: 1;-webkit-transform: translateX(0%);}
+    }
+/*====================== rotateIn ====================*/
+/* 围绕中心点，旋转出现 */
+.rotateIn {
+        animation: rotateIn 1s ease-in-out;
+        -webkit-animation: rotateIn 1s ease-in-out;
+    }
+    @keyframes rotateIn {
+        0%  {opacity: 0;
+            -webkit-transform: rotate3d(0, 0, 1, -200deg);transform: rotate3d(0, 0, 1, -200deg);
+          }
+        100%{opacity: 1;-webkit-transform: none;transform: none;
+        }
+    }
+    @-webkit-keyframes rotateIn {
+        0%  {opacity: 0;-webkit-transform: rotate3d(0, 0, 1, -200deg);}
+        100%{opacity: 1;-webkit-transform: none;}
+    }
+/*====================== rotateInDownLeft ========================*/
+/* 左下角为中心，向右旋转90度 */
+.rotateInDownLeft {
+        -webkit-animation-name: rotateInDownLeft;
+        animation-name: rotateInDownLeft;
+    }
+    @-webkit-keyframes rotateInDownLeft {
+        0% {opacity: 0;
+            -webkit-transform-origin: left bottom;
+            -webkit-transform: rotate(-90deg) translateZ(0);
+        }
+        100% {opacity: 1;
+            -webkit-transform-origin: left bottom;
+            -webkit-transform: rotate(0) translateZ(0);
+        }
+    }
+    @keyframes rotateInDownLeft {
+        0% {opacity: 0;
+            -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+            -webkit-transform: rotate(-90deg) translateZ(0);
+            transform: rotate(-90deg) translateZ(0);
+        }
+        100% {opacity: 1;
+            -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+            -webkit-transform: rotate(0) translateZ(0);
+            transform: rotate(0) translateZ(0);
+        }
+    }
+/*====================== rotateInDownRight ========================*/
+/* 右下角为中心，向左旋转90度 */
+.rotateInDownRight {
+        -webkit-animation-name: rotateInDownRight;
+        animation-name: rotateInDownRight;
+    }
+    @-webkit-keyframes rotateInDownRight {
+        0% {opacity: 0;
+            -webkit-transform-origin: right bottom;
+            -webkit-transform: rotate(90deg) translateZ(0);
+        }
+        100% {opacity: 1;
+            -webkit-transform-origin: right bottom;
+            -webkit-transform: rotate(0) translateZ(0);
+        }
+    }
+    @keyframes rotateInDownRight {
+        0% {opacity: 0;
+            -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+            -webkit-transform: rotate(90deg) translateZ(0);
+            transform: rotate(90deg) translateZ(0);
+        }
+        100% {opacity: 1;
+            -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+            -webkit-transform: rotate(0) translateZ(0);
+            transform: rotate(0) translateZ(0);
+        }
+    }
+/*====================== flipInY ========================*/
+/* 绕Y轴晃动 */
+.flipInY {
+        -webkit-backface-visibility: visible !important;
+        backface-visibility: visible !important;
+        -webkit-animation-name: flipInY;
+        animation-name: flipInY;
+    }
+    @keyframes flipInY {
+        0%  {transform: perspective(400px) rotateY(90deg) translateZ(0);opacity: 0;}
+        40% {transform: perspective(400px) rotateY(-10deg) translateZ(0);}
+        70% {transform: perspective(400px) rotateY(10deg) translateZ(0);}
+        100%{transform: perspective(400px) rotateY(0deg) translateZ(0);opacity: 1;}
+    }
+    @-webkit-keyframes flipInY {
+        0%  {-webkit-transform: perspective(400px) rotateY(90deg) translateZ(0);opacity: 0;}
+        40% {-webkit-transform: perspective(400px) rotateY(-10deg) translateZ(0);}
+        70% {-webkit-transform: perspective(400px) rotateY(10deg) translateZ(0);}
+        100%{-webkit-transform: perspective(400px) rotateY(0deg) translateZ(0);opacity: 1;}
+    }
+/*====================== flipInX ========================*/
+/* 绕X轴晃动 */
+.flipInX {
+        -webkit-backface-visibility: visible !important;
+        backface-visibility: visible !important;
+        -webkit-animation-name: flipInX;
+        animation-name: flipInX;
+    }
+    @keyframes flipInX {
+        0%  {transform: perspective(400px) rotateX(90deg);opacity: 0;}
+        40% {transform: perspective(400px) rotateX(-10deg);}
+        70% {transform: perspective(400px) rotateX(10deg);}
+        100%{transform: perspective(400px) rotateX(0deg);opacity: 1;}
+    }
+    @-webkit-keyframes flipInX {
+        0%  {-webkit-transform: perspective(400px) rotateX(90deg);opacity: 0;}
+        40% {-webkit-transform: perspective(400px) rotateX(-10deg);}
+        70% {-webkit-transform: perspective(400px) rotateX(10deg);}
+        100%{-webkit-transform: perspective(400px) rotateX(0deg);opacity: 1;}
+    }
+/*====================== lightSpeedIn ========================*/
+/* X轴倾斜 */
+.lightSpeedIn {
+        animation: lightSpeedIn 0.5s ease-out;
+        -webkit-animation: lightSpeedIn 0.5s ease-out;
+    }
+    @keyframes lightSpeedIn {
+        0%  {opacity: 0;transform: translateX(100%) skewX(-30deg);}
+        60% {opacity: 1;transform: translateX(-20%) skewX(30deg);}
+        80% {opacity: 1;transform: translateX(0%) skewX(-15deg);}
+        100%{opacity: 1;transform: translateX(0%) skewX(0deg);}
+    }
+    @-webkit-keyframes lightSpeedIn {
+        0%  {opacity: 0;-webkit-transform: translateX(100%) skewX(-30deg);}
+        60% {opacity: 1;-webkit-transform: translateX(-20%) skewX(30deg);}
+        80% {opacity: 1;-webkit-transform: translateX(0%) skewX(-15deg);}
+        100%{opacity: 1;-webkit-transform: translateX(0%) skewX(0deg);}
+    }
+/*====================== stretchLeft ========================*/
+/* 从右向左拉伸 */
+.stretchLeft {
+        animation: stretchLeft 1.5s ease-out;
+        -webkit-animation: stretchLeft 1.5s ease-out;
+        transform-origin: 100% 0%;
+        -webkit-transform-origin: 100% 0%;
+    }
+    @keyframes stretchLeft {
+        0%  {opacity: 0;transform: scaleX(0.3); -webkit-transform: scaleX(0.3);}
+        40% {opacity: 1;transform: scaleX(1.02);-webkit-transform: scaleX(1.02);}
+        60% {opacity: 1;transform: scaleX(0.98);-webkit-transform: scaleX(0.98);}
+        80% {opacity: 1;transform: scaleX(1.01);-webkit-transform: scaleX(1.01);}
+        100%{opacity: 1;transform: scaleX(1);   -webkit-transform: scaleX(1);}
+    }
+    @-webkit-keyframes stretchLeft {
+        0%  {opacity: 0;-webkit-transform: scaleX(0.3);}
+        40% {opacity: 1;-webkit-transform: scaleX(1.02);}
+        60% {opacity: 1;-webkit-transform: scaleX(0.98);}
+        80% {opacity: 1;-webkit-transform: scaleX(1.01);}
+        100%{opacity: 1;-webkit-transform: scaleX(1);}
+    }
+/*====================== stretchRight ========================*/
+/* 从左向右拉伸 */
+.stretchRight {
+        animation: stretchRight 1.5s ease-out;
+        -webkit-animation: stretchRight 1.5s ease-out;
+        transform-origin: 0% 0%;
+        -webkit-transform-origin: 0% 0%;
+    }
+    @keyframes stretchRight {
+        0%  {opacity: 0;transform: scaleX(0.3); -webkit-transform: scaleX(0.3);}
+        40% {opacity: 1;transform: scaleX(1.02);-webkit-transform: scaleX(1.02);}
+        60% {opacity: 1;transform: scaleX(0.98);-webkit-transform: scaleX(0.98);}
+        80% {opacity: 1;transform: scaleX(1.01);-webkit-transform: scaleX(1.01);}
+        100%{opacity: 1;transform: scaleX(1);   -webkit-transform: scaleX(1);}
+    }
+    @-webkit-keyframes stretchRight {
+        0%  {opacity: 0;-webkit-transform: scaleX(0.3);}
+        40% {opacity: 1;-webkit-transform: scaleX(1.02);}
+        60% {opacity: 1;-webkit-transform: scaleX(0.98);}
+        80% {opacity: 1;-webkit-transform: scaleX(1.01);}
+        100%{opacity: 1;-webkit-transform: scaleX(1);}
+    } 
+/*====================== rotate ========================*/
+    @keyframes rotate{
+        0%{-webkit-transform:rotate(0deg)}
+        100%{-webkit-transform:rotate(360deg)}
+    }
+    @-webkit-keyframes rotate{
+        0%{-webkit-transform:rotate(0deg)}
+        100%{-webkit-transform:rotate(360deg)}
+    }    

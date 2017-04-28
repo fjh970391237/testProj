@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <link rel="stylesheet" type="text/css" href="../css/base.css">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <script type="text/javascript" src="../js/TouchSlide.1.1.js"></script>
+    </head>
+<body>
+
+
+    <div class="top">
+	    <div class="left"></div>
+	    <div class="right"></div>
+	    <div class="center">
+	    	<div class="search">搜索目的地/景点/酒店/关键字/航班号</div>
+	    </div>
+    	
+    </div>
+
+   <!-- 本例主要代码 Start ================================ -->
+	<div id="focus" class="focus">
+		<div class="hd">
+			<ul></ul>
+		</div>
+		<div class="bd">
+			<ul>
+				<li><a href="javascript:;"><img src="../images/img/1.png" /></a></li>
+				<li><a href="javascript:;"><img src="../images/img/2.jpg" /></a></li>
+				<li><a href="javascript:;"><img src="../images/img/3.jpg" /></a></li>
+				<li><a href="javascript:;"><img src="../images/img/4.jpg" /></a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		TouchSlide({ 
+			slideCell:"#focus",
+			titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+			mainCell:".bd ul", 
+			effect:"leftLoop", 
+			autoPlay:true,//自动播放
+			autoPage:true //自动分页
+		});
+	</script>
+	<!-- 本例主要代码 End ================================ -->
+
+	<ul class="list clearfix">
+		<li>酒店</li>
+		<li>海外酒店</li>
+		<li>团购</li>
+		<li>特惠酒店</li>
+		<li>客栈·公寓</li>
+		<li>机票</li>
+		<li>火车票</li>
+		<li>汽车票</li>
+		<li>接送机</li>
+		<li>自驾·玩乐</li>
+		<li>旅游</li>
+		<li>门票·玩乐</li>
+		<li>游轮</li>
+		<li>周末游</li>
+		<li>签证</li>
+		<li>攻略·身边</li>
+		<li>出境WiFi</li>
+		<li>美食·购物</li>
+		<li>礼品卡</li>
+		<li>更多</li>
+	</ul>
+	<div class="pic-banner">
+		<ul class="picIn">
+			<li><a href="javascript:;"><img src="../images/img/salead01.png" ></a></li>
+			<li><a href="javascript:;"><img src="../images/img/salead02.png" ></a></li>
+		</ul>
+	</div>
+
+	<div class="bottom">
+		<a href="javascript:;">电话预定</a>
+		<a href="javascript:;">下载客户端</a>
+		<a href="javascript:;">我 的</a>
+	</div>
+
+	<div class="footer">
+		<a href="javascript:;">网站地图</a>|
+		<a href="javascript:;">ENGLISH </a>|
+		<a href="javascript:;">电脑板</a>
+	</div>
+	<p>©2015携程旅行</p>
+	<br>
+	<br>
+	<br>
+	
+</body>
+</html>

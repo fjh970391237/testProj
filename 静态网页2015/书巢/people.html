@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>书巢-读人</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/people.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/people.js"></script>
+	<script type="text/javascript" src="js/ie6png.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+
+	
+	<!--[if lte IE 6]>
+	<script type="text/javascript" src="js/ie6png.js"></script>
+	<script type="text/javascript">
+		DD_belatedPNG.fix('h1,a');
+	</script>
+	<![endif]-->
+</head>
+<body>
+
+<!-- 登录模态窗口简单模拟 -->
+	<div class="Login">
+		<div class="upLogin">
+			<div class="close"></div>
+			<input type="text" class="userName" value="用户名或邮箱，如name@qq.com">
+			<input type="text" class="passWord" placeholder value="输错5次将锁定账号">
+			<button>确认登录</button>
+			<div class="instant"></div>
+			<div class="forget"></div>
+		</div>
+		<div class="downLogin"></div>
+	</div>
+<!-- 登录模态窗口简单模拟 -->
+
+
+<!-- 导航部分结构开始 -->
+	<div class="top">
+		<div class="header">
+			<h1 class="fl"><a href="index.html">书巢</a></h1>
+			<ul class="fl clearfix">
+				<li class="oneNav place">
+					<div><a href="javascript:;">北京</a></div>
+					<ol>
+						<li><a href="javascript:;">北京</a></li>
+						<li><a href="javascript:;">上海</a></li>
+						<li><a href="javascript:;">广州</a></li>
+						<li><a href="javascript:;">深圳</a></li>
+						<li><a href="javascript:;">其他</a></li>
+					</ol>
+				</li>
+				<li class="oneNav"><a href="book.html">读书</a></li>
+				<li class="oneNav current"><a href="people.html">读人</a></li>
+				<li class="oneNav"><a href="javascript:;">话点</a></li>
+				<li class="oneNav"><a href="javascript:;">游吟</a></li>
+			</ul>
+			<div class="header-R fr">
+				<div class="search clearfix fl">
+					<input type="text" value="书名、作者、ISBN" />
+					<s></s>
+				</div>
+				<a href="javascript:;" class="fl login" >登录</a>
+				<a href="javascript:;" class="fr register">注册</a>
+			</div>
+		</div>
+	</div>
+<!-- 导航部分结构结束 -->
+
+
+<!-- 读人部分结构开始 -->
+	<div class="readPeople">
+		<div class="wrap-hd">
+				<h2 class="fl">读人</h2>
+		</div>
+		<div class="list">
+			<dl>
+				<dt>性别</dt>
+				<dd>
+					<a href="javascript:;" class="all" >所有</a>
+					<a href="javascript:;">男</a>
+					<a href="javascript:;">女</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>星座</dt>
+				<dd>
+					<a href="javascript:;" class="all" >所有</a>
+					<a href="javascript:;">摩羯</a>
+					<a href="javascript:;">水瓶</a>
+					<a href="javascript:;">双鱼</a>
+					<a href="javascript:;">白羊</a>
+					<a href="javascript:;">金牛</a>
+					<a href="javascript:;">双子</a>
+					<a href="javascript:;">巨蟹</a>
+					<a href="javascript:;">狮子</a>
+					<a href="javascript:;">处女</a>
+					<a href="javascript:;">天枰</a>
+					<a href="javascript:;">天蝎</a>
+					<a href="javascript:;">射手</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>属相</dt>
+				<dd>
+					<a href="javascript:;" class="all" >所有</a>
+					<a href="javascript:;">鼠</a>
+					<a href="javascript:;">牛</a>
+					<a href="javascript:;">虎</a>
+					<a href="javascript:;">兔</a>
+					<a href="javascript:;">龙</a>
+					<a href="javascript:;">蛇</a>
+					<a href="javascript:;">马</a>
+					<a href="javascript:;">羊</a>
+					<a href="javascript:;">猴</a>
+					<a href="javascript:;">鸡</a>
+					<a href="javascript:;">狗</a>
+					<a href="javascript:;">猪</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>线路</dt>
+				<dd>
+					<a href="javascript:;" class="all" >所有</a>
+					<a href="javascript:;">1号线</a>
+					<a href="javascript:;">2号线</a>
+					<a href="javascript:;">4号线</a>
+					<a href="javascript:;">5号线</a>
+					<a href="javascript:;">6号线</a>
+					<a href="javascript:;">7号线</a>
+					<a href="javascript:;">8号线</a>
+					<a href="javascript:;">9号线</a>
+					<a href="javascript:;">10号线</a>
+					<a href="javascript:;">13号线</a>
+					<a href="javascript:;">14号线</a>
+					<a href="javascript:;">15号线</a>
+					<a href="javascript:;">八通线</a>
+					<a href="javascript:;">昌平线</a>
+					<a href="javascript:;">房山线</a>
+					<a href="javascript:;">亦庄线</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>排序</dt>
+				<dd>
+					<a href="javascript:;" class="all" >所有</a>
+					<a href="javascript:;">财富最高 </a>
+					<a href="javascript:;">注册时间</a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+<!-- 读人部分结构结束 -->
+
+
+<!-- 内容部分结构开始 -->
+	<div class="content">
+		<ul>
+			<li class="clearfix">
+				<div class="fr">
+					<a href="javascript:;"><img src="images/people/book-1.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-2.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-3.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-4.jpg" /></a>
+				</div>
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/1.jpg" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">cash</a></h3>
+					<p class="font14">男</p>
+					<p class="font12"><span>吃饭、睡觉、打书巢</span></p>
+					<p class="font12">北京 / 2号线 / 朝阳门</p>
+					<p><em>7</em>  <em class="gold">9</em></p>
+				</div>
+			</li>
+
+			<li class="clearfix">
+				<div class="fr">
+					<a href="javascript:;"><img src="images/people/book-5.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-6.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-7.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-8.jpg" /></a>
+				</div>
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/2.jpg" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">lerry</a></h3>
+					<p class="font14">男</p>
+					<p class="font12"><span>要么赶紧死，要么活的精彩</span></p>
+					<p class="font12">北京 / 10号线 / 太阳宫</p>
+					<p><em>3</em>  <em class="gold">0</em></p>
+				</div>
+			</li>
+
+			<li class="clearfix">
+				<div class="fr">
+					<a href="javascript:;"><img src="images/people/book-9.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-10.jpg" /></a>
+				</div>
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/3.jpg" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">GeorgeYang</a></h3>
+					<p class="font14">男</p>
+					<p class="font12"><span>让读书成为一种习惯</span></p>
+					<p class="font12">北京 / 4号线 / 高米店北</p>
+					<p><em>4</em>  <em class="gold">1</em></p>
+				</div>
+			</li>
+
+			<li class="clearfix">
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/4.jpg" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">Helen</a></h3>
+					<p class="font14">女</p>
+					<p class="font12"><span>我的不懂事、不成熟、青涩与肤浅总是像白胚上的坑坑洼</span></p>
+					<p class="font12">北京 / 1号线 / 苹果园</p>
+					<p><em>4</em>  <em class="gold">1</em></p>
+				</div>
+			</li>
+
+			<li class="clearfix">
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/5.png" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">pai130443</a></h3>
+					<p class="font14">女</p>
+					<p class="font12"><span>生活</span></p>
+					<p class="font12">北京 / 1号线 / 苹果园</p>
+					<p><em class="gold">0</em></p>
+				</div>
+			</li>
+
+			<li class="clearfix">
+				<div class="fr">
+					<a href="javascript:;"><img src="images/people/book-11.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-12.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-13.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-14.jpg" /></a>
+				</div>
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/6.jpg" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">yanyan</a></h3>
+					<p class="font14">女</p>
+					<p class="font12"><span>不是在书店，就是在去书店的路上。</span></p>
+					<p class="font12">北京 / 6号线 / 东大桥</p>
+					<p><em>3</em>  <em class="gold">4</em></p>
+				</div>
+			</li>
+
+			<li class="clearfix">
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/7.jpg" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">mercury</a></h3>
+					<p class="font14">男</p>
+					<p class="font12"><span>Books can revolutionize the wo</span></p>
+					<p class="font12">北京 / 13号线 / 五道口</p>
+					<p><em>6</em>  <em class="gold">7</em></p>
+				</div>
+			</li>
+
+			<li class="clearfix">
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/8.jpg" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">demon0203</a></h3>
+					<p class="font14">男</p>
+					<p class="font12"><span>123</span></p>
+					<p class="font12">北京 / 6号线 / 褡裢坡</p>
+					<p><em>0</em>  <em class="gold">1</em></p>
+				</div>
+			</li>
+
+			<li class="clearfix">
+				<div class="fr">
+					<a href="javascript:;"><img src="images/people/book-15.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-16.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-17.jpg" /></a>
+					<a href="javascript:;"><img src="images/people/book-18.jpg" /></a>
+				</div>
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/9.jpg" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">Anja</a></h3>
+					<p class="font14">女</p>
+					<p class="font12"><span>春眠不觉晓，处处蚊子咬</span></p>
+					<p class="font12">北京 / 10号线 / 劲松</p>
+					<p><em>8</em>  <em class="gold">4</em></p>
+				</div>
+			</li>
+
+			<li class="clearfix">
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/10.jpg" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">xiaolan</a></h3>
+					<p class="font14">女</p>
+					<p class="font12"><span>新的开始</span></p>
+					<p class="font12">北京 / 6号线 / 十里堡</p>
+					<p><em class="gold">0</em></p>
+				</div>
+			</li>
+
+			<li class="clearfix">
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/11.png" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">lierenyimei</a></h3>
+					<p class="font14">女</p>
+					<p class="font12"><span>做个6。</span></p>
+					<p class="font12">北京 / 2号线 / 朝阳门</p>
+					<p><em>2</em>  <em class="gold">3</em></p>
+				</div>
+			</li>
+
+			<li class="clearfix">
+				<a href="javascript:;" class="fl pt10">
+					<img src="images/people/12.jpg" />
+				</a>
+				<div class="pt10 ml150">
+					<h3><a href="javascript:;">weixin_zzw</a></h3>
+					<p class="font14">未知</p>
+					<p class="font12"><span>这家伙很懒，什么也木留下</span></p>
+					<p class="font12">北京</p>
+					<p><em class="gold">0</em></p>
+				</div>
+			</li>
+		</ul>
+		<div class="page">
+			<a href="javascript:;" class="current">1</a>
+			<a href="javascript:;">2</a>
+			<a href="javascript:;">3</a>
+			<a href="javascript:;">4</a>
+			<a href="javascript:;">5</a>
+			<a href="javascript:;" class="abbr">...</a>
+			<a href="javascript:;">164</a>
+		</div>
+	</div>
+<!-- 内容部分结构结束 -->
+
+
+<!-- 底部结构开始 -->
+	<div class="footer">
+		<div class="inFooter">
+			<ul class="fl">
+				<li><a href="javascript:;">关于</a><em>|</em></li>
+				<li><a href="javascript:;">指南</a><em>|</em></li>
+				<li><a href="javascript:;">帮助</a><em>|</em></li>
+				<li><a href="javascript:;">反馈</a><em>|</em></li>
+				<li><a href="javascript:;">联系</a></li>
+			</ul>
+			<p class="fr">京ICP备14023315号　© 2015 <a href="javascript:;">书巢</a>保留所有权利</p>
+		</div>
+	</div>
+<!-- 底部结构结束 -->
+
+
+</body>
+</html>
