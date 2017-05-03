@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    </head>
+    <body>
+
+    	<div id="test">
+    		<!-- <modal :show.sync="modalShow">
+	  			<div slot="modal-header" class="modal-header">
+					<h4 class="modal-title">Modal title</h4>
+	  			</div>
+	  			<div slot="modal-body" class="modal-body">kdfsgjdfhsjghfdj</div>
+			</modal> -->
+
+			<!-- <modal title="Fade Modal" :show.sync="modalShow" effect="fade" width="800">
+			  	<div slot="modal-body" class="modal-body">...</div>
+			</modal>-->
+    					    		
+			<!-- <modal title="Zoom Modal" :show.sync="modalShow" effect="zoom" width="400">
+			  	<div slot="modal-body" class="modal-body">...</div>
+			</modal>  -->
+
+			<!-- <modal title="Large Modal" large :show.sync="modalShow">
+			  	<div slot="modal-body" class="modal-body">...</div>
+			</modal>
+			
+			<modal title="Small Modal" small :show.sync="modalShow">
+			  	<div slot="modal-body" class="modal-body">...</div>
+			</modal> -->
+			<!-- 不单独写modal-header时，title的内容默认为弹窗标题 -->
+
+			<modal :show.sync="modalShow" effect="fade" width="400px" :backdrop='backdrop'>
+			  	<div slot="modal-header" class="modal-header">
+			  		<button type="button" class="close" @click="modalShow = false"><span>×</span></button>
+			    	<h4 class="modal-title">
+			      		<i>Custom</i> <code>Modal</code> <b>Title</b>
+			    	</h4>
+			  	</div>
+			  	<div slot="modal-body" class="modal-body"><input type="text" v-model="message"></div>
+			  	<div slot="modal-footer" class="modal-footer">
+			    	<button type="button" class="btn btn-default" @click="modalShow = false" v-text="cancelTxt">Exit</button>
+			    	<button type="button" class="btn btn-success" @click="callback" v-text="confirmTxt">Custom Save</button>
+			  	</div>
+			</modal>
+			
+			<button @click="modalShow=!modalShow">弹窗</button>
+    	</div>
+	
+	<script type="text/javascript" src="vue.js"></script>
+	<script type="text/javascript" src="vue-strap.min.js"></script>
+	<script type="text/javascript">
+	var vm = new Vue({
+		el:'#test',
+		data:{
+			modalShow:false,
+			confirmTxt:'确认',
+			cancelTxt:'取消',
+			backdrop:true,
+			message:''
+
+		},
+		methods:{
+			callback:function(){
+				console.log(this.message);
+				this.modalShow = !this.modalShow;
+			}
+		},
+		components:{
+			modal:VueStrap.modal
+		}
+	})
+
+		
+
+	</script>
+    </body>
+</html>

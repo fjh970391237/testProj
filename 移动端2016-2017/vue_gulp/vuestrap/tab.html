@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    </head>
+    <body>
+    <div id="test">
+    	<tabs>
+		  	<tab header="标题1">
+		    tab1
+		  	</tab>
+		  	<tab header="标题2" >
+		    tab2
+		  	</tab>
+		  	<tab-group header="group1">
+		    	<tab header="three">
+		      		tab3-1
+		    	</tab>
+		    	<tab header="four" disabled>
+		      		tab3-1
+		    	</tab>
+		  	</tab-group>
+		  	<tab-group header="group2">
+		    	<tab header="five">
+		      		tab4-1
+		    	</tab>
+		  	</tab-group>
+		</tabs>
+    </div>
+
+    <script type="text/javascript" src="vue.js"></script>
+	<script type="text/javascript" src="vue-strap.min.js"></script>
+	<script type="text/javascript">
+	var vm = new Vue({
+		el:'#test',
+		data:{
+			one:'标题1',
+			two:'标题2'
+		},
+		components:{
+			tabs: VueStrap.tabset,
+		  	tabGroup: VueStrap.tabGroup,
+		  	tab: VueStrap.tab
+		}
+	})
+
+	</script>
+    </body>
+</html>

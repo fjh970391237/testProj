@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    </head>
+    <body id="test">
+    	<alert :show.sync="aa"  type="danger" placement="top"  width="400px" dismissable>
+		  啥地方了静安寺代理费，只拿一根success，show控制弹窗显示与否，不是我说的，是例子说的，理解成组件中已经定义好了这个方法。右上显示，只显示3秒//这里的内容怎么跑进去的,这里的success决定了样式
+		</alert>
+		<div v-text="aa"></div>//这样能理解吧？换成组件
+		<!-- <child :msg="aa"></child> -->//没有child这样的标签，不能写v-text，要用prop方式。这里，名字是要组件child定义的,:是简写v-bind，绑属性用
+		绑方法是v-on,sync是干嘛的，例子有说，传递是单向的，想双向，就需要加这个sync，明白了吧？似懂非懂。我们自己来写一个样的。
+
+		<child :msg="aa" :type="success" hasbtn="true">//一个传的是aa，一个是字符串，aa来自父，字符串写死了。如果要传一个方法可以吗
+			<span style="color:red" v-text="aa"></span>
+			<!-- <button @click='consoleAA'>打印aa</button> -->
+		</child>
+		<span style="color:red" v-text="aa"></span>有区别么？一个在里面，一个在外面，组件没有不会因为写在child里，而调用子的，要调用子的，是temple.
+
+		<button @click="aa=!aa">按钮</button>
+    <script type="text/javascript" src="vue.js"></script>
+    <script type="text/javascript" src="vue-strap.min.js"></script>
+    <script type="text/javascript">
+//怎么定义组件
+var child = Vue.extend({
+	props:['msg'],
+	computed:{
+//计算属性的名字是不是这个？是
+ 		bb:function(){
+ 			return 'alert-'+this.type;
+ 		}
+	},
+	methods:{
+		
+	},
+	// events:{
+	// 	'children':function(){好啦别写了，错了。为啥呢，因为我们写组件的时候，不可能知道别人怎么用我们的组件，所以在组件里面，是不可能定义未来的方法的。事件是写}
+	// }
+	template:'<div role="alert" class="fade-transition alert top" :class=bb style="width: 400px;" v-show="msg"> <button type="button" class="close"> <span @click ="msg=false">×</span> </button>'+ 
+			'<slot></slot></div>'//默认是没显示的.模板要写在一行,在子里面，已经不是aa了，是msg,看懂了么，或者这样
+			//我回来的时间内，大王思考
+})
+
+
+    var vm = new Vue({
+    		el:'#test',
+    		components:{
+    			'alert':VueStrap.alert,
+    			'child':child
+    		},
+    		methods:{
+    			consoleAA:function(){
+    				console.log(this.aa)
+    			},
+    			typeFn:function(a,b){
+    				console.log(a,b)
+    			},
+    			success:function(){
+    				return 'danger';
+    			}
+    		},
+    		data:{
+    			aa:false,//aa参数是父传递给子的，通过prop的方式。这就是prop 方式么？你这样理解.那边show是根据父里的aa来决定。
+    			success:'danger'
+    		}
+    		
+    	});
+    </script>
+    </body>
+</html>

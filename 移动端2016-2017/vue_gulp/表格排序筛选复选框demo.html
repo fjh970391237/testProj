@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        table{border-collapse:collapse;margin: 10px 0px;}
+        th,td{border: 1px solid #000;padding:10px 15px;}
+        .preName{display: inline-block;width: 80px;}
+        .sort{position: relative;}
+        .sort span{position: absolute;right:5px;top:15px;width: 10px;height: 10px;background-color: yellowgreen;cursor: pointer;}
+        ul,li{
+            list-style: none;
+        }
+        li{margin-bottom: 10px;}
+
+    </style>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div id="test">
+        <input type="text"  v-model="iptMsg"/>
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" v-model="toggle" @click="chooseAllFn" /></th>
+                    <th>行数</th>
+                    <th class="sort">日期<span @click="orderFn('dateTime')"></span></th>
+                    <th>消费类型</th>
+                    <th>费用介绍</th>
+                    <th class="sort">消费金额<span @click="orderFn('payMoney')"></span></th>
+                    <th>提示数据</th>
+                    <th>编辑</th>
+                    <th>删除</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in items | filterBy iptMsg in 'payType' 'payIntro' | orderBy orderType order " @click="chooseTr($index)">
+                    <td><input type="checkbox" v-model="item.isCheck"></td>
+                    <td>第{{$index}}行</td>
+                    <td v-text="item.dateTime"></td>
+                    <td v-text="item.payType"></td>
+                    <td v-text="item.payIntro"></td>
+                    <td v-text="item.payMoney| currency '¥'"></td>
+                    <td><button @click="alertData(item)">提示数据</button></td>
+                    <td><button @click="editData(item,$index)">编辑</button></td>
+                    <td><button @click="delTr">删除</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="addTr" @click="addTr">新增一行</button>
+        <child></child>
+    </div>
+
+    <template id="testVue">
+        <ul>
+            <li><span class="preName">日期</span>：<input type="text" v-model="childItem.dateTime"></li>
+            <li><span class="preName">消费类型</span>：<input type="text" v-model="childItem.payType"></li>
+            <li><span class="preName">费用介绍</span>：<input type="text" v-model="childItem.payIntro"></li>
+            <li><span class="preName">消费金额</span>：<input type="text" v-model="childItem.payMoney"></li>
+            <li><button @click="save">保存</button></li>
+        </ul>
+    </template>
+
+    <script type="text/javascript" src="vue.js"></script>
+    <script src="vue-strap.min.js"></script>
+    <script type="text/javascript">
+        var textVue = Vue.extend({
+            //template:"#testVue",//等同
+            template:'<ul>'+
+            '<li><span class="preName">日期</span>：<input type="text" v-model="childItem.dateTime"></li>'+
+            '<li><span class="preName">消费类型</span>：<input type="text" v-model="childItem.payType"></li>'+
+            '<li><span class="preName">费用介绍</span>：<input type="text" v-model="childItem.payIntro"></li>'+
+            '<li><span class="preName">消费金额</span>：<input type="text" v-model="childItem.payMoney"></li>'+
+            '<li><button @click="save">保存</button></li></ul>',
+            data:function(){
+                return {
+                        line:0,
+                        childItem:{dateTime:'',payType:'',payIntro:'',payMoney:0,isCheck:false}
+                    }
+            },
+            methods:{
+                save:function(){
+                    this.$dispatch('father-msg',JSON.parse(JSON.stringify(this.childItem)),this.line);
+                }
+            },
+            events:{
+                'child-msg':function(item,line){
+                    this.childItem = item;
+                    this.line = line;
+                    this.childItem.isCheck = !this.childItem.isCheck;
+                    console.log('父亲叫我回家吃饭')
+                }
+            }
+        });
+
+        var vm = new Vue({
+            el:"#test",
+            data:{
+                iptMsg:'',
+                order:1,
+                orderType:'dateTime',
+                toggle:false,
+                items:[
+                    {dateTime:'2017230',payType:'飞机',payIntro:'fdjsgh',payMoney:10.056,isCheck:false},
+                    {dateTime:'2017330',payType:'酒店',payIntro:'aabcdg',payMoney:11,isCheck:false},
+                    {dateTime:'2017430',payType:'打的',payIntro:'abcdef',payMoney:230,isCheck:false},
+                    {dateTime:'2017530',payType:'火车',payIntro:'abcdef',payMoney:23.0678,isCheck:false},
+                    {dateTime:'2017630',payType:'餐饮',payIntro:'defghi',payMoney:1,isCheck:false}
+                ]
+            },
+            components:{
+                'child':textVue
+            },
+            methods:{
+                orderFn:function(orderType){
+                    this.orderType = orderType;
+                    this.order = this.order * -1;
+                },
+                chooseAllFn:function(){
+                    this.toggle = !this.toggle;
+                    for (var i = 0; i < this.items.length; i++) {
+                        this.items[i].isCheck = this.toggle;
+                    };
+                },
+                chooseTr:function(index){
+                    this.items[index].isCheck = !this.items[index].isCheck;
+                    for (var i = 0,j=0; i < this.items.length; i++) {
+                        if(this.items[i].isCheck){
+                            j++;
+                        }
+                    };
+                    this.toggle = j==this.items.length ? true:false;
+                },
+                alertData:function(message){
+                    console.log(JSON.parse(JSON.stringify(message)));
+                },
+                editData:function(item,index){
+                    this.$broadcast('child-msg',JSON.parse(JSON.stringify(item)),index);
+                },
+                addTr:function(){
+
+                },
+                delTr:function(){
+
+                }
+            },
+            events:{
+                'father-msg':function(item,index){
+                    this.items.$set(index,item);
+                    console.log('儿子叫我了');
+                }
+            }
+        })
+        
+    </script>
+</body>
+
+</html>
