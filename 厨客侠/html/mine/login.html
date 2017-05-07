@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ckx-登录</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/reset.css" rel="stylesheet" />
+		<link href="../../css/mine.css" rel="stylesheet" />
+		<style>
+		</style>
+	</head>
+
+	<body>
+		<!--header  S-->
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">登录</h1>
+		</header>
+		<!--header  E-->
+		
+		<!--底部nav  S-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item shareLink" href="../share/shareIndex.html">
+				<span class="navIcon"></span>
+			</a>
+			<a class="mui-tab-item mealLink" href="#tabbar-with-chat">
+				<span class="navIcon"></span>
+			</a>
+			<a class="mui-tab-item publishLink" href="#tabbar-with-chat">
+				<span class="navIcon"></span>
+			</a>
+			<a class="mui-tab-item findLink" href="#tabbar-with-contact">
+				<span class="navIcon"></span>
+			</a>
+			<a class="mui-tab-item mui-active mineLink" href="login.html">
+				<span class="navIcon"></span>
+			</a>
+		</nav>
+		<!--底部nav  E-->
+		
+		<!--content  S-->
+		<div class="mui-content">
+			<form id="loginForm" class="mui-input-group inputGroup">
+			    <div class="mui-input-row">
+			        <label>手机号</label>
+			    <input type="text" class="mui-input-clear" placeholder="请输入手机号">
+			    </div>
+			    <div class="mui-input-row">
+			        <label>密码</label>
+			        <input type="password" class="" placeholder="6-20位字符"><!-- 加此类名 mui-input-password 可控制密码是否可见-->
+			    </div>
+			    <div class="mui-button-row">
+			        <button type="button" id="logBtn" >登录 </button><!--加类名 active 为可点状态-->
+			    </div>
+			</form>
+			
+			<div class="loglink clearfix">
+				<a href="forgetPw.html" class="mui-pull-left colorBlue">忘记密码</a>
+				<a href="register.html" class="mui-pull-right colorBlue">注册</a>
+			</div>
+			
+			<div class="otherLogin clearfix">
+				<a class="logQQ" href="#">QQ</a>
+				<a class="logweixin" href="#">微信</a>
+				<a class="logweibo" href="#">微博</a>
+			</div>
+		</div>
+		<!--content  E-->
+		
+		<script src="../../js/jquery-2.1.4.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/base.js"></script>
+		<script>
+			//点击登录按钮时验证
+			mui('body').on('tap','#logBtn',function(){
+				logValid();
+				if(check){
+				    window.location.href="/ng/html/share/shareIndex.html"
+				}
+			})
+			//输入框改变时验证
+			$('#loginForm input').change(function(){
+				logValid();
+			})
+		</script>
+
+	</body>
+
+</html>

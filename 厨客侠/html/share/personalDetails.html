@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ckx-个人详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/reset.css" rel="stylesheet" />
+		<link href="../../css/share.css" rel="stylesheet" />
+
+		<style>
+			.mui-bar .mui-btn-link{font-size: 14px;}
+			.p-DetailsCon .personalInfo{padding:20px 10px;background: #fff;}
+			
+			.p-DetailsCon .personalInfo div{padding:0;}
+			.p-DetailsCon .personalInfo .p-name{color:#000;}
+			.p-id{}
+			.p-ltName{}
+			
+			.mt10{margin-top:10px;background: #fff;}
+			.itemName{font-size: 14px;color: #000;line-height: 16px;padding:13px 10px 13px 15px;}
+			.icon-father{position: relative;}
+			.icon-rightArrow{width:16px;height:16px;background:url(../../images/icon-rightArrow.png) no-repeat center;background-size: 100%;position: absolute;right:8px;top:50%;transform: translateY(-50%);}
+			.setRemaks{}
+			
+			.newDynamis{padding-bottom:14px;}
+			.newDynamis .mui-table-view.mui-grid-view{padding: 0 30px 0 10px;}
+			.newDynamis .mui-table-view.mui-grid-view:before,.newDynamis .mui-table-view.mui-grid-view:after{height:0;}
+			.newDynamis .mui-table-view.mui-grid-view .mui-table-view-cell{padding: 0px 3px;}
+			.newDynamis .mui-table-view.mui-grid-view .mui-table-view-cell img{width:100%;height:64px;}
+			.personalDataList{padding:0 15px 15px;}
+			.personalDataList li{line-height: 16px;padding:5px 0;}
+			
+			.shareAmeal .mui-segmented-control{border:0;border-radius: 0;}
+			.shareAmeal .mui-segmented-control .mui-control-item{background: #fff;color: #aa9fb0;font-size: 14px;}
+			.shareAmeal .mui-segmented-control .mui-control-item.mui-active{background: #6c3b28;color: #fff;font-size: 16px;}
+			.shareAmeal ul:after,.shareAmeal li:after{height:0;}
+			.shareAmeal p{color: #000;font-size: 14px;}
+			#itemShare li p{margin:10px 0;}
+			#itemShare li p:first-child{color:#aa9fb0;}
+			#itemShare li p:last-child{color:#000;}
+			.shareIcon{display:inline-block;vertical-align:middle;margin-right:5px;width:22px;height:22px;background-repeat: no-repeat;background-size: 100%;background-position: center;}
+			.sharePen{background-image: url(../../images/sharePen.png);}
+			.shareScore{background-image: url(../../images/shareScore.png);}
+			.shareDevote{background-image: url(../../images/shareDevote.png);}
+			.shareLevel{background-image: url(../../images/shareLevel.png);}
+			.shareMoney{background-image: url(../../images/shareMoney.png);}
+			#itemMeal{padding-bottom: 15px;}
+			#itemMeal .meal-li{padding:5px 15px;}
+			#itemMeal .mealCon,#itemMeal .firstli p{color: #000;}
+			#itemMeal .mealName{color: #aa9fb0;}
+			
+			.review {margin-bottom: 5px;}
+			.review .reviewList{padding:0 15px;margin-top:-15px;}
+			.review .reviewList li{padding:10px 0;float: left;position: relative;width:100%;}
+			.review .reviewList li:after{    
+				position: absolute;
+			    right: 0;
+			    left: 0;
+			    height: 1px;
+			    content: '';
+			    -webkit-transform: scaleY(.5);
+			    transform: scaleY(.5);
+			    background-color: #c8c7cc;
+			    bottom: 1px;
+		    }
+			.review .reviewList .reviewCon{width:75%;}
+			.review .reviewList .reviewTime{width:25%;text-align: right;}
+			.reviewMore{font-size: 16px;color:#6c3b28;display: block;text-align: center;line-height: 42px;}
+			
+			.bottomNav a{font-size: 14px;}
+			.bottomNav.mui-bar-tab .mui-tab-item.mui-active,.bottomNav.mui-bar-tab .mui-tab-item{color:#6f3b2f;}
+			.bottomNav .bt-icon{    
+				width: 24px;
+			    height: 24px;
+			    display: inline-block;
+			    vertical-align: middle;
+			    margin-right: 10px;
+			    background-repeat: no-repeat;
+			    background-size: 100%;
+			    background-position: center;
+		    }
+			.bottomNav .icon-chat{background-image: url(../../images/icon-chat.png);}
+			.bottomNav .icon-attention{background-image: url(../../images/icon-attention.png);}
+			.bottomNav .icon-tipoffs{background-image: url(../../images/icon-tipoffs.png);}
+		</style>
+	</head>
+
+	<body>
+		<!--header  S-->
+		<header class="mui-bar mui-bar-nav header03">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right colorGray02">预约厨房</button>
+		    <h1 class="mui-title">个人详情</h1>
+		</header>
+		<!--header  E-->
+		
+		<!--底部nav  S-->
+		<nav class="mui-bar mui-bar-tab bottomNav">
+			<a class="mui-tab-item mui-active navChat" href="###">
+				<span class="bt-icon icon-chat"></span><span>聊天</span>
+			</a>
+			<a class="mui-tab-item navAttention" href="###">
+				<span class="bt-icon icon-attention"></span><span>关注</span>
+			</a>
+			<a class="mui-tab-item naTtipoffs" href="###">
+				<span class="bt-icon icon-tipoffs"></span><span>拉黑举报</span>
+			</a>
+		</nav>
+		<!--底部nav  E-->
+
+		<!--content  S-->
+		<div class="mui-content p-DetailsCon">
+			<!--个人信息-->
+			<div class="personalInfo clearfix">
+				<img class="mui-pull-left" src="../../images/wish-3.jpg">
+				<div class="mui-pull-left">
+					<p class="clearfix">
+						<span class="p-name">备注名称</span>
+						<span class="iconsafe"></span>
+						<span class="icon-sex icon-women"></span><!--如果性别是男性，需将icon-women 换成icon-men-->
+					</p>
+					<p>侠客号：<span class="p-id colorGray02">123456789</span></p>
+					<p>昵称：<span class="p-ltName colorGray02">某某某</span></p>
+				</div>
+			</div>
+			
+			<!--设置备注和标签-->
+			<div class="setRemaks mt10 icon-father">
+				<p class="itemName">设置备注和标签<span class="icon-rightArrow"></span></p>
+			</div>
+			
+			<!--动态-->
+			<div class="newDynamis mt10">
+				<p class="itemName">动态 <span class="colorBlue">9</span></p>
+				
+				<div class="mui-table-view mui-grid-view icon-father">
+					<div class="mui-table-view-cell mui-col-sm-3 mui-col-xs-3">
+		                <img src="../../images/banner1.jpg"/>
+		            </div>
+					<div class="mui-table-view-cell mui-col-sm-3 mui-col-xs-3">
+		                <img src="../../images/banner1.jpg"/>
+		            </div>
+		            <div class="mui-table-view-cell mui-col-sm-3 mui-col-xs-3">
+		                <img src="../../images/banner1.jpg"/>
+		            </div>
+		            <div class="mui-table-view-cell mui-col-sm-3 mui-col-xs-3">
+		                <img src="../../images/banner1.jpg"/>
+		            </div>
+		            <span class="icon-rightArrow">
+				</div>
+			</div>
+	
+			<!--个人资料-->
+			<div class="personalData mt10">
+				<p class="itemName">个人资料</p>
+				<ul class="personalDataList colorGray02">
+					<li>家乡：<span>上海</span></li>
+					<li>职业：<span>厨师</span></li>
+					<li>星座：<span>天蝎座</span></li>
+					<li>个人签名：<span>京东方可观的减肥客观世界富可敌国就分开的结构发给</span></li>
+				</ul>
+			</div>
+			
+			<!--侠客行和吃货-->
+			<div class="shareAmeal mt10">
+				<div id="segmentedControl" class="mui-segmented-control">
+					<a class="mui-control-item mui-active" href="#itemShare">侠客行</a>
+					<a class="mui-control-item" href="#itemMeal">吃货</a>
+				</div>
+				<div>
+					<!--侠客行-->
+					<div id="itemShare" class="mui-control-content mui-active">
+						<ul class="mui-table-view  mui-grid-view">
+							<li class="mui-table-view-cell mui-col-sm-4 mui-col-xs-4">
+								<p><span class="shareIcon sharePen"></span>侠客记</p>
+								<p>行善<span>999</span>次</p>
+							</li>
+							<li class="mui-table-view-cell mui-col-sm-4 mui-col-xs-4">
+								<p><span class="shareIcon shareScore"></span>积分</p>
+								<p><span>300</span></p>
+							</li>
+							<li class="mui-table-view-cell mui-col-sm-4 mui-col-xs-4">
+								<p><span class="shareIcon shareLevel"></span>威望</p>
+								<p><span>3</span>级</p>
+							</li>
+							<li class="mui-table-view-cell mui-col-sm-4 mui-col-xs-4">
+								<p><span class="shareIcon shareDevote"></span>贡献</p>
+								<p><span>0</span></p>
+							</li>
+							<li class="mui-table-view-cell mui-col-sm-4 mui-col-xs-4">
+								<p><span class="shareIcon shareMoney"></span>铜板</p>
+								<p><span>0</span></p>
+							</li>
+						</ul>
+					</div>
+					<!--吃货-->
+					<div id="itemMeal" class="mui-control-content">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell meal-li firstli">
+								<p class="">我的吃圈</p></li>
+							<li class="mui-table-view-cell meal-li">
+								<p class="mealName">炒菜</p>
+								<p class="mealCon">农家小炒、锅包肉、干煸牛肉、干煸四季豆、辣子鸡丁、青椒炒蛋、小炒肉</p>
+							</li>
+							<li class="mui-table-view-cell meal-li">
+								<p class="mealName">凉菜</p>
+								<p class="mealCon">拍黄瓜、炝拌土豆丝、一清二白、辣白菜</p>
+							</li>
+							<li class="mui-table-view-cell meal-li">
+								<p class="mealName">海鲜</p>
+								<p class="mealCon">龙虾、螃蟹、海胆、黄花鱼</p>
+							</li>
+							<li class="mui-table-view-cell meal-li">
+								<p class="mealName">口味</p>
+								<p class="mealCon">偏甜、BT辣、微辣、中辣、超级辣</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!--评价-->
+			<div class="review mt10">
+				<p class="itemName">评价 <span class="colorBlue">108</span></p>
+				<ul class="reviewList colorGray02 clearfix">
+					<li><span class="reviewCon mui-pull-left">这里是评价内容这里是评价内容这里是评价内容这里是评价内容这里是评价</span>
+						<span class="reviewTime mui-pull-right">1分钟前</span></li>
+					<li><span class="reviewCon mui-pull-left">这里是评价内容这里是评价内容这里是评价内容这里价内这里是评价</span>
+						<span class="reviewTime mui-pull-right">3分钟前</span></li>
+					<li><span class="reviewCon mui-pull-left">这里是评价内容这这里是评价</span>
+						<span class="reviewTime mui-pull-right">昨天</span></li>
+					<li><span class="reviewCon mui-pull-left">这里是评价内容这里是评价内容这里是评价内容这里是评价</span>
+						<span class="reviewTime mui-pull-right">12月12日</span></li>
+				</ul>
+				<a class="reviewMore" href="###">查看更多</a>
+			</div>
+		</div>
+		<!--content  E-->
+
+		<script src="../../js/jquery-2.1.4.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/mui.lazyload.js"></script>
+		<script src="../../js/mui.lazyload.img.js"></script>
+		<script src="../../js/base.js"></script>
+
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+
+</html>

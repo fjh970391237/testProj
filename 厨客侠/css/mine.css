@@ -1,0 +1,72 @@
+/*.mui-content{position: relative;}*/
+.inputGroup{margin-top: 20px;background-color: initial;}
+.inputGroup.mui-input-group .mui-input-row {
+    height:50px;
+    color:#575757;
+    background-color: #fff;
+}
+.inputGroup label{font-size: 16px;line-height: 18px;padding:16px 15px;width:32%;}
+
+.inputGroup.mui-input-group .mui-input-row:after {
+    left: 0px;
+    background-color: #c8c7cc;
+}
+.inputGroup.mui-input-group:after {
+    left: 0;
+    height: 0px;
+    background-color: #c8c7cc;
+}
+.inputGroup .mui-input-row label~input,.inputGroup .mui-input-row label~select,.inputGroup .mui-input-row label~textarea{
+	line-height: 20px;
+	height:50px;
+	font-size: 14px;
+	width:68%;
+	float:left;
+}
+.inputGroup .mui-input-row .mui-input-clear~.mui-icon-clear,.inputGroup .mui-input-row .mui-input-password~.mui-icon-eye, .inputGroup .mui-input-row .mui-input-speech~.mui-icon-speech {
+    font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #999;
+}
+.inputGroup .mui-button-row{margin-top:26px;padding:0 15px;}
+.inputGroup .mui-button-row button{width:100%;height:40px;font-size:20px;background: #D5D5D5;border:1px solid #979696;border-radius: 3px;color: #B8B8B8;}
+.inputGroup .mui-button-row button.active{background: #6f3b2f;border-color:#979696;color: #fff;}
+
+.loglink{margin-top: 15px;height:16px;padding:0 15px;}
+.loglink a{ height:16px;line-height: 16px;}
+
+.otherLogin{position: absolute;bottom: 25%;left:50%;transform: translateX(-50%);width:228px;}
+.otherLogin a{
+	float: left;
+	width:50px;
+	text-align: center;
+	font-size: 14px;
+	color: #000;
+	line-height: 20px;
+	padding-top:55px;
+	background:url(../images/qq.png) no-repeat;
+    background-size: 100%;
+
+}
+.otherLogin .logweixin{
+    margin:0 38px;
+	background-image:url(../images/weixin.png);
+}
+.otherLogin .logweibo{
+	background-image:url(../images/weibo.png);
+}
+
+.inputCode{position:relative;}
+.inputGroup .inputCode label~input{
+	width:31%;
+}
+.inputGroup .inputCode .sendCodeBtn{position:absolute;top:5px;right:15px;height:38px;background: #6f3b2f;font-size: 14px;color:#fff;border:1px solid #6F3B2F;border-radius: 3px;text-align: center;padding: 0;}
+.regAgreement {margin:20px auto;width:120px;}
+.regAgreement input{}
+

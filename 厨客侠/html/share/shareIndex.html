@@ -1,0 +1,384 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ckx-附近</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/reset.css" rel="stylesheet" />
+
+		<style>
+			.mui-bar-nav.mui-bar .mui-title.headTab{width:130px;margin:7px auto;background:#fff;color:#6C3B28;border:1px solid #6C3B28;border-radius: 3px;}
+			.mui-bar-nav.mui-bar .mui-title.headTab span{float:left;width:64px;height:28px;line-height: 28px;}
+			.mui-bar-nav.mui-bar .mui-title.headTab .active{background:#6C3B28;color:#fff;}
+			.placement {
+				text-align: center;
+				line-height: 24px;
+				padding: 7px 10px;
+				font-size: 14px;
+				color: #4f384a;
+			}
+			.placement .place{
+    			max-width: 90%;
+				background: url(../../images/icon-location01.png) no-repeat left center;
+			    background-size: 24px 24px;
+		        display: inline-block;
+    			vertical-align: middle;
+    			padding-left:24px;
+			}
+			.placement .iconRight{
+				width: 15px;
+    			height: 24px;
+				background: url(../../images/icon-rightArrow.png) no-repeat center;
+			    background-size: 100%;
+			}
+			/*卡片视图  S*/
+			.mui-card-content {
+				padding: 10px;
+			}
+			.mui-card span{display: inline-block;vertical-align: middle;}
+			
+			.mui-card-header>img:first-child{border-radius: 50%;}
+			.mui-card .mui-card-header.mui-card-media .mui-media-body  p{
+			    color: #000;
+			    font-size: 14px;
+			    line-height: 18px;
+			} 
+			.mui-card .mui-card-header.mui-card-media .mui-media-body  p.listName{font-weight: 600;}
+			.mui-card .mui-card-header.mui-card-media .mui-media-body  p.listLevel{color:#6C3B28;}
+			.mui-media-body {
+				position: relative;
+			}
+			.mui-card .mui-card-header.mui-card-media .mui-media-body  .listTimePlace{
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			.mui-card .mui-card-header.mui-card-media .mui-media-body  .listTimePlace p{font-size:12px;color:#c3bbc7;}
+			.mui-card .mui-card-header .icons,.mui-card .mui-card-footer .icons{
+			    background-size: 100%;
+			    background-position: center;
+			    background-repeat: no-repeat;
+			}
+			.mui-card .mui-card-header .iconsafe {
+			    background-image: url(../../images/icon-safe.png);
+			    width: 18px;
+			    height: 18px;
+			    margin-left: 5px;
+			}
+			.mui-card .mui-card-header .iconlevel {
+			    background-image: url(../../images/icon-level.png);
+			    width: 14px;
+			    height: 14px;
+			    margin-right: 5px;
+			}
+			
+			.listInfo {
+				color: #000;
+				font-size: 13px;
+				line-height: 18px;
+				margin-bottom: 5px;
+			}
+			.mui-table-view.mui-grid-view.listImg{padding:0 0 5px;}
+			.mui-table-view.mui-grid-view.listImg .mui-table-view-cell{padding:5px;}
+
+			.mui-card-footer:before {
+				height: 0px;
+			}
+			
+			.mui-card-footer {
+				padding-top: 0;
+				min-height: auto;
+			}
+			.footerlike{margin-right:10px;}
+			.likeIcon,.commentIcon,.iconMore{width:22px;height:22px;}
+			.likeIcon{
+				background-image: url(../../images/icon-like02.png);
+			}
+			.commentIcon{
+				background-image: url(../../images/icon-msg.png);
+			}
+			.iconMore{
+				background-image: url(../../images/icon-more.png);
+			}
+			.likeNum,.commentNum {
+				font-size: 14px;
+				margin:0 5px;
+			}
+			/*卡片视图  E*/
+			
+			#filterTerm {
+				width: 112px;
+			}
+			#filterTerm .mui-table-view-cell {
+				position: relative;
+				overflow: hidden;
+				padding: 10px 15px;
+				-webkit-touch-callout: none;
+				line-height: 20px;
+				font-size: 16px;
+			}
+			#filterTerm .mui-table-view-cell .active {
+				color: #6D3C26;
+				position: relative;
+			}
+			#filterTerm .mui-table-view-cell .active:before {
+			    color: #6D3C26;
+			    content: '\e472';
+			    font-family: Muiicons;
+			    font-size: 30px;
+			    font-weight: 500;
+			    font-style: normal;
+			    position: absolute;
+			    top: 8px;
+			    right: 0px;
+			}
+			#tipOff .mui-table-view{margin:10px 0 0;border-radius: 0;}
+			#tipOff .mui-table-view li a{height:50px;line-height:50px;color:#000;font-size: 18px;font-weight: 500;padding:0;}
+		</style>
+	</head>
+
+	<body>
+		<!--header  S-->
+		<header class="mui-bar mui-bar-nav header02">
+			<a href="#filterTerm" id="openfilterTerm" class="icon-menu mui-icon-list mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="icon-filter mui-icon-star mui-icon mui-icon-right-nav mui-pull-right"></a>
+
+			<h1 class="mui-title headTab">
+	    		<span class="active">行侠行善</span>
+    			<span>打酱油</span>
+		    </h1>
+		</header>
+		<!--header  E-->
+
+		<!--底部nav  S-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active shareLink" href="../share/shareIndex.html">
+				<span class="navIcon"></span>
+			</a>
+			<a class="mui-tab-item mealLink" href="#tabbar-with-chat">
+				<span class="navIcon"></span>
+			</a>
+			<a class="mui-tab-item publishLink" href="#tabbar-with-chat">
+				<span class="navIcon"></span>
+			</a>
+			<a class="mui-tab-item findLink" href="#tabbar-with-contact">
+				<span class="navIcon"></span>
+			</a>
+			<a class="mui-tab-item mineLink" href="login.html">
+				<span class="navIcon"></span>
+			</a>
+		</nav>
+		<!--底部nav  E-->
+
+		<!--content  S-->
+		<div class="mui-content">
+			<!--定位地址  S-->
+			<div class="placement">
+				<!--<span class="iconlocation"></span>-->
+				<a class="iconRight mui-pull-right"></a>
+				<p class="place omg">万达广场（高新园区店）</p>
+			</div>
+			<!--定位地址  E-->
+
+			<!--banner轮播  S-->
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop" style="transform: translate3d(-640px, 0px, 0px) translateZ(0px); transition-duration: 0ms; transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../../images/banner4.jpg">
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item mui-active">
+						<a href="#">
+							<img src="../../images/banner1.jpg">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../../images/banner2.jpg">
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../../images/banner3.jpg">
+						</a>
+					</div>
+					<!-- 第四张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../../images/banner4.jpg">
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../../images/banner1.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			<!--banner轮播  E-->
+
+			<!--卡片视图列表  S-->
+			<div class="list" id="shareList">
+				<div class="mui-card">
+
+					<div class="mui-card-header mui-card-media">
+						<img src="../../images/exper-L-1.jpg" />
+						<div class="mui-media-body">
+							<p class="listName">小M<span class="icons iconsafe"></span></p>
+							<p class="listLevel">
+								<span class="icons iconlevel"></span><span>威望三级</span>
+							</p>
+							<div class="listTimePlace">
+								<p class="listTime">1分钟前</p>
+								<p class="listPlace">5.14km</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mui-card-content">
+						<p class="listInfo">中午吃饭多点了两份，已经将打包好的饭菜放入人民广场6号餐柜中，希望能帮到需要它的朋友！</p>
+						<ul class="listImg mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-8"><!--如果只有一张图片时 用 此类名  mui-col-xs-8 多张时用  mui-col-xs-4-->
+								<img class="mui-media-object" src="../../images/exper-L-1.jpg" />
+							</li>
+						</ul>
+						<ul class="listLabels clearfix">
+							<li class="labels labelblue">
+								<span class="iconlocation"></span><span>纳米大厦</span></li>
+							<li class="labels labelgreen"><span>行侠行善</span></li>
+							<li class="labels labelorange"><span>6号餐柜</span></li>
+						</ul>
+
+					</div>
+
+					<div class="mui-card-footer">
+						<div class="clearfix footerleft">
+							<p class="mui-pull-left footerlike"><span class="icons likeIcon"></span><span class="likeNum">32</span></p>
+							<p class="mui-pull-left footercomment"><span class="icons commentIcon"></span><span class="commentNum">156</span></p>
+						</div>
+
+						<a href="#tipOff" class=""><span class="icons iconMore"></span></a>
+					</div>
+				</div>
+				
+			</div>
+			<!--卡片视图列表  E-->
+
+		</div>
+		<!--content  E-->
+
+		<!--举报弹窗  S-->
+		<div id="tipOff" class="mui-popover mui-popover-bottom mui-popover-action ">
+			<!-- 可选择菜单 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">举报</a>
+				</li>
+			</ul>
+			<!-- 取消菜单 -->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#tipOff">取消</a>
+				</li>
+			</ul>
+		</div>
+		<!--举报弹窗  E-->
+
+		<!--筛选条件  S-->
+		<div id="filterTerm" class="mui-popover">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell"><a class="active" href="#">综合排行</a></li>
+				<li class="mui-table-view-cell"><a href="#">距离最近</a></li>
+				<li class="mui-table-view-cell"><a href="#">评分最高</a></li>
+			</ul>
+		</div>
+		<!--筛选条件  E-->
+
+		<script src="../../js/jquery-2.1.4.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/mui.lazyload.js"></script>
+		<script src="../../js/mui.lazyload.img.js"></script>
+		<script src="../../js/base.js"></script>
+
+		<script type="text/javascript">
+		//只加载一部分列表
+		var createFragment = function(count) {
+			var fragment = document.createDocumentFragment();
+			var shareDiv;
+			for (var i = 5; i < count; i++) {
+				shareDiv = document.createElement('div');
+				shareDiv.className = 'mui-card';
+				//此处为重复循环加载的dom结构
+				var str='<!--页眉区-->'+
+						'<div class="mui-card-header mui-card-media">'+
+							'<img data-lazyload="../../images/banner' + i + '.jpg"/>'+
+							'<div class="mui-media-body">'+
+								'<p class="listName">姓名昵称<span class="icons iconsafe"></span></p>'+
+								'<p class="listLevel"><span class="icons iconlevel"></span><span>威望三级</span></p>'+
+								'<div class="listTimePlace"><p class="listTime">1分钟前</p><p class="listPlace">5.14km</p>'+
+							'</div></div></div>';
+				str +=  '<!--内容区-->'+
+						'<div class="mui-card-content">'+
+							'<p class="listInfo">中午吃饭多点了两份，已经将打包好的饭菜放入人民广场6号餐柜中，希望能帮到需要它的朋友！</p>'+
+							'<ul class="listImg mui-table-view mui-grid-view">'+
+								'<li class="mui-table-view-cell mui-media mui-col-xs-4">'+
+									'<img class="mui-media-object" src="../../images/exper-L-1.jpg" /></li>'+
+								'<li class="mui-table-view-cell mui-media mui-col-xs-4">'+
+									'<img class="mui-media-object" src="../../images/exper-L-2.jpg"></li>'+
+								'<li class="mui-table-view-cell mui-media mui-col-xs-4">'+
+									'<img class="mui-media-object" src="../../images/exper-L-3.jpg"></li>'+
+							'</ul>'+
+							'<ul class="listLabels clearfix">'+
+								'<li class="labels labelblue">'+
+									'<span class="iconlocation"></span><span>纳米大厦</span></li>'+
+								'<li class="labels labelgreen"><span>行侠行善</span></li>'+
+								'<li class="labels labelorange"><span>6号餐柜</span></li>'+
+							'</ul></div>';
+				str +=  '<!--页脚区-->'+
+						'<div class="mui-card-footer">'+
+							'<div class="clearfix footerleft">'+
+								'<p class="mui-pull-left footerlike"><span class="icons likeIcon"></span><span class="likeNum">32</span></p>'+
+								'<p class="mui-pull-left footercomment"><span class="icons commentIcon"></span><span class="commentNum">156</span></p></div>'+
+							'<a href="#tipOff" class=""><span class="icons iconMore"></span></a>'+
+						'</div>';
+				shareDiv.innerHTML = str; 
+				fragment.appendChild(shareDiv);
+			}
+			return fragment;
+		};
+		(function($) {
+			var shareList = document.getElementById("shareList");
+			shareList.appendChild(createFragment(30));//30 为数量 
+			$(document).imageLazyload({
+				placeholder: '../../images/wish-1.jpg'//这个图片是图片未加载出来是显示的图片
+			});
+		})(mui);
+		
+		/*举报弹窗点击举报,跳转页面*/
+		mui('body').on('tap', '.mui-popover-action li>a', function() {
+			if(whichBtn(this)=='举报'){
+				window.location.href='tipoffs.html';
+			}
+		})
+		/*点击发布按钮*/
+		mui('body').on('tap','.publishLink',function(){
+			window.location.href='editPublish.html';
+		})
+		</script>
+	</body>
+
+</html>

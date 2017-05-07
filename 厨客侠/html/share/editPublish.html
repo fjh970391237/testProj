@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ckx-编辑动态</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/reset.css" rel="stylesheet" />
+		<style type="text/css">
+			.editPublish{margin:10px 0;}
+			.editPublish textarea{margin:0px;border:0;font-size: 14px;}
+			.editPublishImg li .icon-del{
+			    width: 20px;
+			    height: 20px;
+			    font-size: 20px;
+			    position: absolute;
+			    top: 0;
+			    right: 0;
+			    background: url(../../images/icon-del.png) no-repeat;
+			    background-size: 100%;
+			}
+			.uploadImg{
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 100%;
+			    display: none; 
+	     	}
+			.editPublishList .shareIcon span{
+				width:25px;
+				height:25px;
+				background:url(../../images/weixin.png) no-repeat;
+				background-size: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--header  S-->
+		<header class="mui-bar mui-bar-nav header03">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">发布</button>
+		    <h1 class="mui-title">编辑动态</h1>
+		</header>
+		<!--header  E-->
+		
+		<!--content  S-->
+		<div class="mui-content listStyle editPublishCon">
+			<!--发布编辑区域-->
+			<div class="editPublish">
+				<textarea name="" rows="" cols="" placeholder="请输入总结..."></textarea>
+				
+				<ul class="mui-table-view mui-grid-view editPublishImg" id="publishImg">
+					<li class="mui-table-view-cell mui-media mui-col-xs-4">
+						<img class="mui-media-object" src="../../images/exper-L-1.jpg" />
+						<span class="icon-del"></span>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4">
+						<img class="mui-media-object" src="../../images/exper-L-2.jpg">
+						<span class="icon-del"></span>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4">
+						<img class="mui-media-object" src="../../images/exper-L-2.jpg">
+						<span class="icon-del"></span>
+					</li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-4 lastLi">
+						<img class="mui-media-object addImg" src="../../images/addimg.png">
+						<input class="uploadImg" type="file" name="" id="uploadImg" value="" />
+					</li>
+				</ul>
+				<div id="aaa"></div>
+			</div>
+			
+			<!--发布选择区域-->
+			<ul class="mui-table-view editPublishList">
+			    <li class="mui-table-view-cell locationIcon"><a class="mui-navigate-right">地点<span class="mui-pull-right  colorBlue02">万达广场</span></a></li>
+			    <li class="mui-table-view-cell visibilityIcon"><a class="mui-navigate-right">谁可以看<span class="mui-pull-right  colorGray">所有人可见</span></a></li>
+			    <li class="mui-table-view-cell shareIcon">分享<span class="mui-pull-right "></span></li>
+			</ul>
+		</div>
+		<!--content  E-->
+		
+		<script src="../../js/jquery-2.1.4.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/base.js"></script>
+
+		<script type="text/javascript">
+			//选择谁可以见
+			mui('.editPublishCon').on('tap','li.visibilityIcon',function(){
+				window.location.href = 'visibility.html';
+			})
+			//添加图片
+			mui('body').on('tap','.addImg',function(){
+				$('#uploadImg').trigger('click');
+			})
+			//当#uploadImg value值改变时
+			//图片上传
+			var editPublishImg = document.getElementById('publishImg'); //获取显示图片的div元素
+			var input = document.getElementById("uploadImg"); //获取选择图片的input元素
+			
+			//判断本浏览器是否支持这个API。
+			if(typeof FileReader==='undefined'){ 
+			    editPublishImg.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+			    input.setAttribute('disabled','disabled'); 
+			}else{
+			    input.addEventListener('change',readFile,false); //如果支持就监听改变事件，一旦改变了就运行readFile函数。
+			}
+			//删除图片
+			mui('body').on('tap','.editPublishImg .icon-del',function(){
+				$(this).parent().remove();
+			})
+		</script>
+	</body>
+</html>
