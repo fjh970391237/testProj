@@ -1,6 +1,6 @@
 .reviewLike{font-size: 14px; margin-bottom: 10px;}
 
-.reviewLikeTab.mui-segmented-control.mui-segmented-control-inverted{padding:0 10px;}
+.reviewLikeTab.mui-segmented-control.mui-segmented-control-inverted{padding:0 10px;    background: #fff;}
 .reviewLikeTab.mui-segmented-control .mui-control-item{display: block;float:left;color:#c3bbc7;margin:0 20px;width:auto;}
 .reviewLikeTab.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{color: #6c3b28;border-color:#6c3828;border-width:4px;}
 .reviewLikeTab a span{margin-left:10px;}
@@ -16,7 +16,7 @@
 }
 .reviewLikeCon .mui-table-view{ background-color: #f4f4f4;}
 .reviewLikeCon li{background-color: #fff;}
-.reviewLikeCon .itemLine{margin-bottom:10px;}
+.reviewLikeCon .itemLine{margin-bottom:10px;padding: 10px 15px;}
 #itemLike .itemLine{margin-bottom:0px;}
 #itemLike .peopleName{line-height: 36px;}   
 .reviewLikeCon .itemLine .reWords{margin-top:10px;}
@@ -25,16 +25,29 @@
 	height:0;
 }
 
-.reviewLikeCon .reWords .mui-table-view-cell>a:not(.mui-btn) {
+/*.reviewLikeCon .reWords .mui-table-view-cell>a:not(.mui-btn) {
  	padding:11px 0;
 }
 .reviewLikeCon .reWords .mui-table-view-cell:after {
     height: 0px;
-}
-.reviewLikeCon .reWords .mui-table-view-cell:before{
+}*/
+.reviewLikeCon .reWords li{padding:10px 0;position: relative;}
+.reviewLikeCon .reWords li:before{
 	position: absolute;
     right: 0;
     top: 0px;
+    left: 0px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
+#itemLike .itemLine{position: relative;}
+#itemLike .itemLine:before{
+	position: absolute;
+    right: 0;
+    bottom: 0px;
     left: 0px;
     height: 1px;
     content: '';
@@ -48,3 +61,6 @@
 .reviewLikeAction .icons{float: left;margin-right:8px;}
 .reviewLikeAction .likeIcon,.reviewLikeAction .likeIconNone{width:18px;height:18px;}
 .reviewLikeAction .deleteReview{}
+
+.reviewEdit{width:100%;height:50px;padding:10px;}
+input.reviewEditIpt{display:block;width:100%;line-height: 18px;height:auto;border:1px solid #c8c7cc;border-radius: 3px;margin:0;padding:5px 10px;}
