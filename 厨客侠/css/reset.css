@@ -36,12 +36,15 @@ html, body {
 .colorRed{color:#6c3b28;font-size: 14px;}
 .colorGray{color:#c9c4cc;font-size: 14px;}
 .colorGray02{color:#aa9fb0!important;font-size: 14px;}
+.mt10{margin-top:10px;background: #fff;}
+.lgBtn{width:270px;height:40px;background: #6c3b28;font-size: 17px;color: #fff;border-radius: 20px;display: block;text-align: center;line-height: 40px;margin:0 auto;}
+.whiteBg{background:#fff;}
 
 /*头部带返回按钮*/
 .mui-bar-nav.mui-bar{background: #fff;}
 .mui-bar-nav.mui-bar .mui-title{font-size: 18px;}
 .mui-bar-nav.mui-bar .mui-action-back{margin:12px 12px 12px 0;background: url(../images/return.png) no-repeat;background-size: 100% 100%;width: 20px;height:20px;}
-.mui-bar-nav.mui-bar .mui-action-back.icon-leftArrow{background-image: url(../images/icon-leftArrow.png);}
+.opacityHeader.mui-bar-nav.mui-bar .mui-action-back{background-image: url(../images/icon-leftArrow.png);}
 .mui-bar-nav.mui-bar .mui-action-back:before{content:'';}
 
 .mui-bar-nav.mui-bar.header02 .mui-title{font-size: 12px;}
@@ -52,7 +55,8 @@ html, body {
 .mui-bar-nav.mui-bar.header02 .mui-icon:before{content:'';}
 
 .mui-bar-nav.mui-bar.header03 .mui-title,.mui-bar-nav.mui-bar.header03 .mui-btn{color: #6c3b28;outline: none;border: 0;}
-
+.mui-bar-nav.mui-bar.header03 .headMore{margin:12px 0px 12px 12px;background: url(../images/headMore.png) no-repeat;background-size: 100% 100%;width: 24px;height:24px;}
+.
 
 .mui-content {background-color: #F4F4F4;}
 
@@ -70,16 +74,37 @@ html, body {
 .shareLink.mui-active .navIcon{background-image:url(../images/share02.png);}
 .mealLink .navIcon{background-image:url(../images/meal01.png);}
 .mealLink.mui-active .navIcon{background-image:url(../images/meal02.png);}
-.publishLink .navIcon{background-image:url(../images/publish.png);
-	width: 50px;
+.publishLink .navIcon{
+	background-image: url(../images/publish.png);
+    width: 50px;
     height: 50px;
     position: absolute;
     top: -5px;
-    left:6px;}
+    left: 50%;
+    transform: translate(-50%);
+}
 .findLink .navIcon{background-image:url(../images/find01.png);}
 .findLink.mui-active .navIcon{background-image:url(../images/find02.png);}
 .mineLink .navIcon{background-image:url(../images/mine01.png);}
 .mineLink.mui-active .navIcon{background-image:url(../images/mine02.png);}
+/*有三个图标的底部样式*/
+.bottomNav a{font-size: 14px;}
+.bottomNav.mui-bar-tab .mui-tab-item.mui-active,.bottomNav.mui-bar-tab .mui-tab-item{color:#6f3b2f;}
+.bottomNav .bt-icon{    
+	width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.bottomNav .icon-chat{background-image: url(../images/icon-chat.png);}
+.bottomNav .icon-attention{background-image: url(../images/icon-attention.png);}
+.bottomNav .icon-tipoffs{background-image: url(../images/icon-tipoffs.png);}
+.bottomNav .icon-like{background-image: url(../images/icon-like.png);}
+.bottomNav .icon-forward{background-image: url(../images/icon-forward.png);}
 
 /*列表每一行下面的边线*/
 .mui-table-view-cell:after {
@@ -132,6 +157,10 @@ html, body {
 	.mui-table-view.mui-grid-view .mui-table-view-cell.mui-col-xs-8 .mui-media-object{
 		height:180px;
 	}
+	/*个人详情*/
+	.newDynamis .mui-table-view.mui-grid-view .mui-table-view-cell img{
+		height:66px
+	}
 }
 @media only screen and (min-width:375px ) {
 	.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-object{
@@ -139,6 +168,10 @@ html, body {
 	}
 	.mui-table-view.mui-grid-view .mui-table-view-cell.mui-col-xs-8 .mui-media-object{
 		height:210px;
+	}
+	/*个人详情*/
+	.newDynamis .mui-table-view.mui-grid-view .mui-table-view-cell img{
+		height:80px
 	}
 }
 @media only screen and (min-width:414px ) {
@@ -148,6 +181,10 @@ html, body {
 	.mui-table-view.mui-grid-view .mui-table-view-cell.mui-col-xs-8 .mui-media-object{
 		height:239px;
 	}
+	/*个人详情*/
+	.newDynamis .mui-table-view.mui-grid-view .mui-table-view-cell img{
+		height:90px
+	}
 }
 @media only screen and (min-width:768px ) {
 	.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-object{
@@ -155,6 +192,10 @@ html, body {
 	}
 	.mui-table-view.mui-grid-view .mui-table-view-cell.mui-col-xs-8 .mui-media-object{
 		height:475px;
+	}
+	/*个人详情*/
+	.newDynamis .mui-table-view.mui-grid-view .mui-table-view-cell img{
+		height:179px
 	}
 }
 
@@ -188,3 +229,17 @@ html, body {
 	background-size: 100%;
     margin-left: -5px;
 }
+/*弹窗*/
+.shadowModel{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.shadow{position:absolute;background: #000;opacity: 0.5;width:100%;height:100%;}
+.modelCon{position:fixed;background: #fff;top:50%;left:50%;transform: translate(-50%,-50%);border-radius: 3px;width:300px;height:455px;}
+.modelHead{font-size: 14px;text-align: center;position: relative;color:#6f3b2f;padding-top: 13px;line-height: 16px;}
+.modelHead .icon-close{width:15px;height:15px;background:url(../images/icon-close.png) no-repeat center;background-size:100%;position: absolute;top:14px;right:17px;}
+.modelContent .leaveMsg{font-size: 14px;padding:6px;width:250px;height:70px;}

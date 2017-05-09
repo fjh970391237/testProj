@@ -12,25 +12,27 @@
 		<style>
 			.dynamicsHeader.mui-bar.mui-bar-nav{    
 				height: auto;
-			    background: url(../../images/banner26.jpg) no-repeat top;
+				color:#6C2B28;
+			    background: #fff;
 			    padding: 0;
 			    background-size: cover;
 			    box-shadow: none;
+			    padding:0 10px;
+		        box-shadow: 0 1px 6px #ccc;
 		    }
-			.headTop{height:44px;padding:0 10px;}
-			.headTop .mui-title{color:#cbd7dc;}
-			/*.mui-bar-nav~.dynamicsCon.mui-content{padding-top:200px;}*/
-			.dynamicsCon .personalInfo{background: url(../../images/banner26.jpg) no-repeat bottom;background-size: cover;}
+		    .dynamicsHeader .mui-title{color:#6c3b28;}
+		    .opacityHeader.mui-bar.mui-bar-nav{background: rgba(0,0,0,0);box-shadow: none;}
+			.opacityHeader .mui-title{color:#cbd7dc;}
+			.mui-bar-nav~.dynamicsCon.mui-content{padding-top:0px;}
+			.dynamicsCon .personalInfo{background: url(../../images/banner26.jpg) no-repeat bottom;background-size: cover;padding-top:122px;}
 		</style>
 	</head>
 
 	<body>
 		<!--header  S-->
-		<header class="mui-bar mui-bar-nav dynamicsHeader">
-			<div class="headTop">
-			    <a class="icon-leftArrow mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<header class="mui-bar mui-bar-nav dynamicsHeader opacityHeader">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			    <h1 class="mui-title">个人动态</h1>
-		    </div>
 		</header>
 		<!--header  E-->
 
@@ -163,7 +165,7 @@
 		};
 		(function($) {
 			var shareList = document.getElementById("shareList");
-			shareList.appendChild(createFragment(30));//30 为数量 
+			shareList.appendChild(createFragment(10));//30 为数量 
 			$(document).imageLazyload({
 				placeholder: '../../images/wish-1.jpg'//这个图片是图片未加载出来是显示的图片
 			});
@@ -175,6 +177,17 @@
 				window.location.href='tipoffs.html';
 			}
 		})
+		
+		/*当滚动超过头部高度时,header透明度从0变1*/
+		$(window).scroll( function() {
+			var windowScrollTop = $(window).scrollTop();
+			var targetHeader = $('header.dynamicsHeader');
+			if(windowScrollTop>44){
+				targetHeader.removeClass('opacityHeader');
+			}else{
+				targetHeader.addClass('opacityHeader')
+			}
+		});
 		</script>
 	</body>
 

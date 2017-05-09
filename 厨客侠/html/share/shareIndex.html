@@ -7,135 +7,10 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../../css/mui.min.css" rel="stylesheet" />
 		<link href="../../css/reset.css" rel="stylesheet" />
+		<link href="../../css/share.css" rel="stylesheet" />
 
 		<style>
-			.mui-bar-nav.mui-bar .mui-title.headTab{width:130px;margin:7px auto;background:#fff;color:#6C3B28;border:1px solid #6C3B28;border-radius: 3px;}
-			.mui-bar-nav.mui-bar .mui-title.headTab span{float:left;width:64px;height:28px;line-height: 28px;}
-			.mui-bar-nav.mui-bar .mui-title.headTab .active{background:#6C3B28;color:#fff;}
-			.placement {
-				text-align: center;
-				line-height: 24px;
-				padding: 7px 10px;
-				font-size: 14px;
-				color: #4f384a;
-			}
-			.placement .place{
-    			max-width: 90%;
-				background: url(../../images/icon-location01.png) no-repeat left center;
-			    background-size: 24px 24px;
-		        display: inline-block;
-    			vertical-align: middle;
-    			padding-left:24px;
-			}
-			.placement .iconRight{
-				width: 15px;
-    			height: 24px;
-				background: url(../../images/icon-rightArrow.png) no-repeat center;
-			    background-size: 100%;
-			}
-			/*卡片视图  S*/
-			.mui-card-content {
-				padding: 10px;
-			}
-			.mui-card span{display: inline-block;vertical-align: middle;}
 			
-			.mui-card-header>img:first-child{border-radius: 50%;}
-			.mui-card .mui-card-header.mui-card-media .mui-media-body  p{
-			    color: #000;
-			    font-size: 14px;
-			    line-height: 18px;
-			} 
-			.mui-card .mui-card-header.mui-card-media .mui-media-body  p.listName{font-weight: 600;}
-			.mui-card .mui-card-header.mui-card-media .mui-media-body  p.listLevel{color:#6C3B28;}
-			.mui-media-body {
-				position: relative;
-			}
-			.mui-card .mui-card-header.mui-card-media .mui-media-body  .listTimePlace{
-				position: absolute;
-				top: 0;
-				right: 0;
-			}
-			.mui-card .mui-card-header.mui-card-media .mui-media-body  .listTimePlace p{font-size:12px;color:#c3bbc7;}
-			.mui-card .mui-card-header .icons,.mui-card .mui-card-footer .icons{
-			    background-size: 100%;
-			    background-position: center;
-			    background-repeat: no-repeat;
-			}
-			.mui-card .mui-card-header .iconsafe {
-			    background-image: url(../../images/icon-safe.png);
-			    width: 18px;
-			    height: 18px;
-			    margin-left: 5px;
-			}
-			.mui-card .mui-card-header .iconlevel {
-			    background-image: url(../../images/icon-level.png);
-			    width: 14px;
-			    height: 14px;
-			    margin-right: 5px;
-			}
-			
-			.listInfo {
-				color: #000;
-				font-size: 13px;
-				line-height: 18px;
-				margin-bottom: 5px;
-			}
-			.mui-table-view.mui-grid-view.listImg{padding:0 0 5px;}
-			.mui-table-view.mui-grid-view.listImg .mui-table-view-cell{padding:5px;}
-
-			.mui-card-footer:before {
-				height: 0px;
-			}
-			
-			.mui-card-footer {
-				padding-top: 0;
-				min-height: auto;
-			}
-			.footerlike{margin-right:10px;}
-			.likeIcon,.commentIcon,.iconMore{width:22px;height:22px;}
-			.likeIcon{
-				background-image: url(../../images/icon-like02.png);
-			}
-			.commentIcon{
-				background-image: url(../../images/icon-msg.png);
-			}
-			.iconMore{
-				background-image: url(../../images/icon-more.png);
-			}
-			.likeNum,.commentNum {
-				font-size: 14px;
-				margin:0 5px;
-			}
-			/*卡片视图  E*/
-			
-			#filterTerm {
-				width: 112px;
-			}
-			#filterTerm .mui-table-view-cell {
-				position: relative;
-				overflow: hidden;
-				padding: 10px 15px;
-				-webkit-touch-callout: none;
-				line-height: 20px;
-				font-size: 16px;
-			}
-			#filterTerm .mui-table-view-cell .active {
-				color: #6D3C26;
-				position: relative;
-			}
-			#filterTerm .mui-table-view-cell .active:before {
-			    color: #6D3C26;
-			    content: '\e472';
-			    font-family: Muiicons;
-			    font-size: 30px;
-			    font-weight: 500;
-			    font-style: normal;
-			    position: absolute;
-			    top: 8px;
-			    right: 0px;
-			}
-			#tipOff .mui-table-view{margin:10px 0 0;border-radius: 0;}
-			#tipOff .mui-table-view li a{height:50px;line-height:50px;color:#000;font-size: 18px;font-weight: 500;padding:0;}
 		</style>
 	</head>
 
@@ -315,6 +190,12 @@
 		<script src="../../js/base.js"></script>
 
 		<script type="text/javascript">
+		window.onload = function(){
+			console.log('onload')
+		}
+		$(function(){
+			console.log('ready')
+		})
 		//只加载一部分列表
 		var createFragment = function(count) {
 			var fragment = document.createDocumentFragment();

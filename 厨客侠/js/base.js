@@ -114,3 +114,17 @@ function readFile(){
         $('.lastLi').before(str);
     } 
 }
+/*
+显示obj模块
+参数 obj 为被hide类 控制显示与隐藏的元素 
+*/
+function openRewardModel(obj){
+	obj.removeClass('hide');
+}
+/*
+隐藏obj模块
+参数 obj 为被hide类 控制显示与隐藏的元素 
+*/
+function closeRewardModel(obj){
+	obj.addClass('hide');
+}

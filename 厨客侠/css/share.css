@@ -50,6 +50,11 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.icons{
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .mui-card .mui-card-header .iconsafe {
     background-image: url(../images/icon-safe.png);
     width: 18px;
