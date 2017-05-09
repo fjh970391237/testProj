@@ -1,0 +1,50 @@
+.reviewLike{font-size: 14px; margin-bottom: 10px;}
+
+.reviewLikeTab.mui-segmented-control.mui-segmented-control-inverted{padding:0 10px;}
+.reviewLikeTab.mui-segmented-control .mui-control-item{display: block;float:left;color:#c3bbc7;margin:0 20px;width:auto;}
+.reviewLikeTab.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{color: #6c3b28;border-color:#6c3828;border-width:4px;}
+.reviewLikeTab a span{margin-left:10px;}
+.reviewLikeCon{}
+.reviewLike .reviewLikeCon img{border-radius: 50%;width:36px;height:36px;}
+.reviewLike .peopleName{color:#0075cf;}
+.reviewLike .reviewTime{color:#C3BBC7;}
+.reviewLike .reviewLikeInfo{color:#000;}
+.reviewLike .mui-table-view-cell>a:not(.mui-btn) {
+ 	overflow: auto; 
+ 	white-space: normal; 
+ 	text-overflow: inherit; 
+}
+.reviewLikeCon .mui-table-view{ background-color: #f4f4f4;}
+.reviewLikeCon li{background-color: #fff;}
+.reviewLikeCon .itemLine{margin-bottom:10px;}
+#itemLike .itemLine{margin-bottom:0px;}
+#itemLike .peopleName{line-height: 36px;}   
+.reviewLikeCon .itemLine .reWords{margin-top:10px;}
+.reviewLikeCon .reWords.mui-table-view:before{height:0;}
+.reviewLikeCon .reWords.mui-table-view:after{
+	height:0;
+}
+
+.reviewLikeCon .reWords .mui-table-view-cell>a:not(.mui-btn) {
+ 	padding:11px 0;
+}
+.reviewLikeCon .reWords .mui-table-view-cell:after {
+    height: 0px;
+}
+.reviewLikeCon .reWords .mui-table-view-cell:before{
+	position: absolute;
+    right: 0;
+    top: 0px;
+    left: 0px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
+
+.reviewLikeAction{line-height: 18px;padding-top:8px;}
+.reviewLikeAction .mui-pull-right{min-width:62px;color:#c9c4cc;}
+.reviewLikeAction .icons{float: left;margin-right:8px;}
+.reviewLikeAction .likeIcon,.reviewLikeAction .likeIconNone{width:18px;height:18px;}
+.reviewLikeAction .deleteReview{}
