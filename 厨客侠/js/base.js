@@ -118,13 +118,21 @@ function readFile(){
 显示obj模块
 参数 obj 为被hide类 控制显示与隐藏的元素 
 */
-function openRewardModel(obj){
+function openModel(obj){
 	obj.removeClass('hide');
 }
 /*
 隐藏obj模块
 参数 obj 为被hide类 控制显示与隐藏的元素 
 */
-function closeRewardModel(obj){
+function closeModel(obj){
 	obj.addClass('hide');
+}
+/*判断当前显示的是评论还是点赞,来切换底部nav*/
+function changeNav(){
+	if($('#itemReview').is(':visible')){
+		$('nav div.itemReviewfooter').removeClass('mui-hidden').siblings().addClass('mui-hidden');
+	}else if($('#itemLike').is(':visible')){
+		$('nav div.itemLikefooter').removeClass('mui-hidden').siblings().addClass('mui-hidden');
+	}
 }
