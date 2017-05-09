@@ -15,32 +15,26 @@
 			/*打赏弹窗*/
 			.reward{padding:20px 0;background:#fff;}
 			.rewardCon img{margin:20px auto 10px;width:80px;height:80px;border-radius: 50%;}
-			.rewardName{text-align: center;font-size: 16px;color: #000;line-height: 16px;margin-bottom: 10px;}
-			.rewardNamespan,.rewardLevelspan{position: relative;}
-			.rewardNamespan.icon-safe:before,
-			.rewardNamespan.icon-women:after,
-			.rewardNamespan.icon-men:after{
-				content:'';
-				position:absolute;
-				top:3px;
+			.rewardInfo{position:relative;height:42px;}
+			.rewardName,.rewardLevel{position:absolute;top:0;left:50%;transform:translateX(-50%);}
+			.rewardName{font-size: 16px;color: #000;line-height: 16px;}
+			.rewardNamespan,.rewardLevelspan{float: left;margin:0 6px 0 10px;}
+			.rewardLevelspan{margin:0 0 0 6px;}
+			.icon-safe,.icon-women,.icon-men,.icon-level{
+				float: left;
+				margin-top:-2px;
 				width:18px;height:18px;
 				background-size:100%;
 				background-repeat: no-repeat;
 				background-position: center;
 			}
-			.rewardNamespan.icon-safe:before{left:-26px;background-image: url(../../images/icon-safe.png);}
-			.rewardNamespan.icon-women:after{right:-26px;background-image: url(../../images/icon-women.png);}
-			.rewardNamespan.icon-men:after{right:-26px;background-image: url(../../images/icon-mem.png);}
-			.rewardLevel{font-size: 14px;color: #6c3b28;text-align: center;}
-			.rewardLevelspan:before{
-				content:'';
-				position:absolute;
-				top:2px;
-				width:14px;height:14px;
-				background-size:100%;
-				background-repeat: no-repeat;
-				background-position: center;
-				left:-18px;background-image: url(../../images/icon-level.png);
+			.icon-safe{left:-26px;background-image: url(../../images/icon-safe.png);}
+			.icon-women{right:-26px;background-image: url(../../images/icon-women.png);}
+			.icon-men{right:-26px;background-image: url(../../images/icon-mem.png);}
+			.rewardLevel{font-size: 14px;color: #6c3b28;top:25px;}
+			.icon-level{
+				margin-top:4px;
+				width:14px;height:14px;background-image: url(../../images/icon-level.png);
 			}
 			/*滑块*/
 			.iptRangeName{font-size: 14px;color: #aa9fb0;text-align: center;line-height: 16px;margin:20px 0;}
@@ -78,7 +72,7 @@
 			}
 			.mui-input-range .rangeBtn {
 		        font-size: 14px;
-			    line-height: 20px;
+			    line-height: 18px;
 			    position: absolute;
 			    z-index: 9;
 			    top: 14px;
@@ -95,7 +89,7 @@
 			}
 			.mui-toast-container.mui-active{display: none!important;}
 			
-			.rewardWrite{width:250px;margin:30px auto;position: relative;}
+			.rewardWrite{width:250px;margin:32px auto 30px;position: relative;}
 			.rewardWrite textarea{margin:0;line-height: 18px;}
 			.rewardWrite span{position: absolute;bottom:8px;right:10px;height:16px;}
 		</style>
@@ -129,9 +123,9 @@
 		<!--content  S-->
 		<div class="mui-content dynamicDetailsCon">
 			<!--卡片视图列表  S-->
-			<div class="list">
+			<div class="imgList" id="shareList">
+				<!--一张图片  S-->
 				<div class="mui-card">
-
 					<div class="mui-card-header mui-card-media">
 						<img src="../../images/exper-L-1.jpg" />
 						<div class="mui-media-body">
@@ -148,8 +142,10 @@
 
 					<div class="mui-card-content">
 						<p class="listInfo">中午吃饭多点了两份，已经将打包好的饭菜放入人民广场6号餐柜中，希望能帮到需要它的朋友！</p>
-						<ul class="listImg mui-table-view mui-grid-view">
-							<li class="mui-table-view-cell mui-media mui-col-xs-8"><!--如果只有一张图片时 用 此类名  mui-col-xs-8 多张时用  mui-col-xs-4-->
+						<ul class="listImg mui-table-view mui-grid-view listImg01">
+							<li class="mui-table-view-cell mui-media mui-col-xs-8">
+							<!--listImg01(1张),listImg02(2张),listImg04(4张),listImg(多张)	
+								mui-col-xs-8   mui-col-xs-6   mui-col-xs-6   mui-col-xs-4  -->
 								<img class="mui-media-object" src="../../images/exper-L-1.jpg" />
 							</li>
 						</ul>
@@ -161,10 +157,18 @@
 						</ul>
 
 					</div>
+
+					<div class="mui-card-footer">
+						<div class="clearfix footerleft">
+							<p class="mui-pull-left footerlike"><span class="icons likeIcon"></span><span class="likeNum">32</span></p><!--likeIcon01 是灰色的点赞图标，likeIcon 是红色的点赞图标-->
+							<p class="mui-pull-left footercomment"><span class="icons commentIcon"></span><span class="commentNum">156</span></p>
+						</div>
+
+						<a href="#tipOff" class=""><span class="icons iconMore"></span></a>
+					</div>
 				</div>
-				
+				<!--一张图片  E-->
 			</div>
-			<!--卡片视图列表  E-->
 			
 			<!--任性打赏  S-->
 			<div class="reward">
@@ -182,8 +186,8 @@
 					<!--评论  S-->
 					<div id="itemReview" class="mui-control-content mui-active">
 						<ul class="mui-table-view">
-							<li class="mui-table-view-cell mui-media itemLine">
-								<a href="javascript:;">
+							<li class="mui-media itemLine">
+								<div href="javascript:;">
 									<img class="mui-media-object mui-pull-left" src="../../images/banner10.jpg">
 									<div class="mui-media-body">
 										<span class="peopleName">木屋</span><span class="mui-pull-right reviewTime">08:12</span>
@@ -192,11 +196,11 @@
 											<span class="mui-pull-right">
 												<span class="likeIcon icons"></span>999</span></p>
 									</div>
-								</a>
+								</div>
 								<!--评论回复  S-->
 								<ul class="reWords mui-table-view">
-									<li class="mui-table-view-cell mui-media">
-										<a href="javascript:;">
+									<li class="mui-media">
+										<div href="javascript:;">
 											<img class="mui-media-object mui-pull-left" src="../../images/banner10.jpg">
 											<div class="mui-media-body">
 												<span class="peopleName">木屋</span><span class="mui-pull-right reviewTime">08:12</span>
@@ -205,10 +209,10 @@
 													<span class="mui-pull-right"><span class="likeIconNone icons"></span>999</span>
 													<span class="mui-pull-right deleteReview">删除</span></p>
 											</div>
-										</a>
+										</div>
 									</li>
-									<li class="mui-table-view-cell mui-media">
-										<a href="javascript:;">
+									<li class="mui-media">
+										<div href="javascript:;">
 											<img class="mui-media-object mui-pull-left" src="../../images/banner10.jpg">
 											<div class="mui-media-body">
 												<span class="peopleName">木屋</span><span class="mui-pull-right reviewTime">08:12</span>
@@ -217,14 +221,14 @@
 													<span class="mui-pull-right"><span class="likeIconNone icons"></span>999</span>
 													<span class="mui-pull-right deleteReview">删除</span></p>
 											</div>
-										</a>
+										</div>
 									</li>
 								</ul>
 								<!--评论回复  E-->
 								
 							</li>
-							<li class="mui-table-view-cell mui-media itemLine">
-								<a href="javascript:;">
+							<li class="mui-media itemLine">
+								<div href="javascript:;">
 									<img class="mui-media-object mui-pull-left" src="../../images/banner10.jpg">
 									<div class="mui-media-body">
 										<span class="peopleName">木屋</span><span class="mui-pull-right reviewTime">08:12</span>
@@ -233,11 +237,11 @@
 											<span class="mui-pull-right">
 												<span class="likeIcon icons"></span>999</span></p>
 									</div>
-								</a>
+								</div>
 								<!--评论回复  S-->
 								<ul class="reWords mui-table-view">
-									<li class="mui-table-view-cell mui-media">
-										<a href="javascript:;">
+									<li class="mui-media">
+										<div href="javascript:;">
 											<img class="mui-media-object mui-pull-left" src="../../images/banner10.jpg">
 											<div class="mui-media-body">
 												<span class="peopleName">木屋</span><span class="mui-pull-right reviewTime">08:12</span>
@@ -246,14 +250,14 @@
 													<span class="mui-pull-right"><span class="likeIconNone icons"></span>999</span>
 													<span class="mui-pull-right deleteReview">删除</span></p>
 											</div>
-										</a>
+										</div>
 									</li>
 								</ul>
 								<!--评论回复  E-->
 								
 							</li>
-							<li class="mui-table-view-cell mui-media itemLine">
-								<a href="javascript:;">
+							<li class="mui-media itemLine">
+								<div href="javascript:;">
 									<img class="mui-media-object mui-pull-left" src="../../images/banner10.jpg">
 									<div class="mui-media-body">
 										<span class="peopleName">木屋</span><span class="mui-pull-right reviewTime">08:12</span>
@@ -262,7 +266,7 @@
 											<span class="mui-pull-right">
 												<span class="likeIcon icons"></span>999</span></p>
 									</div>
-								</a>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -270,29 +274,29 @@
 					<!--点赞  S-->
 					<div id="itemLike" class="mui-control-content">
 						<ul class="mui-table-view">
-							<li class="mui-table-view-cell mui-media itemLine">
-								<a href="javascript:;">
+							<li class="mui-media itemLine">
+								<div href="javascript:;">
 									<img class="mui-media-object mui-pull-left" src="../../images/banner10.jpg">
 									<div class="mui-media-body">
 										<span class="peopleName">李木子</span>
 									</div>
-								</a>
+								</div>
 							</li>
-							<li class="mui-table-view-cell mui-media itemLine">
-								<a href="javascript:;">
+							<li class="mui-media itemLine">
+								<div href="javascript:;">
 									<img class="mui-media-object mui-pull-left" src="../../images/banner10.jpg">
 									<div class="mui-media-body">
 										<span class="peopleName">木屋</span>
 									</div>
-								</a>
+								</div>
 							</li>
-							<li class="mui-table-view-cell mui-media itemLine">
-								<a href="javascript:;">
+							<li class="mui-media itemLine">
+								<div href="javascript:;">
 									<img class="mui-media-object mui-pull-left" src="../../images/banner10.jpg">
 									<div class="mui-media-body">
 										<span class="peopleName">木屋</span>
 									</div>
-								</a>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -316,10 +320,12 @@
 						<img class="rewardImg" src="../../images/banner2.jpg"/>
 						<!--打赏信息-->						
 						<div class="rewardInfo">
-							<p class="rewardName"><!--如果性别是男性，需将icon-women 换成icon-men-->
-								<span class="rewardNamespan icon-women icon-safe">昵称某某某</span>
+							<p class="rewardName clearfix"><!--如果性别是男性，需将icon-women 换成icon-men-->
+								<span class="icon-safe"></span>
+								<span class="rewardNamespan">昵称某某某</span>
+								<span class="icon-women"></span>
 							</p>
-							<p class="rewardLevel"><span class="rewardLevelspan icon-level">威望<span>3</span>级</span></p>
+							<p class="rewardLevel clearfix"><span class="icon-level"></span><span class="rewardLevelspan">威望<span>3</span>级</span></p>
 						</div>
 						<!--滑块-->
 						<p class="iptRangeName">打赏支持一下</p>
@@ -351,15 +357,19 @@
 		<script type="text/javascript">
 			/*显示打赏*/
 			mui('body').on('tap','a.lgBtn',function(){
-				openRewardModel($('#rewardModel'));
-			})
+				openModel($('#rewardModel'));
+			});
 			/*关闭打赏*/
-			mui('body').on('tap','span.icon-close',function(){
-				closeRewardModel($('#rewardModel'));
-			})
+			mui('body').on('tap','#rewardModel span.icon-close',function(){
+				closeModel($('#rewardModel'));
+			});
 			mui('body').on('tap','.navReviewLike',function(){
 				window.location.href = "reviewLike.html";
+			});
+			mui('body').on('tap','#itemReview li.mui-table-view-cell,#itemLike li.mui-table-view-cell',function(){
+				return false;
 			})
+			
 			//监听input事件，获取range的value值
 		     document.getElementById('rewardRange').addEventListener('input',function(){
 		     	console.log(this.value);
