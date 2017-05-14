@@ -454,7 +454,7 @@ html, body {
 .craa9fb0{color:#aa9fb0!important;}
 .cr2498f2{color:#2498f2!important;}
 .ft17{font-size: 17px;}
-.ft14{font-size: 14px;}
+.ft14{font-size: 14px!important;}
 .ft12{font-size: 12px;}
 .lh20{line-height: 20px;}
 .lh22{line-height: 22px;}
@@ -467,3 +467,16 @@ html, body {
 .mgt10{margin-top:10px;}
 .mgt14{margin-top:14px;}
 .mgb10{margin-bottom:10px;}
+
+/*联动*/
+.mui-poppicker,.mui-picker,.mui-dtpicker-title h5,.mui-dtpicker{background: #fff;}
+.mui-poppicker-header .mui-btn,.mui-dtpicker-header button{font-size: 14px;background:none;border:none;color: #6C3B28;}
+.mui-backdrop {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.3);
+}
