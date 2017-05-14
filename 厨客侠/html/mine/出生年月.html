@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ckx-出生年月</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/mui.picker.min.css" rel="stylesheet" />
+		
+		<link href="../../css/reset.css" rel="stylesheet" />
+		<link href="../../css/share.css" rel="stylesheet" />
+
+		<style>
+			html, body{font-size: initial;}
+			.dynamicsHeader.mui-bar.mui-bar-nav{    
+				height: auto;
+				color:#6C2B28;
+			    background: #fff;
+			    padding: 0;
+			    background-size: cover;
+			    box-shadow: none;
+			    padding:0 10px;
+		        box-shadow: 0 1px 6px #ccc;
+		    }
+		    .dynamicsHeader .mui-title{color:#6c3b28;}
+		    .opacityHeader.mui-bar.mui-bar-nav{background: rgba(0,0,0,0);box-shadow: none;}
+			.opacityHeader .mui-title{color:#cbd7dc;}
+			.mui-bar-nav~.dynamicsCon.mui-content{padding-top:0px;}
+			.normalTit{background: #6c3b28;background-size: cover;padding-top:58px;text-align: center;padding-bottom: 20px;}
+			.crfff{color:#fff !important;}.crGren{color:#2fc810}.crRed{color:#ff0101}.crRedGray{color: #6c3b28 !important;}
+			.bgRedGray{background-color: #6c3b28 !important;}.bgfff{background-color:#fff}
+			.normalTit h2{margin:30px 0;}
+			.bigBtn{height: 40px;width:45%;max-width:160px;
+    font-size: 16px;background-color:transparent ;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #fff;}
+    .ft20{font-size:20px !important;}.ft14{font-size: 14px !important;}.ft12{font-size: 12px !important;}
+    .mmTitle{line-height: 42px;font-size:14px;padding-left: 14px;}
+    .normalCont{margin-top:44px;padding-top: 10px !important;}
+    .iconEdit{background:url(../../images/icon-edit.png) no-repeat center;width:16px;height: 16px;background-size: 16px;display: inline-block;}
+    .iconAdd{background:url(../../images/icon-add.png) no-repeat center;width:16px;height: 16px;background-size: 16px;display: inline-block;}
+    .mmRadio{margin-right: 40px;line-height: 50px;}
+    .mmRadio input:before{content:'';background:url(../../images/icon-nok.png) no-repeat center;background-size:16px;display: inline-block;width:16px;height:16px;}
+    .mmRadio input{
+    	-webkit-appearance: none;margin-right: 10px;}
+    .mmRadio input:checked:before{
+    	background-image:url(../../images/icon-ok.png)}
+    	.w35p{width:35%;display: inline-block;}
+    	.h100{height:100px !important}
+    	.row-line{ 
+    margin-left: 15px;
+    height: 1px;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;}
+    .linH50Group .mui-input-row{height:50px;}
+    .linH50Group .mui-input-row label{padding:16px 14px;}
+    .linH50Group .mui-input-row>input{height:48px;}
+    .linH50Group textarea{height: 100%;}
+    .rightMsg{float:right;padding:13px 14px;color:gray;font-size:14px;}
+    
+		</style>
+	</head>
+
+	<body>
+		<!--header  S-->
+		<header class="mui-bar mui-bar-nav dynamicsHeader">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			    <h1 class="mui-title">出生年月</h1>
+			    <button class="mui-btn ft12 crRedGray mui-btn-link mui-pull-right">保存</button>
+		</header>
+		<!--header  E-->
+
+		<!--content  S-->
+		<div class="mui-content dynamicsCon normalCont">
+			
+			<form class="mui-input-group inputGroup linH50Group">
+			    <div class="mui-input-row">
+			        <label>出生年月</label>
+			    	<span class="rightMsg">25<span>周岁</span></span>
+			    </div>
+			    <div class="mui-input-row">
+			        <label>星座</label>
+			        <span class="rightMsg">双子座</span>
+			    </div>
+			    
+			    
+			</form>
+			<button id='demo2' data-options='{"type":"date","beginYear":1800}' class="mui-hidden">选择日期 ...</button>
+		</div>
+		<!--content  E-->
+
+		
+
+		<script src="../../js/jquery-2.1.4.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/base.js"></script>
+		<script src="../../js/mui.picker.min.js"></script>
+		<script>
+			//日期选择
+			
+			$(function(){
+				$('#demo2').on('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						/*
+						 * 首次显示时实例化组件
+						 * 示例为了简洁，将 options 放在了按钮的 dom 上
+						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+						 */
+						var picker = new mui.DtPicker(options);
+						picker.show(function(rs) {//选择日期后，点击确定的回调事件
+							/*
+							 * rs.value 拼合后的 value
+							 * rs.text 拼合后的 text
+							 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+							 * rs.m 月，用法同年
+							 * rs.d 日，用法同年
+							 * rs.h 时，用法同年
+							 * rs.i 分（minutes 的第二个字母），用法同年
+							 */
+							alert(rs.text);
+							/* 
+							 * 返回 false 可以阻止选择框的关闭
+							 * return false;
+							 */
+							return false;
+							/*
+							 * 释放组件资源，释放后将将不能再操作组件
+							 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+							 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+							 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+							 */
+							picker.dispose();
+						});
+						
+						$("body>div.mui-backdrop").hide();//自定义不要遮罩和取消按钮
+						$("div.mui-dtpicker-header>button:first").css("visibility","hidden");
+				});
+				$("#demo2").trigger('tap');
+			})
+		</script>
+	</body>
+
+</html>

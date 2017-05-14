@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ckx-新增地址</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/reset.css" rel="stylesheet" />
+		<link href="../../css/share.css" rel="stylesheet" />
+
+		<style>
+			html, body{font-size: initial;}
+			.dynamicsHeader.mui-bar.mui-bar-nav{    
+				height: auto;
+				color:#6C2B28;
+			    background: #fff;
+			    padding: 0;
+			    background-size: cover;
+			    box-shadow: none;
+			    padding:0 10px;
+		        box-shadow: 0 1px 6px #ccc;
+		    }
+		    .dynamicsHeader .mui-title{color:#6c3b28;}
+		    .opacityHeader.mui-bar.mui-bar-nav{background: rgba(0,0,0,0);box-shadow: none;}
+			.opacityHeader .mui-title{color:#cbd7dc;}
+			.mui-bar-nav~.dynamicsCon.mui-content{padding-top:0px;}
+			.normalTit{background: #6c3b28;background-size: cover;padding-top:58px;text-align: center;padding-bottom: 20px;}
+			.crfff{color:#fff !important;}.crGren{color:#2fc810}.crRed{color:#ff0101}.crRedGray{color: #6c3b28 !important;}
+			.bgRedGray{background-color: #6c3b28 !important;}.bgfff{background-color:#fff}
+			.normalTit h2{margin:30px 0;}
+			.bigBtn{height: 40px;width:45%;max-width:160px;
+    font-size: 16px;background-color:transparent ;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #fff;}
+    .ft20{font-size:20px !important;}.ft14{font-size: 14px !important;}.ft12{font-size: 12px !important;}
+    .mmTitle{line-height: 42px;font-size:14px;padding-left: 14px;}
+    .normalCont{margin-top:44px;padding-top: 10px !important;}
+    .iconEdit{background:url(../../images/icon-edit.png) no-repeat center;width:16px;height: 16px;background-size: 16px;display: inline-block;}
+    .iconAdd{background:url(../../images/icon-add.png) no-repeat center;width:16px;height: 16px;background-size: 16px;display: inline-block;}
+    .mmRadio{margin-right: 40px;line-height: 50px;}
+    .mmRadio input:before{content:'';background:url(../../images/icon-nok.png) no-repeat center;background-size:16px;display: inline-block;width:16px;height:16px;}
+    .mmRadio input{
+    	-webkit-appearance: none;margin-right: 10px;}
+    .mmRadio input:checked:before{
+    	background-image:url(../../images/icon-ok.png)}
+    	.w35p{width:35%;display: inline-block;}
+    	.h100{height:100px !important}
+    	.row-line{ 
+    margin-left: 15px;
+    height: 1px;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;}
+    .linH50Group .mui-input-row{height:50px;}
+    .linH50Group .mui-input-row label{padding:16px 14px;}
+    .linH50Group .mui-input-row>input{height:48px;}
+    .linH50Group textarea{height: 100%;}
+		</style>
+	</head>
+
+	<body>
+		<!--header  S-->
+		<header class="mui-bar mui-bar-nav dynamicsHeader">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			    <h1 class="mui-title">新增地址</h1>
+			    <button class="mui-btn ft12 crRedGray mui-btn-link mui-pull-right">保存</button>
+		</header>
+		<!--header  E-->
+
+		<!--content  S-->
+		<div class="mui-content dynamicsCon normalCont">
+			
+			<form class="mui-input-group inputGroup linH50Group">
+			    <div class="mui-input-row">
+			        <label>联系人</label>
+			    	<input type="text" class="mui-input-clear ft14" placeholder="收获人姓名" >
+			    </div>
+			    <span class="w35p"></span>
+			        <label class="mmRadio">
+			        	<input name="radio" type="radio" checked>男士
+			        </label>
+			        <label class="mmRadio">
+			       		<input name="radio" type="radio" >女士
+			        </label>
+			    <div class="row-line"></div>
+			    
+			    <div class="mui-input-row">
+			        <label>联系电话</label>
+			        <input type="tel" class="mui-input-clear ft14" placeholder="收货人电话">
+			    </div>
+			    <div class="mui-input-row h100">
+			        <label>收获地址</label>
+			        <textarea class=" ft14" placeholder="详细地址"></textarea>
+			    </div>
+			    
+			</form>
+
+		</div>
+		<!--content  E-->
+
+		
+
+		<script src="../../js/jquery-2.1.4.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/base.js"></script>
+
+	</body>
+
+</html>
