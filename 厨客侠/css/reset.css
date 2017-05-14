@@ -25,7 +25,7 @@ img { -ms-interpolation-mode: bicubic; }
 .fr{float: right;}
 
 html, body {
-	font-size:40px;
+	font-size:14px;
     color:#000; background:#f4f4f4;
     font-family: 'Microsoft Yahei','微软雅黑', \5FAE\8F6F\96C5\9ED1,'宋体',\5b8b\4f53,arial,'Hiragino Sans GB',Tahoma,Arial,Helvetica;
 }
@@ -403,3 +403,67 @@ html, body {
 .modelHead{font-size: 14px;text-align: center;position: relative;color:#6f3b2f;padding-top: 14px;line-height: 16px;}
 .modelHead .icon-close{width:15px;height:15px;background:url(../images/icon-close.png) no-repeat center;background-size:100%;position: absolute;top:14px;right:17px;}
 .modelContent .leaveMsg{font-size: 14px;padding:6px;width:250px;height:70px;}
+
+/*图标共用*/
+.Icons{width:24px;height:24px;background-repeat: no-repeat;background-size:100%;position: relative;}
+.icon-score{background-image: url(../images/icon-score.png);}
+.icon-account{background-image: url(../images/icon-account.png);}
+.icon-discount{background-image: url(../images/icon-discount.png);}
+.icon-address{background-image: url(../images/icon-location.png);}
+.icon-cook{background-image: url(../images/icon-cook.png);}
+.icon-grade{background-image: url(../images/icon-grade.png);}
+.icon-service{background-image: url(../images/icon-service.png);}
+.icon-setting{background-image: url(../images/icon-setting.png);}
+.icon-bell{background-image: url(../images/icon-bell.png);}
+.navIcon{position: relative;}
+.Icons .mui-badge ,.navIcon .mui-badge{
+    font-size: 10px;
+    line-height: 1;
+    position: absolute;
+    top: -5px;
+    left: 100%;
+    margin-left: -12px;
+    padding: 1px 4px;
+    color: #fff;
+    background: red;
+}
+.navIcon .mui-badge{top:-2px;margin-left: -16px;}
+
+/*列表共用*/
+.normalList li,.normalList li a{min-height:50px;line-height: 26px;font-size: 17px;}
+.normalList .mui-table-view-cell.mui-active,.normalList .mui-table-view-cell>a:not(.mui-btn).mui-active {
+    background-color: #fff;
+}
+.normalList .mui-table-view-cell>a:not(.mui-btn){white-space: normal;}
+.normalList .mui-navigate-right:after,.normalList .mui-push-right:after {
+    right: 10px;
+    content: '\e583';
+}
+.normalListName {
+	position: absolute;
+    top: 50%;
+    margin-top:-15px;
+}
+.normalList .listRight{margin-right:15px;font-size: 14px;color:#aa9fb0;max-width: 65%;line-height: 18px;padding:4px 0;}
+.normalList img.listRight{padding:0;}
+/*字体样式共用*/
+.cr000{color:#000;}
+.crfff{color:#fff;}
+.crf00{color:#f00!important;}
+.cr9a{color:#9a9a9a!important;}
+.craa9fb0{color:#aa9fb0!important;}
+.cr2498f2{color:#2498f2!important;}
+.ft17{font-size: 17px;}
+.ft14{font-size: 14px;}
+.ft12{font-size: 12px;}
+.lh20{line-height: 20px;}
+.lh22{line-height: 22px;}
+.lh25{line-height: 25px;}
+.lh16{line-height: 16px;}
+.lh18{line-height: 18px;}
+.lh31{line-height: 31px;}
+.img68{width:68px;height: 68px;border-radius: 50%;}
+.img70{width:70px;height: 70px;border-radius: 50%;}
+.mgt10{margin-top:10px;}
+.mgt14{margin-top:14px;}
+.mgb10{margin-bottom:10px;}
