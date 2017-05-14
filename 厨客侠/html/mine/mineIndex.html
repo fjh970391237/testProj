@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ckx-我</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/reset.css" rel="stylesheet" />
+		<link href="../../css/share.css" rel="stylesheet" />
+
+		<style>
+			header .icon-bell{margin-top:10px;}
+			.mineInfo{height: 186px;text-align: center;position: relative;background:url(../../images/banner1.jpg) no-repeat center ;background-size:100% 100%;padding-top:22px;}
+			.mineInfo .img68{margin:0px auto 4px;}
+			.mineEdit,.mineArrowR{position: absolute;top:10px;right:14px;}
+			.mineArrowR{top:50%;margin-top:-12px;right:10px;}
+			.mineIntro{padding:0 28px;height:32px;overflow: hidden;}
+			
+			.minedynamics {height: 46px;margin-bottom: 10px;overflow: hidden;display: table;width:100%;}
+			.minedynamics li{display:table-cell;color:#000;font-size: 14px;text-align: center;background:#fff;padding:6px 0;line-height: 22px;}
+			.minedynamics li.mineDy{border-right:1px solid #f4f4f4;}
+			.minedynamics span{background-size:100%;width:32px;height:32px;display: block;margin:0 auto;}
+			.minedynamics li.mineDy span{background-image: url(../../images/icon-mine.png);}
+			.minedynamics li.friendDy span{background-image: url(../../images/icon-friend.png);}
+			
+			.mineListBottom{margin:10px 0 26px;}
+			.mineIndexList li .mineIcon{margin:2px 20px 2px 0px;}
+		</style>
+	</head>
+
+	<body>
+		<!--header  S-->
+		<header class="mui-bar mui-bar-nav header03">
+			<a href="###" class="Icons icon-bell mui-pull-left"><span class="mui-badge">9</span></a>
+			<h1 class="mui-title">我</h1>
+		</header>
+		<!--header  E-->
+
+		<!--底部nav  S-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item shareLink" href="../share/shareIndex.html">
+				<span class="navIcon"></span>
+			</a>
+			<a class="mui-tab-item mealLink" href="#tabbar-with-chat">
+				<span class="navIcon"></span>
+			</a>
+			<a class="mui-tab-item publishLink" href="#tabbar-with-chat">
+				<span class="navIcon"></span>
+			</a>
+			<a class="mui-tab-item findLink" href="#tabbar-with-contact">
+				<span class="navIcon"><span class="mui-badge">9</span></span>
+			</a>
+			<a class="mui-tab-item mineLink mui-active " href="login.html">
+				<span class="navIcon"></span>
+			</a>
+		</nav>
+		<!--底部nav  E-->
+
+		<!--content  S-->
+		<div class="mui-content">
+			<!--信息，签名等  S-->
+			<div class="mineInfo">
+				<img class="img68" src="../../images/banner10.jpg"/>
+				<a class="mineEdit ft12 crfff lh20" href="###">编辑</a>
+				<span class="mineArrowR mui-icon mui-icon-arrowright crfff" href="###"></span>
+				<p class="ft17 crfff lh25">昵称某某某</p>
+				<p class="ft14 crfff lh22">18232145678</p>
+				<p class="mineIntro ft12 crfff lh16">皮尔小姐摇了摇她桌子上的铃铛皮尔小姐摇了摇她桌子上的铃铛，他们全都又坐下了。</p>
+				
+			</div>
+			<!--信息，签名等  E-->
+			
+			<!--动态  S-->
+			<ul class="minedynamics clearfix">
+				<li class="mineDy"><span></span>我的动态</li>
+				<li class="friendDy"><span></span>好友动态</li>
+			</ul>
+			<!--动态  E-->
+			
+			<!--列表  S-->
+			<ul class="mui-table-view normalList mineIndexList mineListTop">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">积分
+						<span class="Icons mineIcon icon-score mui-pull-left"></span>
+						<span class="mui-pull-right listRight">2100分</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">余额
+						<span class="Icons mineIcon icon-account mui-pull-left"></span>
+						<span class="mui-pull-right listRight">0.00元</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">优惠
+						<span class="Icons mineIcon icon-discount mui-pull-left"></span>
+						<span class="mui-pull-right listRight">2个</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">我的地址
+						<span class="Icons mineIcon icon-address mui-pull-left"></span>
+
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">私厨相关
+						<span class="Icons mineIcon icon-cook mui-pull-left"></span>
+
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">欢迎评分
+						<span class="Icons mineIcon icon-grade mui-pull-left"></span>
+
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">服务中心
+						<span class="Icons mineIcon icon-service mui-pull-left"></span>
+
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view normalList mineIndexList mineListBottom">
+				<li class="mui-table-view-cell settingLi">
+					<a class="mui-navigate-right">设置
+						<span class="Icons mineIcon icon-setting mui-pull-left"></span>
+
+					</a>
+				</li>
+			</ul>
+			<!--列表  E-->
+		</div>
+		<!--content  E-->
+
+
+		<script src="../../js/jquery-2.1.4.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/base.js"></script>
+
+		<script type="text/javascript">
+		
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ckx-个人资料</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/reset.css" rel="stylesheet" />
+		<link href="../../css/share.css" rel="stylesheet" />
+		<link href="../../css/mui.picker.css" rel="stylesheet" />
+		<link href="../../css/mui.poppicker.css" rel="stylesheet" />
+
+		<style>
+			.mui-poppicker,.mui-picker{background: #fff;}
+			.mui-poppicker-header .mui-btn{font-size: 14px;background:none;border:none;color: #6C3B28;}
+			.mui-backdrop {
+			    position: fixed;
+			    z-index: 998;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    left: 0;
+			    background-color: rgba(0,0,0,.3);
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--header  S-->
+		<header class="mui-bar mui-bar-nav header03">
+			<a href="###" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">个人资料</h1>
+		</header>
+		<!--header  E-->
+
+		<!--content  S-->
+		<div class="mui-content">
+			<!--列表  S-->
+			<ul class="mui-table-view normalList mgt14">
+				<li class="mui-table-view-cell settingLi">
+					<a class="mui-navigate-right">
+						<span class="normalListName">头像</span>
+						<img src="../../images/banner10.jpg" class="mui-pull-right listRight img70" />
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view normalList mgt14">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="normalListName">昵称</span>
+						<span class="mui-pull-right listRight">某某某某</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="normalListName">二维码</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="normalListName">生日</span>
+						<span class="mui-pull-right listRight">1994.12.12</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="normalListName">性别</span>
+						<span class="mui-pull-right listRight">男</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="normalListName">情感状态</span>
+						<span class="mui-pull-right listRight">单身</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" id="showCityPicker">
+						<span class="normalListName">家乡</span>
+						<span id='cityResult' class="mui-pull-right listRight">辽宁大连</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="normalListName">职业</span>
+						<span class="mui-pull-right listRight">IT</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="normalListName">侠客号</span>
+						<span class="mui-pull-right listRight">123456</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="normalListName">个人签名</span>
+						<span class="mui-pull-right listRight">您提供了虚假信息和错误的个人资料您提供了虚假信息和错误的个人资料您提供了虚假信息和错误的个人资料</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view normalList mgt10">
+				<li class="mui-table-view-cell settingLi">
+					<a class="mui-navigate-right">
+						<span class="normalListName">客栈相关</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view normalList mgt10">
+				<li class="mui-table-view-cell settingLi">
+					<a class="mui-navigate-right">
+						<span class="normalListName">我的吃圈</span>
+						<span class="mui-pull-right listRight">意大利菜、日本料理、川味</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view normalList mgt10 mgb10">
+				<li class="mui-table-view-cell settingLi">
+					<a class="mui-navigate-right">
+						<span class="normalListName">手机认证</span>
+						<span class="mui-pull-right listRight">已认证</span></span><!--未认证用crf00 的类名-->
+					</a>
+				</li>
+				<li class="mui-table-view-cell settingLi">
+					<a class="mui-navigate-right">
+						<span class="normalListName">实名认证</span>
+						<span class="mui-pull-right listRight crf00">未认证</span><!--未认证用crf00 的类名-->
+					</a>
+				</li>
+			</ul>
+			<!--列表  E-->
+		</div>
+		<!--content  E-->
+
+		<script src="../../js/jquery-2.1.4.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/mui.picker.js"></script>
+		<script src="../../js/mui.poppicker.js"></script>
+		<script src="../../js/city.data.js"></script>
+		<script src="../../js/base.js"></script>
+
+		<script type="text/javascript">
+		(function($, doc,jQ) {
+			$.init();
+			$.ready(function() {
+			
+				var cityPicker = new $.PopPicker({
+					layer: 2
+				});
+				cityPicker.setData(cityData);
+				var showCityPickerButton = doc.getElementById('showCityPicker');
+				var cityResult = doc.getElementById('cityResult');
+				showCityPickerButton.addEventListener('tap', function(event) {
+					cityPicker.show(function(items) {
+						cityResult.innerText = items[0].text + " " + items[1].text;
+						
+						//返回 false 可以阻止选择框的关闭
+						//return false;
+					});
+					jQ('div.mui-backdrop').hide();//关闭了地址联动后面的透明遮罩，如果需要遮罩不加此句即可
+				}, false);
+				
+			});
+		})(mui, document,jQuery);
+		</script>
+	</body>
+
+</html>
