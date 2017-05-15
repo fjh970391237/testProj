@@ -38,6 +38,8 @@ html, body {
 .colorGray02{color:#aa9fb0!important;font-size: 14px;}
 .mt10{margin-top:10px;background: #fff;}
 .lgBtn{width:270px;height:40px;background: #6c3b28;font-size: 17px;color: #fff;border-radius: 20px;display: block;text-align: center;line-height: 40px;margin:0 auto;}
+.lgBtn-sm{width:237px;height:40px;background: #6c3b28;font-size: 17px;color: #fff;border-radius: 20px;display: block;text-align: center;line-height: 40px;margin:0 auto;}
+
 .whiteBg{background:#fff;}
 .mui-content {
     background-color: #f4f4f4;
@@ -107,7 +109,8 @@ html, body {
 .bottomNav .icon-chat{background-image: url(../images/icon-chat.png);}
 .bottomNav .icon-attention{background-image: url(../images/icon-attention.png);}
 .bottomNav .icon-tipoffs{background-image: url(../images/icon-tipoffs.png);}
-.bottomNav .icon-like{background-image: url(../images/icon-like.png);}
+.bottomNav .icon-like{background-image: url(../images/icon-like02.png);}
+.bottomNav .icon-unlike{background-image: url(../images/icon-like.png);}
 .bottomNav .icon-forward{background-image: url(../images/icon-forward.png);}
 
 /*列表每一行下面的边线*/
@@ -415,6 +418,16 @@ html, body {
 .icon-service{background-image: url(../images/icon-service.png);}
 .icon-setting{background-image: url(../images/icon-setting.png);}
 .icon-bell{background-image: url(../images/icon-bell.png);}
+.icon-IT{background-image: url(../images/icon-IT.png);}
+.icon-business{background-image: url(../images/icon-business.png);}
+.icon-publicService{background-image: url(../images/icon-publicServie.png);}
+.icon-engineer{background-image: url(../images/icon-engineer.png);}
+.icon-entertainment{background-image: url(../images/icon-entertainment.png);}
+.icon-media{background-image: url(../images/icon-media.png);}
+.icon-traffic{background-image: url(../images/icon-traffic.png);}
+.icon-finance{background-image: url(../images/icon-finance.png);}
+.icon-student{background-image: url(../images/icon-student.png);}
+.icon-none{background-image: url(../images/icon-none.png);}
 .navIcon{position: relative;}
 .Icons .mui-badge ,.navIcon .mui-badge{
     font-size: 10px;
@@ -430,6 +443,7 @@ html, body {
 .navIcon .mui-badge{top:-2px;margin-left: -16px;}
 
 /*列表共用*/
+.normalList li{color:#000;background:#fff;}
 .normalList li,.normalList li a{min-height:50px;line-height: 26px;font-size: 17px;}
 .normalList .mui-table-view-cell.mui-active,.normalList .mui-table-view-cell>a:not(.mui-btn).mui-active {
     background-color: #fff;
@@ -447,26 +461,27 @@ html, body {
 .normalList .listRight{margin-right:15px;font-size: 14px;color:#aa9fb0;max-width: 65%;line-height: 18px;padding:4px 0;}
 .normalList img.listRight{padding:0;}
 /*字体样式共用*/
-.cr000{color:#000;}
-.crfff{color:#fff;}
+.cr000{color:#000!important;}
+.crfff{color:#fff!important;}
 .crf00{color:#f00!important;}
 .cr9a{color:#9a9a9a!important;}
 .craa9fb0{color:#aa9fb0!important;}
 .cr2498f2{color:#2498f2!important;}
-.ft17{font-size: 17px;}
+.ft17{font-size: 17px!important;}
 .ft14{font-size: 14px!important;}
-.ft12{font-size: 12px;}
-.lh20{line-height: 20px;}
-.lh22{line-height: 22px;}
-.lh25{line-height: 25px;}
-.lh16{line-height: 16px;}
-.lh18{line-height: 18px;}
-.lh31{line-height: 31px;}
+.ft12{font-size: 12px!important;}
+.lh20{line-height: 20px!important;}
+.lh22{line-height: 22px!important;}
+.lh25{line-height: 25px!important;}
+.lh16{line-height: 16px!important;}
+.lh18{line-height: 18px!important;}
+.lh31{line-height: 31px!important;}
 .img68{width:68px;height: 68px;border-radius: 50%;}
 .img70{width:70px;height: 70px;border-radius: 50%;}
 .mgt10{margin-top:10px;}
 .mgt14{margin-top:14px;}
 .mgb10{margin-bottom:10px;}
+.mgt20{margin-top:20px;}
 
 /*联动*/
 .mui-poppicker,.mui-picker,.mui-dtpicker-title h5,.mui-dtpicker{background: #fff;}

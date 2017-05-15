@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ckx-职业</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/reset.css" rel="stylesheet" />
+		<link href="../../css/share.css" rel="stylesheet" />
+
+		<style>
+			.Occupation{width:100%;}
+			.Occupation .normalList{width:50%;background-color: transparent}
+			.Occupation .occuLeft{border:1px solid #e4e3e6;border-width:0px 1px 1px 0;position: relative;}
+			.Occupation .normalList li{overflow: initial;}
+
+			.Occupation .occuLeft li{color: #aa9fb0;}
+			.Occupation .Icons{margin:2px 16px 2px 0;}
+			.linH50Group .mui-input-row{height:50px;}
+		    .linH50Group .mui-input-row label{padding:17px 14px;}
+		    .linH50Group .mui-input-row>input{height:46px;}
+		    .linH50Group textarea{height: 100%;}
+		    .ykx-checkGrp input[type=radio]:before {
+		    	content:'';
+		    }
+		    .ykx-checkGrp input[type=radio]:checked:before {
+		    	content:'' !important;background:url(../../images/icon-ok.png) no-repeat center !important;;background-size: 20px !important;
+		    	display: inline-block;width:100%;height:90%;
+		    }
+		    .mui-input-group .mui-input-row:after {
+			    left: 0px;
+			}
+			.Occupation .occuLeft:before {
+			    position: absolute;
+			    top: 0;
+			    right: 0;
+			    left: 0;
+			    height: 1px;
+			    content: '';
+			    -webkit-transform: scaleY(.5);
+			    transform: scaleY(.5);
+			    background-color: #c8c7cc;
+			    z-index: 1;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--header  S-->
+		<header class="mui-bar mui-bar-nav header03">
+			<a href="###" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<button class="mui-btn ft12 crRedGray mui-btn-link mui-pull-right">保存</button>
+			<h1 class="mui-title">职业</h1>
+		</header>
+		<!--header  E-->
+
+		<!--content  S-->
+		<div class="mui-content ">
+			<form class="mui-input-group inputGroup linH50Group mgt10">
+			    <div class="mui-input-row">
+			    	<input type="text" class="mui-input-clear" placeholder="自定义职业" >
+			    </div>
+			    
+			</form>
+			<div class="Occupation mgt20 mgb10 clearfix">
+				<ul class="occuLeft normalList mui-pull-left">
+					<li class="mui-table-view-cell">
+						<a class="">信息技术
+							<span class="Icons icon-IT mui-pull-left"></span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">金融保险
+							<span class="Icons icon-finance mui-pull-left"></span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">商业服务
+							<span class="Icons icon-business mui-pull-left"></span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">工程制造
+							<span class="Icons icon-engineer mui-pull-left"></span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">交通运输
+							<span class="Icons icon-traffic mui-pull-left"></span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">文化传媒
+							<span class="Icons icon-media mui-pull-left"></span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">娱乐体育
+							<span class="Icons icon-entertainment mui-pull-left"></span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">公共事业
+							<span class="Icons icon-publicService mui-pull-left"></span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">学生
+							<span class="Icons icon-student mui-pull-left"></span>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="">无
+							<span class="Icons icon-none mui-pull-left"></span>
+						</a>
+					</li>
+				</ul>
+				<div class="occuRight normalList linH50Group mui-input-group inputGroup mui-pull-left">
+					<div class="mui-input-row mui-radio ykx-checkGrp">
+				        <label>互联网</label>
+				        <input name="radio" type="radio" checked>
+				    </div>
+				    <div class="mui-input-row mui-radio ykx-checkGrp">
+				        <label>IT</label>
+				        <input name="radio" type="radio" >
+				    </div>
+				    <div class="mui-input-row mui-radio ykx-checkGrp">
+				        <label>通讯</label>
+				        <input name="radio" type="radio" >
+				    </div>
+				    <div class="mui-input-row mui-radio ykx-checkGrp">
+				        <label>电信运营</label>
+				        <input name="radio" type="radio" >
+				    </div>
+					
+				</div>
+			</div>
+		</div>
+		<!--content  E-->
+
+
+		<script src="../../js/jquery-2.1.4.min.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/base.js"></script>
+	</body>
+
+</html>
