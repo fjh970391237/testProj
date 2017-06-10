@@ -1,0 +1,143 @@
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.view.min.js"></script>
+<script>
+		mui.init();
+		//初始化单页view
+		var viewApi = mui('#app').view({
+			defaultPage: '#index'
+		});
+		var view = viewApi.view;
+		function randomChoose(){
+			
+		}
+
+		(function($) {
+			//处理view的后退与webview后退
+			var oldBack = $.back;
+			$.back = function() {
+				if (viewApi.canBack()) { //如果view可以后退，则执行view的后退
+					viewApi.back();
+				} else { //执行webview后退
+					oldBack();
+				}
+			};
+			//监听页面切换事件方案1,通过view元素监听所有页面切换事件，目前提供pageBeforeShow|pageShow|pageBeforeBack|pageBack四种事件(before事件为动画开始前触发)
+			//第一个参数为事件名称，第二个参数为事件回调，其中e.detail.page为当前页面的html对象
+			view.addEventListener('pageBeforeShow', function(e) {
+				//				console.log(e.detail.page.id + ' beforeShow');
+				if(e.detail.page.id=="index")
+				getRandomUrl(imgBg);
+			});
+			view.addEventListener('pageShow', function(e) {
+				//				console.log(e.detail.page.id + ' show');
+				
+			});
+			view.addEventListener('pageBeforeBack', function(e) {
+				//				console.log(e.detail.page.id + ' beforeBack');
+			});
+			view.addEventListener('pageBack', function(e) {
+				//console.log(e.detail.page.id + ' back');
+			});
+			// 点击添加按钮
+			/*mui('body').on('tap','#addImg',function(){
+				console.log(111)
+			});*/
+			// 随机背景图
+			var imgBg = document.getElementById('imgBg');
+			var goBackPage = document.getElementById('goBack');
+			var index2 = document.getElementById('index2');
+			var clothList = document.getElementById('clothList');
+			getRandomUrl(imgBg);
+			
+			
+			// 从页面2回1重新更换背景图
+			goBackPage.onClick = function(){
+				console.log(111)
+
+			}
+			if(index2.style.display =='block'){console.log(222)}
+			/*
+			$('body').on('tap','#goBack',function(){
+			});*/
+			// 随机背景图
+			function getRandomUrl(target){
+				var num = parseInt(Math.random()*10);
+				var	url = 'images/test0'+num+'.jpg';
+					target.style.backgroundImage = 'url('+url+')';
+					return url;
+			}
+			
+		})(mui);
+		var data=JSON.parse(localStorage.getItem('lists'))||[];
+		var vm = new Vue({
+			el:'#clobody',
+			data:{
+				showAddModal:false,
+				showDeleteModal:false,
+				itemname:'',
+				clothItems:data,
+				indexNum:'',
+				result:{srcImg:'',nameImg:''},
+				showResult:false
+			},
+			components:{
+				'childLi':''
+			},
+			methods:{
+				addCloth:function(){
+					this.showAddModal=true;
+				},
+				add:function(){
+					if(this.itemname==""){
+						mui.toast("未填写名称");return false;
+					}
+					this.showAddModal = false;
+		            var imgs = ['images/test01.jpg','images/test02.jpg','images/test03.jpg','images/test04.jpg','images/test05.jpg','images/test06.jpg','images/test07.jpg','images/test08.jpg','images/test09.jpg','images/test10.jpg','images/test11.jpg','images/test12.jpg'];
+		            var cc = Math.round(Math.random() * (imgs.length-1));
+
+		            if(this.itemname != ''){
+		                this.clothItems.push({
+		                    //'id': this.lists.length+1,
+		                    'name': this.itemname,
+		                    'imgsrc': imgs[cc]
+		                });
+		                this.itemname = '';
+		                this.listState = true;
+		                localStorage.setItem("lists",JSON.stringify(JSON.parse(JSON.stringify(this.clothItems))))
+		            }
+				},
+				delCloth:function(indexNum){
+					this.showDeleteModal=true;
+					this.indexNum = indexNum;
+				},
+				delete:function(){
+					this.showDeleteModal=false;
+
+					this.clothItems.splice(this.indexNum,1);
+
+
+				},
+				cancel:function(){
+					this.showDeleteModal=false;
+				},
+				gorandomChoose:function(){
+					viewApi.go("#index3");
+					this.getResult();
+				},
+				getResult:function(){
+					this.showResult = false;
+					var i = Math.round(Math.random()*(this.clothItems.length - 1));
+					setTimeout(function(){
+						vm.result.srcImg = vm.clothItems[i].imgsrc;
+						vm.result.nameImg = vm.clothItems[i].name;
+						vm.showResult = true;
+					}, 1500)
+				}
+
+			}
+		})
+
+		
+		
+</script>
